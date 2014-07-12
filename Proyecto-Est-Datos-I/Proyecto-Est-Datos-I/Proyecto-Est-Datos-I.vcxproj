@@ -81,10 +81,26 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Equipo.h" />
+    <ClInclude Include="ListaEquipos.h" />
+    <ClInclude Include="ListaGrupos.h" />
+    <ClInclude Include="ListaPais.h" />
+    <ClInclude Include="NodoEquipo.h" />
+    <ClInclude Include="NodoGrupos.h" />
+    <ClInclude Include="NodoPais.h" />
+    <ClInclude Include="Pais.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Equipo.cpp" />
+    <ClCompile Include="ListaEquipos.cpp" />
+    <ClCompile Include="ListaGrupos.cpp" />
+    <ClCompile Include="ListaPais.cpp" />
+    <ClCompile Include="NodoEquipo.cpp" />
+    <ClCompile Include="NodoGrupos.cpp" />
+    <ClCompile Include="NodoPais.cpp" />
+    <ClCompile Include="Pais.cpp" />
     <ClCompile Include="Proyecto-Est-Datos-I.cpp" />
     <ClCompile Include="stdafx.cpp" />
   </ItemGroup>
