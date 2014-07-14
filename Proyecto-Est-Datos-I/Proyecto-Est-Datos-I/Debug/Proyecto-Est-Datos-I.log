@@ -1,0 +1,78 @@
+﻿Build started 7/13/2014 8:00:34 PM.
+     1>Project "C:\Users\Daniel Aguilar\Downloads\Proyecto-Est-Datos-I\Proyecto-Est-Datos-I\Proyecto-Est-Datos-I.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Equipo.cpp Jugador.cpp ListaEquipos.cpp ListaEquipoxPartido.cpp ListaGrupos.cpp ListaJugadores.cpp ListaJugadorxEquipo.cpp ListaPais.cpp ListaPartidos.cpp ListaPartidoxEquipo.cpp NodoEquipo.cpp NodoEquipoxPartido.cpp NodoGrupos.cpp NodoJugador.cpp NodoJugadorxEquipo.cpp NodoPais.cpp NodoPartido.cpp NodoPartidoxEquipo.cpp Pais.cpp Partido.cpp "Proyecto-Est-Datos-I.cpp" stdafx.cpp
+         stdafx.cpp
+         Proyecto-Est-Datos-I.cpp
+         Partido.cpp
+         Pais.cpp
+         NodoPartidoxEquipo.cpp
+         NodoPartido.cpp
+         NodoPais.cpp
+         NodoJugadorxEquipo.cpp
+         NodoJugador.cpp
+         NodoGrupos.cpp
+         NodoEquipoxPartido.cpp
+         NodoEquipo.cpp
+         ListaPartidoxEquipo.cpp
+         ListaPartidos.cpp
+         ListaPais.cpp
+         ListaJugadorxEquipo.cpp
+         ListaJugadores.cpp
+         ListaGrupos.cpp
+         ListaEquipoxPartido.cpp
+         ListaEquipos.cpp
+         Generating Code...
+     1>c:\users\daniel aguilar\downloads\proyecto-est-datos-i\proyecto-est-datos-i\listaequipos.cpp(27): error C4716: 'ListaEquipos::Agregar' : must return a value
+     1>c:\users\daniel aguilar\downloads\proyecto-est-datos-i\proyecto-est-datos-i\listaequipos.cpp(28): error C4716: 'ListaEquipos::Eliminar' : must return a value
+     1>c:\users\daniel aguilar\downloads\proyecto-est-datos-i\proyecto-est-datos-i\listaequipos.cpp(29): error C4716: 'ListaEquipos::MostarLista' : must return a value
+     1>c:\users\daniel aguilar\downloads\proyecto-est-datos-i\proyecto-est-datos-i\listaequipos.cpp(30): error C4716: 'ListaEquipos::MostrarEquipo' : must return a value
+     1>c:\users\daniel aguilar\downloads\proyecto-est-datos-i\proyecto-est-datos-i\listaequipoxpartido.cpp(13): error C4716: 'ListaEquipoxPartido::getCabeza' : must return a value
+     1>c:\users\daniel aguilar\downloads\proyecto-est-datos-i\proyecto-est-datos-i\listaequipoxpartido.cpp(16): error C4716: 'ListaEquipoxPartido::getTamaño' : must return a value
+     1>c:\users\daniel aguilar\downloads\proyecto-est-datos-i\proyecto-est-datos-i\listaequipoxpartido.cpp(19): error C4716: 'ListaEquipoxPartido::agregar' : must return a value
+     1>c:\users\daniel aguilar\downloads\proyecto-est-datos-i\proyecto-est-datos-i\listaequipoxpartido.cpp(20): error C4716: 'ListaEquipoxPartido::eliminar' : must return a value
+     1>c:\users\daniel aguilar\downloads\proyecto-est-datos-i\proyecto-est-datos-i\listagrupos.cpp(29): error C4716: 'ListaGrupos::Agregar' : must return a value
+     1>c:\users\daniel aguilar\downloads\proyecto-est-datos-i\proyecto-est-datos-i\listagrupos.cpp(37): error C4716: 'ListaGrupos::MostarLista' : must return a value
+     1>c:\users\daniel aguilar\downloads\proyecto-est-datos-i\proyecto-est-datos-i\listagrupos.cpp(41): error C4716: 'ListaGrupos::MostrarGrupo' : must return a value
+     1>c:\users\daniel aguilar\downloads\proyecto-est-datos-i\proyecto-est-datos-i\listagrupos.cpp(33): error C4716: 'ListaGrupos::Eliminar' : must return a value
+     1>c:\users\daniel aguilar\downloads\proyecto-est-datos-i\proyecto-est-datos-i\listajugadores.cpp(30): error C4716: 'ListaJugadores::Agregar' : must return a value
+     1>c:\users\daniel aguilar\downloads\proyecto-est-datos-i\proyecto-est-datos-i\listajugadores.cpp(32): error C4716: 'ListaJugadores::Eliminar' : must return a value
+     1>c:\users\daniel aguilar\downloads\proyecto-est-datos-i\proyecto-est-datos-i\listajugadorxequipo.cpp(13): error C4716: 'ListaJugadorxEquipo::getCabeza' : must return a value
+     1>c:\users\daniel aguilar\downloads\proyecto-est-datos-i\proyecto-est-datos-i\listajugadorxequipo.cpp(16): error C4716: 'ListaJugadorxEquipo::getTamaño' : must return a value
+     1>c:\users\daniel aguilar\downloads\proyecto-est-datos-i\proyecto-est-datos-i\listajugadorxequipo.cpp(19): error C4716: 'ListaJugadorxEquipo::agregar' : must return a value
+     1>c:\users\daniel aguilar\downloads\proyecto-est-datos-i\proyecto-est-datos-i\listajugadorxequipo.cpp(20): error C4716: 'ListaJugadorxEquipo::eliminar' : must return a value
+     1>c:\users\daniel aguilar\downloads\proyecto-est-datos-i\proyecto-est-datos-i\listapais.cpp(12): error C4716: 'ListaPais::GetCab' : must return a value
+     1>c:\users\daniel aguilar\downloads\proyecto-est-datos-i\proyecto-est-datos-i\listapais.cpp(17): error C4716: 'ListaPais::Agregar' : must return a value
+     1>c:\users\daniel aguilar\downloads\proyecto-est-datos-i\proyecto-est-datos-i\listapais.cpp(15): error C4716: 'ListaPais::GetTama' : must return a value
+     1>c:\users\daniel aguilar\downloads\proyecto-est-datos-i\proyecto-est-datos-i\listapais.cpp(18): error C4716: 'ListaPais::Eliminar' : must return a value
+     1>c:\users\daniel aguilar\downloads\proyecto-est-datos-i\proyecto-est-datos-i\listapais.cpp(19): error C4716: 'ListaPais::MostarLista' : must return a value
+     1>c:\users\daniel aguilar\downloads\proyecto-est-datos-i\proyecto-est-datos-i\listapais.cpp(20): error C4716: 'ListaPais::MostarPais' : must return a value
+     1>c:\users\daniel aguilar\downloads\proyecto-est-datos-i\proyecto-est-datos-i\listapartidos.cpp(30): error C4716: 'ListaPartidos::Agregar' : must return a value
+     1>c:\users\daniel aguilar\downloads\proyecto-est-datos-i\proyecto-est-datos-i\listapartidos.cpp(32): error C4716: 'ListaPartidos::Eliminar' : must return a value
+     1>c:\users\daniel aguilar\downloads\proyecto-est-datos-i\proyecto-est-datos-i\listapartidoxequipo.cpp(13): error C4716: 'ListaPartidoxEquipo::getCabeza' : must return a value
+     1>c:\users\daniel aguilar\downloads\proyecto-est-datos-i\proyecto-est-datos-i\listapartidoxequipo.cpp(16): error C4716: 'ListaPartidoxEquipo::getTamaño' : must return a value
+     1>c:\users\daniel aguilar\downloads\proyecto-est-datos-i\proyecto-est-datos-i\listapartidoxequipo.cpp(20): error C4716: 'ListaPartidoxEquipo::agregar' : must return a value
+     1>c:\users\daniel aguilar\downloads\proyecto-est-datos-i\proyecto-est-datos-i\listapartidoxequipo.cpp(21): error C4716: 'ListaPartidoxEquipo::eliminar' : must return a value
+     1>c:\users\daniel aguilar\downloads\proyecto-est-datos-i\proyecto-est-datos-i\nodoequipoxpartido.cpp(15): error C4716: 'NodoEquipoxPartido::getEquipo' : must return a value
+     1>c:\users\daniel aguilar\downloads\proyecto-est-datos-i\proyecto-est-datos-i\nodoequipoxpartido.cpp(18): error C4716: 'NodoEquipoxPartido::getPais' : must return a value
+     1>c:\users\daniel aguilar\downloads\proyecto-est-datos-i\proyecto-est-datos-i\nodoequipoxpartido.cpp(21): error C4716: 'NodoEquipoxPartido::getAnterior' : must return a value
+     1>c:\users\daniel aguilar\downloads\proyecto-est-datos-i\proyecto-est-datos-i\nodoequipoxpartido.cpp(24): error C4716: 'NodoEquipoxPartido::getSiguiente' : must return a value
+     1>c:\users\daniel aguilar\downloads\proyecto-est-datos-i\proyecto-est-datos-i\nodojugadorxequipo.cpp(15): error C4716: 'NodoJugadorxEquipo::getEquipo' : must return a value
+     1>c:\users\daniel aguilar\downloads\proyecto-est-datos-i\proyecto-est-datos-i\nodojugadorxequipo.cpp(18): error C4716: 'NodoJugadorxEquipo::getJugador' : must return a value
+     1>c:\users\daniel aguilar\downloads\proyecto-est-datos-i\proyecto-est-datos-i\nodojugadorxequipo.cpp(21): error C4716: 'NodoJugadorxEquipo::getSiguiente' : must return a value
+     1>c:\users\daniel aguilar\downloads\proyecto-est-datos-i\proyecto-est-datos-i\nodojugadorxequipo.cpp(24): error C4716: 'NodoJugadorxEquipo::getAnterior' : must return a value
+     1>c:\users\daniel aguilar\downloads\proyecto-est-datos-i\proyecto-est-datos-i\nodojugadorxequipo.cpp(25): error C4716: 'NodoJugadorxEquipo::seAnterior' : must return a value
+     1>c:\users\daniel aguilar\downloads\proyecto-est-datos-i\proyecto-est-datos-i\nodopartidoxequipo.cpp(17): error C4716: 'NodoPartidoxEquipo::getEquipo1' : must return a value
+     1>c:\users\daniel aguilar\downloads\proyecto-est-datos-i\proyecto-est-datos-i\nodopartidoxequipo.cpp(20): error C4716: 'NodoPartidoxEquipo::getEquipo2' : must return a value
+     1>c:\users\daniel aguilar\downloads\proyecto-est-datos-i\proyecto-est-datos-i\nodopartidoxequipo.cpp(23): error C4716: 'NodoPartidoxEquipo::getPartido' : must return a value
+     1>c:\users\daniel aguilar\downloads\proyecto-est-datos-i\proyecto-est-datos-i\nodopartidoxequipo.cpp(26): error C4716: 'NodoPartidoxEquipo::getSguiente' : must return a value
+     1>c:\users\daniel aguilar\downloads\proyecto-est-datos-i\proyecto-est-datos-i\nodopartidoxequipo.cpp(29): error C4716: 'NodoPartidoxEquipo::getAnterior' : must return a value
+         Compiling...
+         Jugador.cpp
+         Equipo.cpp
+         Generating Code...
+     1>Done Building Project "C:\Users\Daniel Aguilar\Downloads\Proyecto-Est-Datos-I\Proyecto-Est-Datos-I\Proyecto-Est-Datos-I.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:03.57
