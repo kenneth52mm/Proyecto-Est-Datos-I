@@ -10,6 +10,7 @@ public:
 	NodoEquipo(void);
 	~NodoEquipo(void);
 
+	NodoEquipo(Equipo *);
 	Equipo *GetEquipo();
 	void SetEquipo(Equipo *);
 

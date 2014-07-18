@@ -5,6 +5,7 @@ class ListaPais
 private :
 	NodoPais *cab;
 	int tamano;
+	NodoPais *DirNodo(int);
 public:
 	ListaPais(void);
 	~ListaPais(void);

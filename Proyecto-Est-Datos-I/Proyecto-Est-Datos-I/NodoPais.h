@@ -9,7 +9,7 @@ private:
 public:
 	NodoPais(void);
 	~NodoPais(void);
-
+	NodoPais(Pais *);
 	Pais *GetPais();
 	void SetPais(Pais *);
 

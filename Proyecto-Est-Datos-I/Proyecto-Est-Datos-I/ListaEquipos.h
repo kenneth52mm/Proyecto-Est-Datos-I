@@ -5,6 +5,7 @@ class ListaEquipos
 private:
 	NodoEquipo *cab;
 	int tamano;
+	NodoEquipo *DirNodo(int);
 public:
 	ListaEquipos(void);
 	~ListaEquipos(void);

@@ -10,6 +10,11 @@ NodoEquipo::~NodoEquipo(void)
 {
 }
 
+NodoEquipo::NodoEquipo(Equipo *_equipo)
+{
+	SetEquipo(_equipo);
+}
+
 Equipo *NodoEquipo::GetEquipo()
 {
 	return this->equipo;

@@ -2,10 +2,13 @@
 //
 
 #include "stdafx.h"
+#include "ListaEquipos.h"
+
 
 
 int _tmain(int argc, _TCHAR* argv[])
 {
+
 	return 0;
 }
 

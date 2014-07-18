@@ -10,6 +10,11 @@ NodoPais::~NodoPais(void)
 {
 }
 
+NodoPais::NodoPais(Pais *_pais)
+{
+	SetPais(_pais);
+}
+
 Pais *NodoPais::GetPais()
 {
 	return this->pais;
