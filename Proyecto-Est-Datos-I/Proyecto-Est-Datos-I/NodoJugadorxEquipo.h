@@ -1,6 +1,7 @@
 #pragma once
 #include "NodoEquipo.h"
 #include "NodoJugador.h"
+#include "stdafx.h"
 
 class NodoJugadorxEquipo
 {
@@ -9,6 +10,9 @@ private:
 	NodoJugador* jugador;
 	NodoJugadorxEquipo* siguiente;
 	NodoJugadorxEquipo* anterior;
+	NodoEquipo* enlaceEquipo;
+	NodoJugador* enlaceJugador;
+	
 
 public:
 	NodoJugadorxEquipo(void);
@@ -26,6 +30,12 @@ public:
 	void setSiguiente(NodoJugadorxEquipo*);
 
 	NodoJugadorxEquipo* getAnterior();
-	NodoJugadorxEquipo* seAnterior(NodoJugadorxEquipo*);
-};
+	NodoJugadorxEquipo* setAnterior(NodoJugadorxEquipo*);
 
+	NodoEquipo* getEnlaceEquipo();
+	void setEnlaceEquipo(NodoEquipo*);
+
+	NodoJugador* getEnlaceJugador();
+	void setEnlaceJugador(NodoJugador*);
+
+};

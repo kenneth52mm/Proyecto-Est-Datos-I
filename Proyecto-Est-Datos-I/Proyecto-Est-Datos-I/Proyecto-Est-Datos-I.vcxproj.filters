@@ -84,6 +84,12 @@
     <ClInclude Include="Partido.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="NodoEquipoxPais.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ListaEquipoxPais.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -150,6 +156,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Partido.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NodoEquipoxPais.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ListaEquipoxPais.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

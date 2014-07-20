@@ -1,5 +1,7 @@
 #pragma once
 #include "NodoPartidoxEquipo.h"
+#include "stdafx.h"
+
 class ListaPartidoxEquipo
 {
 private:
@@ -16,9 +18,8 @@ public:
 	void setTamaño(int);
 
 
-	int agregar(NodoEquipo*, NodoEquipo*, NodoPartido*);
-	int eliminar(int);
+	int agregar(int, int, int, ListaEquipos*, ListaEquipos*, ListaPartidos*);
+	int eliminar(int, int,int);
 	void mostrarLista();
-	void mostrarEnlace(int);
+	void mostrarEnlace(int, int, int);
 };
-

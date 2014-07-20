@@ -2,6 +2,9 @@
 #include "stdafx.h"
 #include "NodoEquipo.h"
 #include "NodoPartido.h"
+#include "ListaPartidos.h"
+#include "ListaEquipos.h"
+
 class NodoPartidoxEquipo
 
 {
@@ -11,26 +14,34 @@ private:
 	NodoPartido* partido;
 	NodoPartidoxEquipo* siguiente;
 	NodoPartidoxEquipo* anterior;
+	NodoPartido* enlacePartido;
+	NodoEquipo* enlaceEquipo;
 
 public:
 	NodoPartidoxEquipo(void);
 	~NodoPartidoxEquipo(void);
 
-	NodoPartidoxEquipo(NodoEquipo*, NodoPartido*);
+	NodoPartidoxEquipo(NodoEquipo*, NodoEquipo*, NodoPartido*);
 
 	NodoEquipo* getEquipo1();
-	void setEquipo1(Equipo*);
+	void setEquipo1(NodoEquipo*);
 
 	NodoEquipo* getEquipo2();
-	void setEquipo2(Equipo*);
+	void setEquipo2(NodoEquipo*);
 
 	NodoPartido*getPartido();
-	void setPartido(Partido*);
+	void setPartido(NodoPartido*);
 
 	NodoPartidoxEquipo*getSguiente();
 	void setSiguiente(NodoPartidoxEquipo*);
 
 	NodoPartidoxEquipo*getAnterior();
 	void setAnterior(NodoPartidoxEquipo*);
+
+	NodoPartido*getEnlacePartido();
+	void setEnlacePartido(NodoPartido*);
+
+	NodoEquipo* getEnlaceEquipo();
+	void setenlaceEquipo(NodoEquipo*);
 };
 

@@ -1,5 +1,9 @@
 #pragma once
 #include "NodoJugadorxEquipo.h"
+#include "ListaEquipos.h"
+#include "ListaJugadores.h"
+#include "stdafx.h"
+
 class ListaJugadorxEquipo
 {
 private:
@@ -15,9 +19,8 @@ public:
 	int getTamaño();
 	void setTamaño(int);
 
-	int agregar(NodoJugador*, NodoEquipo* );
+	int agregar(int, int, ListaJugadores*, ListaEquipos* );
 	int eliminar(int , int);
 	void mostrarLista();
-	void mostrarEnlace(int);
+	void mostrarEnlace(int, int);
 };
-

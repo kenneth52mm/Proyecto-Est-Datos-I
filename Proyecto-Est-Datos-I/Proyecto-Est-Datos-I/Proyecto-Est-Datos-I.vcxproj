@@ -84,6 +84,7 @@
     <ClInclude Include="Equipo.h" />
     <ClInclude Include="Jugador.h" />
     <ClInclude Include="ListaEquipos.h" />
+    <ClInclude Include="ListaEquipoxPais.h" />
     <ClInclude Include="ListaEquipoxPartido.h" />
     <ClInclude Include="ListaGrupos.h" />
     <ClInclude Include="ListaJugadores.h" />
@@ -92,6 +93,7 @@
     <ClInclude Include="ListaPartidos.h" />
     <ClInclude Include="ListaPartidoxEquipo.h" />
     <ClInclude Include="NodoEquipo.h" />
+    <ClInclude Include="NodoEquipoxPais.h" />
     <ClInclude Include="NodoEquipoxPartido.h" />
     <ClInclude Include="NodoGrupos.h" />
     <ClInclude Include="NodoJugador.h" />
@@ -108,6 +110,7 @@
     <ClCompile Include="Equipo.cpp" />
     <ClCompile Include="Jugador.cpp" />
     <ClCompile Include="ListaEquipos.cpp" />
+    <ClCompile Include="ListaEquipoxPais.cpp" />
     <ClCompile Include="ListaEquipoxPartido.cpp" />
     <ClCompile Include="ListaGrupos.cpp" />
     <ClCompile Include="ListaJugadores.cpp" />
@@ -116,6 +119,7 @@
     <ClCompile Include="ListaPartidos.cpp" />
     <ClCompile Include="ListaPartidoxEquipo.cpp" />
     <ClCompile Include="NodoEquipo.cpp" />
+    <ClCompile Include="NodoEquipoxPais.cpp" />
     <ClCompile Include="NodoEquipoxPartido.cpp" />
     <ClCompile Include="NodoGrupos.cpp" />
     <ClCompile Include="NodoJugador.cpp" />
