@@ -11,6 +11,8 @@ public:
 	NodoJugador(void);
 	~NodoJugador(void);
 
+	NodoJugador(Jugador *);
+
 	Jugador * GetJugador();
 	void SetJugador(Jugador *);
 

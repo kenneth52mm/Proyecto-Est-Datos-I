@@ -6,6 +6,9 @@ class ListaJugadores
 private:
 	NodoJugador * cabeza;
 	int tamano;
+
+	NodoJugador * DirNodo(int);
+
 public:
 	ListaJugadores(void);
 	~ListaJugadores(void);

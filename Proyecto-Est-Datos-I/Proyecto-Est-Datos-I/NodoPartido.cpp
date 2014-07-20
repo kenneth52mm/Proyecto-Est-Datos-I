@@ -8,6 +8,11 @@ NodoPartido::~NodoPartido(void)
 {
 }
 
+NodoPartido::NodoPartido(Partido * partido)
+{
+	this->SetPartido(partido);
+}
+
 Partido * NodoPartido::GetPartido()
 {
 	return this->partido;

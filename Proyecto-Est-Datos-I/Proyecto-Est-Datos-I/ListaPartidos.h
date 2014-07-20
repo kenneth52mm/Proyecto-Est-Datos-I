@@ -4,14 +4,17 @@
 class ListaPartidos
 {
 private:
-	NodoPartido * partido;
+	NodoPartido * cabeza;
 	int tamano;
+
+	NodoPartido * DirNodo(int);
+
 public:
 	ListaPartidos(void);
 	~ListaPartidos(void);
 
-	NodoPartido * GetPartido();
-	void SetPartido(NodoPartido *);
+	NodoPartido * GetCabeza();
+	void SetCabeza(NodoPartido *);
 
 	int GetTamano();
 	void SetTamano(int);
