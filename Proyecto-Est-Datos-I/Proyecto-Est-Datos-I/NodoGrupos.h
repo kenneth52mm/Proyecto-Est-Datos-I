@@ -10,7 +10,7 @@ private :
 	NodoGrupos *sgte;
 	NodoGrupos *ante;
 public:
-
+	NodoGrupos(char *, ListaEquipos *);
 	NodoGrupos(void);
 	~NodoGrupos(void);
 

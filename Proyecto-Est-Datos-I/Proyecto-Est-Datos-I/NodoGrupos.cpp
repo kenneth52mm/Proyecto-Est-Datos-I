@@ -3,11 +3,19 @@
 
 NodoGrupos::NodoGrupos(void)
 {
+	
 }
 
 
 NodoGrupos::~NodoGrupos(void)
 {
+}
+
+NodoGrupos::NodoGrupos(char *_grupo,ListaEquipos *equipos)
+{
+	SetGrupo(_grupo);
+	SetEquipos(	equipos);
+
 }
 
 int NodoGrupos::GetId()

@@ -11,12 +11,13 @@ public:
 
 	NodoGrupos *GetCab();
 	void SetCab(NodoGrupos *);
+	NodoGrupos *DirNodo(int);
 
 	int GetTama();
 
 	int Agregar(char *,ListaEquipos*);
 	int Eliminar(int);
 	ListaGrupos *MostarLista();
-	ListaEquipos *MostrarGrupo();
+	ListaEquipos *MostrarGrupo(int);
 };
 
