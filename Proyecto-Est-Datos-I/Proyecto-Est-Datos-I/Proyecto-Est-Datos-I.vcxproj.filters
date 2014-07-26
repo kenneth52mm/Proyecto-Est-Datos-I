@@ -36,9 +36,6 @@
     <ClInclude Include="ListaJugadorxEquipo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="NodoEquipoxPartido.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="ListaEquipoxPartido.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -90,6 +87,9 @@
     <ClInclude Include="ListaEquipoxPais.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="PantallaPrincipal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -111,9 +111,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="NodoEquipoxPartido.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ListaEquipoxPartido.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Equipo.cpp">
@@ -162,6 +159,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ListaEquipoxPais.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PantallaPrincipal.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
