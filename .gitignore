@@ -38,3 +38,5 @@ Icon
 # Visual Studio Sucks
 
 *.suo
+*.dll
+*.cache
