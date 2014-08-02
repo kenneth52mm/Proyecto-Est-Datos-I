@@ -10,10 +10,11 @@ Pais::~Pais(void)
 {
 }
 
-Pais::Pais(int _id,char *_nombre)
+Pais::Pais(int _id, string _nombre, string abreviatura)
 {
 	SetId(_id);
 	SetNombre(_nombre);
+	SetAbreviatura(abreviatura);
 }
 
 int Pais::GetId()
@@ -25,11 +26,20 @@ void Pais::SetId(int _id)
 	this->id=_id;
 }
 
-char *Pais::GetNombre()
+string Pais::GetNombre()
 {
 	return this->nombre;
 }
-void Pais::SetNombre(char *_nombre)
+void Pais::SetNombre(string _nombre)
 {
 	this->nombre=_nombre;
+}
+
+string Pais::GetAbreviatura()
+{
+	return this->abreviatura;
+}
+void Pais::SetAbreviatura(string abreviatura)
+{
+	this->abreviatura = abreviatura;
 }

@@ -54,6 +54,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>C:\Users\Daniel Aguilar\Downloads\boost_1_55_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -82,9 +83,11 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CargaInicial.h" />
     <ClInclude Include="Equipo.h" />
     <ClInclude Include="Jugador.h" />
     <ClInclude Include="ListaEquipos.h" />
+    <ClInclude Include="ListaEquipoXGrupo.h" />
     <ClInclude Include="ListaEquipoxPais.h" />
     <ClInclude Include="ListaEquipoxPartido.h" />
     <ClInclude Include="ListaGrupos.h" />
@@ -94,6 +97,7 @@
     <ClInclude Include="ListaPartidos.h" />
     <ClInclude Include="ListaPartidoxEquipo.h" />
     <ClInclude Include="NodoEquipo.h" />
+    <ClInclude Include="NodoEquipoXGrupo.h" />
     <ClInclude Include="NodoEquipoxPais.h" />
     <ClInclude Include="NodoGrupos.h" />
     <ClInclude Include="NodoJugador.h" />
@@ -110,9 +114,11 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CargaInicial.cpp" />
     <ClCompile Include="Equipo.cpp" />
     <ClCompile Include="Jugador.cpp" />
     <ClCompile Include="ListaEquipos.cpp" />
+    <ClCompile Include="ListaEquipoXGrupo.cpp" />
     <ClCompile Include="ListaEquipoxPais.cpp" />
     <ClCompile Include="ListaGrupos.cpp" />
     <ClCompile Include="ListaJugadores.cpp" />
@@ -121,6 +127,7 @@
     <ClCompile Include="ListaPartidos.cpp" />
     <ClCompile Include="ListaPartidoxEquipo.cpp" />
     <ClCompile Include="NodoEquipo.cpp" />
+    <ClCompile Include="NodoEquipoXGrupo.cpp" />
     <ClCompile Include="NodoEquipoxPais.cpp" />
     <ClCompile Include="NodoEquipoxPartido.cpp" />
     <ClCompile Include="NodoGrupos.cpp" />
