@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PantallaPrincipal</class>
+ <widget class="QMainWindow" name="PantallaPrincipal">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>713</width>
+    <height>455</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>PantallaPrincipal</string>
+  </property>
+  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>713</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuGrupos">
+    <property name="title">
+     <string>Grupos</string>
+    </property>
+    <addaction name="actionGrupo_A"/>
+    <addaction name="actionGrupo_B"/>
+   </widget>
+   <widget class="QMenu" name="menuEquipos">
+    <property name="title">
+     <string>Equipos</string>
+    </property>
+    <addaction name="actionAlemania"/>
+    <addaction name="actionArgentina"/>
+    <addaction name="actionAustralia"/>
+    <addaction name="actionCosta_de_Marfil"/>
+    <addaction name="actionCosta_Rica"/>
+    <addaction name="actionEspa_a"/>
+    <addaction name="actionHolanda"/>
+    <addaction name="actionJap_n"/>
+   </widget>
+   <widget class="QMenu" name="menuJugadores">
+    <property name="title">
+     <string>Jugadores</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuPartidos">
+    <property name="title">
+     <string>Partidos</string>
+    </property>
+   </widget>
+   <addaction name="menuGrupos"/>
+   <addaction name="menuEquipos"/>
+   <addaction name="menuJugadores"/>
+   <addaction name="menuPartidos"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionGrupo_A">
+   <property name="text">
+    <string>Grupo A</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionGrupo_B">
+   <property name="text">
+    <string>Grupo B</string>
+   </property>
+  </action>
+  <action name="actionAlemania">
+   <property name="text">
+    <string>Alemania</string>
+   </property>
+  </action>
+  <action name="actionArgentina">
+   <property name="text">
+    <string>Argentina</string>
+   </property>
+  </action>
+  <action name="actionAustralia">
+   <property name="text">
+    <string>Australia</string>
+   </property>
+  </action>
+  <action name="actionCosta_de_Marfil">
+   <property name="text">
+    <string>Costa de Marfil</string>
+   </property>
+  </action>
+  <action name="actionCosta_Rica">
+   <property name="text">
+    <string>Costa Rica</string>
+   </property>
+  </action>
+  <action name="actionEspa_a">
+   <property name="text">
+    <string>España</string>
+   </property>
+  </action>
+  <action name="actionHolanda">
+   <property name="text">
+    <string>Holanda</string>
+   </property>
+  </action>
+  <action name="actionJap_n">
+   <property name="text">
+    <string>Japón</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
