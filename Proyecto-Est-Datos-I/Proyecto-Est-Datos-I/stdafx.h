@@ -10,12 +10,6 @@
 #include <stdio.h>
 #include <tchar.h>
 #include <iostream>
+#include <string> // Para poder usar strings.
 
 using namespace std;
-
-
-
-
-
-
-// TODO: reference additional headers your program requires here

@@ -1,5 +1,6 @@
 #pragma once
 #include "NodoGrupos.h"
+
 class ListaGrupos
 {
 private:
@@ -9,13 +10,13 @@ public:
 	ListaGrupos(void);
 	~ListaGrupos(void);
 
-	NodoGrupos *GetCab();
+	NodoGrupos * GetCab();
 	void SetCab(NodoGrupos *);
-	NodoGrupos *DirNodo(int);
+	NodoGrupos * DirNodo(int);
 
 	int GetTama();
 
-	int Agregar(char *,ListaEquipos*);
+	int Agregar(string, int, ListaEquipos *);
 	int Eliminar(int);
 	ListaGrupos *MostarLista();
 	ListaEquipos *MostrarGrupo(int);
