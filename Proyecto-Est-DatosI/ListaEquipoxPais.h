@@ -8,7 +8,7 @@ class ListaEquipoxPais
 {
 private:
 	NodoEquipoxPais* cabeza;
-	int tamaño;
+    int tamano;
 public:
 	ListaEquipoxPais(void);
 	~ListaEquipoxPais(void);
@@ -16,8 +16,8 @@ public:
 	NodoEquipoxPais* getCabeza();
 	void setCabeza(NodoEquipoxPais*);
 
-	int getTamaño();
-	void setTamaño(int);
+    int getTamano();
+    void setTamano(int);
 
 
 

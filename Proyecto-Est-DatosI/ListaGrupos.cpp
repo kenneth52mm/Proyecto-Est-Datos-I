@@ -102,9 +102,9 @@ ListaGrupos *ListaGrupos::MostarLista()
 	ListaGrupos *nueva=new ListaGrupos();
 	NodoGrupos *aux=GetCab();
 	do{
-		nueva->Agregar(aux->GetGrupo()),aux->GetEquipos());
+		nueva->Agregar(aux->GetGrupo(),aux->GetEquipos());
 	}while(aux!=GetCab());
-	return nueva
+	return nueva;
 }
 ListaEquipos *ListaGrupos::MostrarGrupo(int _id)
 {

@@ -53,7 +53,7 @@ NodoJugadorxEquipo* NodoJugadorxEquipo::getAnterior()
 }
 NodoJugadorxEquipo* NodoJugadorxEquipo::setAnterior(NodoJugadorxEquipo* _anterior)
 {
-	this->anterior= _anterior;
+	return	this->anterior= _anterior;
 }
 
 NodoEquipo* NodoJugadorxEquipo::getEnlaceEquipo()

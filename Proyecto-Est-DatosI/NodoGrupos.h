@@ -5,7 +5,7 @@ class NodoGrupos
 {
 private :
 	int id;
-	string grupo;
+	char *grupo;
 	ListaEquipos *equipos;
 	NodoGrupos *sgte;
 	NodoGrupos *ante;

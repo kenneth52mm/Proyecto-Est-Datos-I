@@ -18,8 +18,6 @@ public:
 	Jugador(void);
 	~Jugador(void);
 
-	Jugador(int, string, string, string, int, int, int, int, string, string);
-
 	int GetId();
 	void SetId(int);
 

@@ -1,22 +1,20 @@
 #pragma once
-#include "stdafx.h"
-
 class Equipo
 {
 private :
 	int id;
-	string entrenador;
+	char *entrenador;
 public:
 	Equipo(void);
 	~Equipo(void);
 
-	Equipo(int,string);
+	Equipo(int,char*);
 
 	int GetId();
 	void SetId(int);
 
-	string GetEntrenador();
-	void SetEntrenador(string);
+	char *GetEntrenador();
+	void SetEntrenador(char *);
 
 };
 

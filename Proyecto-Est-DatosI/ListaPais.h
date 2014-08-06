@@ -8,9 +8,7 @@ private :
 public:
 	ListaPais(void);
 	~ListaPais(void);
-
 	NodoPais *DirNodo(int);
-
 	NodoPais *GetCab();
 	void SetCab(NodoPais *);
 
@@ -18,7 +16,7 @@ public:
 
 	int Agregar(Pais *pais);
 	int Eliminar(int);
-	ListaPais * MostarLista();
-	Pais * MostarPais(int);
+	ListaPais *MostarLista();
+	Pais *MostarPais(int);
 };
 

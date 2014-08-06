@@ -7,8 +7,8 @@
 class ListaJugadorxEquipo
 {
 private:
-	int tamano;
-	NodoJugadorxEquipo* cabeza
+    int tamano;
+	NodoJugadorxEquipo* cabeza;
 public:
 	ListaJugadorxEquipo(void);
 	~ListaJugadorxEquipo(void);
@@ -16,8 +16,8 @@ public:
 	NodoJugadorxEquipo* getCabeza();
 	void setCabeza(NodoJugadorxEquipo*);
 
-	int getTamano();
-	void setTamano(int);
+    int getTamano();
+    void setTamano(int);
 
 	int agregar(int, int, ListaJugadores*, ListaEquipos* );
 	int eliminar(int , int);

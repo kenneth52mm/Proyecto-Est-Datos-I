@@ -7,12 +7,12 @@ private:
 	NodoPartido * cabeza;
 	int tamano;
 
-	NodoPartido * DirNodo(int);
+	
 
 public:
 	ListaPartidos(void);
 	~ListaPartidos(void);
-
+	NodoPartido * DirNodo(int);
 	NodoPartido * GetCabeza();
 	void SetCabeza(NodoPartido *);
 

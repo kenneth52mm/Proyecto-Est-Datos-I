@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 #include "NodoPartidoxEquipo.h"
 #include "stdafx.h"
 
@@ -6,7 +6,7 @@ class ListaPartidoxEquipo
 {
 private:
 	NodoPartidoxEquipo* cabeza;
-	int tama�o;
+    int tamano;
 public:
 	ListaPartidoxEquipo(void);
 	~ListaPartidoxEquipo(void);
@@ -14,8 +14,8 @@ public:
 	NodoPartidoxEquipo*getCabeza();
 	void setCabeza(NodoPartidoxEquipo*);
 
-    int getTama�tamano();
-    void setTama�tamano(int);
+    int getTamano();
+    void setTamano(int);
 
 
 	int agregar(int, int, int, ListaEquipos*, ListaEquipos*, ListaPartidos*);

@@ -4,7 +4,7 @@
 ListaPartidoxEquipo::ListaPartidoxEquipo(void)
 {
 	this->setCabeza(NULL);
-	this->setTamano(0);
+    this->setTamano(0);
 }
 
 
@@ -23,11 +23,11 @@ void ListaPartidoxEquipo::setCabeza(NodoPartidoxEquipo*_cabeza)
 
 int ListaPartidoxEquipo::getTamano()
 {
-	return this->tamano;
+    return this->tamano;
 }
 void ListaPartidoxEquipo::setTamano(int _tamano)
 {
-	this->tamano = _tamano;
+    this->tamano = _tamano;
 }
 
 
@@ -70,7 +70,7 @@ int ListaPartidoxEquipo::eliminar(int _idPartido, int _idEquipo1, int _idEquipo2
 }
 void ListaPartidoxEquipo::mostrarLista()
 {
-	if (this->getCabeza== NULL)
+	if (this->getCabeza()== NULL)
 		cout<< "No hay elementos en la lista"<<endl;
 	else{
 		NodoPartidoxEquipo* aux = this->getCabeza();
@@ -78,7 +78,7 @@ void ListaPartidoxEquipo::mostrarLista()
 		{
 			cout<< aux->getEquipo1()->GetEquipo()->GetId()<<", " << aux->getEquipo1()->GetEquipo()->GetEntrenador()<<endl;
 			cout<< aux->getEquipo2()->GetEquipo()->GetId()<<", " << aux->getEquipo2()->GetEquipo()->GetEntrenador()<<endl;
-			cout<< aux->getEnlacePartido()->GetPartido()->GetEstadio()<< endl<<aux->getEnlacePartido()->GetPartido()->GetId<<endl<<
+			cout<< aux->getEnlacePartido()->GetPartido()->GetEstadio()<< endl<<aux->getEnlacePartido()->GetPartido()->GetId()<<endl<<
 				aux->getEnlacePartido()->GetPartido()->GetFecha()<< endl<< aux->getEnlacePartido()->GetPartido()->GetHora()<<endl<<
 				aux->getEnlacePartido()->GetPartido()->GetUbicacion()<< endl <<aux->getEnlacePartido()->GetPartido()->GetPuntuacion()<<endl;
 			aux= aux->getSguiente();
@@ -87,7 +87,7 @@ void ListaPartidoxEquipo::mostrarLista()
 }
 void ListaPartidoxEquipo::mostrarEnlace(int _idPartido, int _idEquipo1, int _idEquipo2)
 {
-	if (this->getCabeza== NULL)
+	if (this->getCabeza()== NULL)
 		cout<< "No hay elementos en la lista"<<endl;
 	else{
 		NodoPartidoxEquipo* aux =this->getCabeza();
@@ -98,7 +98,7 @@ void ListaPartidoxEquipo::mostrarEnlace(int _idPartido, int _idEquipo1, int _idE
 			{
 				cout<< aux->getEquipo1()->GetEquipo()->GetId()<<", " << aux->getEquipo1()->GetEquipo()->GetEntrenador()<<endl;
 				cout<< aux->getEquipo2()->GetEquipo()->GetId()<<", " << aux->getEquipo2()->GetEquipo()->GetEntrenador()<<endl;
-				cout<< aux->getEnlacePartido()->GetPartido()->GetEstadio()<< endl<<aux->getEnlacePartido()->GetPartido()->GetId<<endl<<
+				cout<< aux->getEnlacePartido()->GetPartido()->GetEstadio()<< endl<<aux->getEnlacePartido()->GetPartido()->GetId()<<endl<<
 					aux->getEnlacePartido()->GetPartido()->GetFecha()<< endl<< aux->getEnlacePartido()->GetPartido()->GetHora()<<endl<<
 					aux->getEnlacePartido()->GetPartido()->GetUbicacion()<< endl <<aux->getEnlacePartido()->GetPartido()->GetPuntuacion()<<endl;
 			}else

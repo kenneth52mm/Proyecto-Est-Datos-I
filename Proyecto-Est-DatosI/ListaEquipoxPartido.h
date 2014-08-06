@@ -4,7 +4,7 @@ class ListaEquipoxPartido
 {
 private:
 	NodoEquipoxPartido* cabeza;
-	int tamano;
+    int tamano;
 public:
 	ListaEquipoxPartido(void);
 	~ListaEquipoxPartido(void);
@@ -12,8 +12,8 @@ public:
 	NodoEquipoxPartido* getCabeza();
 	void setCabeza(NodoEquipoxPartido*);
 
-	int getTamano();
-	void setTamano(int);
+    int getTamano();
+    void setTamano(int);
 
 	int agregar(NodoEquipo*, NodoPais*);
 	int eliminar(int, int);

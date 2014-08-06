@@ -1,26 +1,20 @@
 #pragma once
-#include "stdafx.h"
-
 class Pais
 {
 
 private:
 	int id;
-	string nombre;
-	string abreviatura;
+	char *nombre;
 public:
 	Pais(void);
 	~Pais(void);
 
-	Pais(int, string, string);
+	Pais(int,char*);
 
 	int GetId();
 	void SetId(int);
 
-	string GetNombre();
-	void SetNombre(string);
-
-	string GetAbreviatura();
-	void SetAbreviatura(string);
+	char *GetNombre();
+	void SetNombre(char *);
 };
 

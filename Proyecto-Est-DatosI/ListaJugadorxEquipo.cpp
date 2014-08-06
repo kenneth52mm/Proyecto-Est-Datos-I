@@ -4,7 +4,7 @@
 ListaJugadorxEquipo::ListaJugadorxEquipo(void)
 {
 	this->setCabeza(NULL);
-	this->setTamaño(0);
+    this->setTamano(0);
 }
 
 
@@ -21,13 +21,13 @@ void ListaJugadorxEquipo::setCabeza(NodoJugadorxEquipo* _cabeza)
 	this->cabeza= _cabeza;
 }
 
-int ListaJugadorxEquipo::getTamaño()
+int ListaJugadorxEquipo::getTamano()
 {
-	return this->tamaño;
+    return this->tamano;
 }
-void ListaJugadorxEquipo::setTamaño(int _tamaño)
+void ListaJugadorxEquipo::setTamano(int _tamano)
 {
-	this->tamaño= _tamaño;
+    this->tamano= _tamano;
 }
 
 int ListaJugadorxEquipo::agregar(int _idJugador, int _idEquipo, ListaJugadores* _jugador, ListaEquipos* _equipo)
@@ -71,7 +71,7 @@ int ListaJugadorxEquipo::eliminar(int _idJugador, int _idEquipo)
 }
 void ListaJugadorxEquipo::mostrarLista()
 {
-	if (this->getCabeza== NULL)
+	if (this->getCabeza()== NULL)
 		cout<< "No hay elementos en la lista"<<endl;
 	else{
 		NodoJugadorxEquipo* aux = this->getCabeza();
@@ -89,7 +89,7 @@ void ListaJugadorxEquipo::mostrarLista()
 }
 void ListaJugadorxEquipo::mostrarEnlace(int _idEquipo, int _idJugador)
 {
-	if (this->getCabeza== NULL)
+	if (this->getCabeza()== NULL)
 		cout<< "No hay elementos en la lista"<<endl;
 	else{
 		NodoJugadorxEquipo* aux =this->getCabeza();

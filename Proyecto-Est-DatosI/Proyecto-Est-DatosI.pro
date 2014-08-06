@@ -10,7 +10,7 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = Proyecto-Est-DatosI
 TEMPLATE = app
-INCLUDEPATH += C:\Users\Kenneth\Documents\boost_1_55_0\boost_1_55_0\boost\algorithm
+INCLUDEPATH += C:\Users\Kenneth\Documents\boost_1_55_0\boost_1_55_0\
 LIBS +=C:\Users\Kenneth\Documents\boost_1_55_0\boost_1_55_0\boost\algorithm\string.hpp
 
 

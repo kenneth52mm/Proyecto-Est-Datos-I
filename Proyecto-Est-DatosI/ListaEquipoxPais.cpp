@@ -3,7 +3,7 @@
 
 ListaEquipoxPais::ListaEquipoxPais(void)
 {
-	this->setTamaño(0);
+    this->setTamano(0);
 	this->setCabeza(NULL);
 }
 
@@ -21,13 +21,13 @@ void ListaEquipoxPais::setCabeza(NodoEquipoxPais* _cabeza)
 	this->cabeza = _cabeza;
 }
 
-int ListaEquipoxPais::getTamaño()
+int ListaEquipoxPais::getTamano()
 {
-	return this->tamaño;
+    return this->tamano;
 }
-void ListaEquipoxPais::setTamaño(int _tamaño)
+void ListaEquipoxPais::setTamno(int _tamano)
 {
-	this->tamaño= _tamaño;
+    this->tamano= _tamano;
 }
 
 int ListaEquipoxPais::agregar(int _idEquipo, int _idPais, ListaEquipos*_equipo, ListaPais* _pais)
