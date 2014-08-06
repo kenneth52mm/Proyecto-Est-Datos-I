@@ -17,29 +17,29 @@ void Jugador::SetId(int id)
 	this->id = id;
 }
 
-char * Jugador::GetPosicion()
+string Jugador::GetPosicion()
 {
 	return this->posicion;
 }
-void Jugador::SetPosicion(char * posicion)
+void Jugador::SetPosicion(string posicion)
 {
 	this->posicion = posicion;
 }
 
-char * Jugador::GetPrimerPartido()
+string Jugador::GetPrimerPartido()
 {
 	return this->primer_partido;
 }
-void Jugador::SetPrimerPartido(char * primer_partido)
+void Jugador::SetPrimerPartido(string primer_partido)
 {
 	this->primer_partido = primer_partido;
 }
 
-char * Jugador::GetNombre()
+string Jugador::GetNombre()
 {
 	return this->nombre;
 }
-void Jugador::SetNombre(char * nombre)
+void Jugador::SetNombre(string nombre)
 {
 	this->nombre = nombre;
 }
@@ -80,20 +80,20 @@ void Jugador::SetAltura(int altura)
 	this->altura = altura;
 }
 
-char * Jugador::GetFechaNac()
+string Jugador::GetFechaNac()
 {
 	return this->fecha_nac;
 }
-void Jugador::SetFechaNac(char * fecha_nac)
+void Jugador::SetFechaNac(string fecha_nac)
 {
 	this->fecha_nac = fecha_nac;
 }
 
-char * Jugador::GetClub()
+string Jugador::GetClub()
 {
 	return this->club;
 }
-void Jugador::SetClub(char * club)
+void Jugador::SetClub(string club)
 {
 	this->club = club;
 }

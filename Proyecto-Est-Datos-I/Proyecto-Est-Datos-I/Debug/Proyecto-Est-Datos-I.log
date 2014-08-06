@@ -1,69 +1,57 @@
-﻿Build started 7/30/2014 12:05:07 PM.
-     1>Project "C:\Users\Daniel Aguilar\Documents\GitHub\Proyecto-Est-Datos-I\Proyecto-Est-Datos-I\Proyecto-Est-Datos-I\Proyecto-Est-Datos-I.vcxproj" on node 2 (Build target(s)).
+﻿Compilación iniciada a las 04/08/2014 11:18:01 a.m..
+     1>Proyecto "C:\Users\Mayron  Corrales\Documents\GitHub\Proyecto-Est-Datos-I\Proyecto-Est-Datos-I\Proyecto-Est-Datos-I\Proyecto-Est-Datos-I.vcxproj" en el nodo 2 (Build destinos).
      1>ClCompile:
-         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Equipo.cpp Jugador.cpp ListaEquipos.cpp ListaEquipoxPais.cpp ListaGrupos.cpp ListaJugadores.cpp ListaJugadorxEquipo.cpp ListaPais.cpp ListaPartidos.cpp ListaPartidoxEquipo.cpp NodoEquipo.cpp NodoEquipoxPais.cpp NodoEquipoxPartido.cpp NodoGrupos.cpp NodoJugador.cpp NodoJugadorxEquipo.cpp NodoPais.cpp NodoPartido.cpp NodoPartidoxEquipo.cpp Pais.cpp Partido.cpp "Proyecto-Est-Datos-I.cpp" stdafx.cpp
-         stdafx.cpp
-         Proyecto-Est-Datos-I.cpp
-         Partido.cpp
-         Pais.cpp
-         NodoPartidoxEquipo.cpp
-         NodoPartido.cpp
-         NodoPais.cpp
-         NodoJugadorxEquipo.cpp
-         NodoJugador.cpp
-         NodoGrupos.cpp
-         NodoEquipoxPartido.cpp
-     1>NodoEquipoxPartido.cpp(1): fatal error C1083: Cannot open include file: 'NodoEquipoxPartido.h': No such file or directory
-         NodoEquipoxPais.cpp
-         NodoEquipo.cpp
-         ListaPartidoxEquipo.cpp
-     1>ListaPartidoxEquipo.cpp(38): error C2248: 'ListaEquipos::DirNodo' : cannot access private member declared in class 'ListaEquipos'
-                 c:\users\daniel aguilar\documents\github\proyecto-est-datos-i\proyecto-est-datos-i\proyecto-est-datos-i\ListaEquipos.h(8) : see declaration of 'ListaEquipos::DirNodo'
-                 c:\users\daniel aguilar\documents\github\proyecto-est-datos-i\proyecto-est-datos-i\proyecto-est-datos-i\ListaEquipos.h(4) : see declaration of 'ListaEquipos'
-     1>ListaPartidoxEquipo.cpp(39): error C2248: 'ListaEquipos::DirNodo' : cannot access private member declared in class 'ListaEquipos'
-                 c:\users\daniel aguilar\documents\github\proyecto-est-datos-i\proyecto-est-datos-i\proyecto-est-datos-i\ListaEquipos.h(8) : see declaration of 'ListaEquipos::DirNodo'
-                 c:\users\daniel aguilar\documents\github\proyecto-est-datos-i\proyecto-est-datos-i\proyecto-est-datos-i\ListaEquipos.h(4) : see declaration of 'ListaEquipos'
-     1>ListaPartidoxEquipo.cpp(40): error C2248: 'ListaPartidos::DirNodo' : cannot access private member declared in class 'ListaPartidos'
-                 c:\users\daniel aguilar\documents\github\proyecto-est-datos-i\proyecto-est-datos-i\proyecto-est-datos-i\ListaPartidos.h(10) : see declaration of 'ListaPartidos::DirNodo'
-                 c:\users\daniel aguilar\documents\github\proyecto-est-datos-i\proyecto-est-datos-i\proyecto-est-datos-i\ListaPartidos.h(5) : see declaration of 'ListaPartidos'
-     1>ListaPartidoxEquipo.cpp(73): error C3867: 'ListaPartidoxEquipo::getCabeza': function call missing argument list; use '&ListaPartidoxEquipo::getCabeza' to create a pointer to member
-     1>ListaPartidoxEquipo.cpp(81): error C3867: 'Partido::GetId': function call missing argument list; use '&Partido::GetId' to create a pointer to member
-     1>ListaPartidoxEquipo.cpp(90): error C3867: 'ListaPartidoxEquipo::getCabeza': function call missing argument list; use '&ListaPartidoxEquipo::getCabeza' to create a pointer to member
-     1>ListaPartidoxEquipo.cpp(101): error C3867: 'Partido::GetId': function call missing argument list; use '&Partido::GetId' to create a pointer to member
-         ListaPartidos.cpp
-         ListaPais.cpp
-         ListaJugadorxEquipo.cpp
-     1>ListaJugadorxEquipo.cpp(37): error C2248: 'ListaEquipos::DirNodo' : cannot access private member declared in class 'ListaEquipos'
-                 c:\users\daniel aguilar\documents\github\proyecto-est-datos-i\proyecto-est-datos-i\proyecto-est-datos-i\ListaEquipos.h(8) : see declaration of 'ListaEquipos::DirNodo'
-                 c:\users\daniel aguilar\documents\github\proyecto-est-datos-i\proyecto-est-datos-i\proyecto-est-datos-i\ListaEquipos.h(4) : see declaration of 'ListaEquipos'
-     1>ListaJugadorxEquipo.cpp(38): error C2248: 'ListaJugadores::DirNodo' : cannot access private member declared in class 'ListaJugadores'
-                 c:\users\daniel aguilar\documents\github\proyecto-est-datos-i\proyecto-est-datos-i\proyecto-est-datos-i\ListaJugadores.h(10) : see declaration of 'ListaJugadores::DirNodo'
-                 c:\users\daniel aguilar\documents\github\proyecto-est-datos-i\proyecto-est-datos-i\proyecto-est-datos-i\ListaJugadores.h(5) : see declaration of 'ListaJugadores'
-     1>ListaJugadorxEquipo.cpp(74): error C3867: 'ListaJugadorxEquipo::getCabeza': function call missing argument list; use '&ListaJugadorxEquipo::getCabeza' to create a pointer to member
-     1>ListaJugadorxEquipo.cpp(92): error C3867: 'ListaJugadorxEquipo::getCabeza': function call missing argument list; use '&ListaJugadorxEquipo::getCabeza' to create a pointer to member
-         ListaJugadores.cpp
-         ListaGrupos.cpp
-     1>ListaGrupos.cpp(105): error C2660: 'ListaGrupos::Agregar' : function does not take 1 arguments
-     1>ListaGrupos.cpp(105): error C2059: syntax error : ')'
-     1>ListaGrupos.cpp(108): error C2143: syntax error : missing ';' before '}'
-         ListaEquipoxPais.cpp
-     1>ListaEquipoxPais.cpp(37): error C2248: 'ListaEquipos::DirNodo' : cannot access private member declared in class 'ListaEquipos'
-                 c:\users\daniel aguilar\documents\github\proyecto-est-datos-i\proyecto-est-datos-i\proyecto-est-datos-i\ListaEquipos.h(8) : see declaration of 'ListaEquipos::DirNodo'
-                 c:\users\daniel aguilar\documents\github\proyecto-est-datos-i\proyecto-est-datos-i\proyecto-est-datos-i\ListaEquipos.h(4) : see declaration of 'ListaEquipos'
-     1>ListaEquipoxPais.cpp(38): error C2248: 'ListaPais::DirNodo' : cannot access private member declared in class 'ListaPais'
-                 c:\users\daniel aguilar\documents\github\proyecto-est-datos-i\proyecto-est-datos-i\proyecto-est-datos-i\ListaPais.h(8) : see declaration of 'ListaPais::DirNodo'
-                 c:\users\daniel aguilar\documents\github\proyecto-est-datos-i\proyecto-est-datos-i\proyecto-est-datos-i\ListaPais.h(4) : see declaration of 'ListaPais'
-         Generating Code...
-     1>c:\users\daniel aguilar\documents\github\proyecto-est-datos-i\proyecto-est-datos-i\proyecto-est-datos-i\listajugadores.cpp(118): warning C4715: 'ListaJugadores::Agregar' : not all control paths return a value
-     1>c:\users\daniel aguilar\documents\github\proyecto-est-datos-i\proyecto-est-datos-i\proyecto-est-datos-i\listapartidos.cpp(118): warning C4715: 'ListaPartidos::Agregar' : not all control paths return a value
-     1>c:\users\daniel aguilar\documents\github\proyecto-est-datos-i\proyecto-est-datos-i\proyecto-est-datos-i\nodojugadorxequipo.cpp(57): error C4716: 'NodoJugadorxEquipo::setAnterior' : must return a value
-         Compiling...
-         ListaEquipos.cpp
-         Jugador.cpp
-         Equipo.cpp
-         Generating Code...
-     1>Done Building Project "C:\Users\Daniel Aguilar\Documents\GitHub\Proyecto-Est-Datos-I\Proyecto-Est-Datos-I\Proyecto-Est-Datos-I\Proyecto-Est-Datos-I.vcxproj" (Build target(s)) -- FAILED.
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /AI"C:\Program Files (x86)\Windows Kits\8.0\References\CommonConfiguration\Neutral" /Zi /clr /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib DetalleJugador.cpp Jugadores.cpp MyForm.cpp PantallaPrincipal.cpp VentanaEquipos.cpp
+         DetalleJugador.cpp
+     1>c:\users\mayron  corrales\documents\github\proyecto-est-datos-i\proyecto-est-datos-i\proyecto-est-datos-i\DetalleJugador.h(229): error C2664: 'System::Windows::Forms::DataGridViewCell::Value::set' : no se puede convertir el parámetro 1 de 'char *' a 'System::Object ^'
+                 No hay un operador de conversión definida por el usuario disponible, o
+                 No se puede convertir un tipo nativo a un tipo administrado
+     1>c:\users\mayron  corrales\documents\github\proyecto-est-datos-i\proyecto-est-datos-i\proyecto-est-datos-i\DetalleJugador.h(230): error C2664: 'System::Windows::Forms::DataGridViewCell::Value::set' : no se puede convertir el parámetro 1 de 'char *' a 'System::Object ^'
+                 No hay un operador de conversión definida por el usuario disponible, o
+                 No se puede convertir un tipo nativo a un tipo administrado
+     1>c:\users\mayron  corrales\documents\github\proyecto-est-datos-i\proyecto-est-datos-i\proyecto-est-datos-i\DetalleJugador.h(234): error C2664: 'System::Windows::Forms::DataGridViewCell::Value::set' : no se puede convertir el parámetro 1 de 'char *' a 'System::Object ^'
+                 No hay un operador de conversión definida por el usuario disponible, o
+                 No se puede convertir un tipo nativo a un tipo administrado
+     1>c:\users\mayron  corrales\documents\github\proyecto-est-datos-i\proyecto-est-datos-i\proyecto-est-datos-i\DetalleJugador.h(235): error C2664: 'System::Windows::Forms::DataGridViewCell::Value::set' : no se puede convertir el parámetro 1 de 'char *' a 'System::Object ^'
+                 No hay un operador de conversión definida por el usuario disponible, o
+                 No se puede convertir un tipo nativo a un tipo administrado
+     1>c:\users\mayron  corrales\documents\github\proyecto-est-datos-i\proyecto-est-datos-i\proyecto-est-datos-i\DetalleJugador.h(237): error C2664: 'System::Windows::Forms::DataGridViewCell::Value::set' : no se puede convertir el parámetro 1 de 'char *' a 'System::Object ^'
+                 No hay un operador de conversión definida por el usuario disponible, o
+                 No se puede convertir un tipo nativo a un tipo administrado
+     1>c:\users\mayron  corrales\documents\github\proyecto-est-datos-i\proyecto-est-datos-i\proyecto-est-datos-i\DetalleJugador.h(238): error C2664: 'System::Windows::Forms::DataGridViewCell::Value::set' : no se puede convertir el parámetro 1 de 'char *' a 'System::Object ^'
+                 No hay un operador de conversión definida por el usuario disponible, o
+                 No se puede convertir un tipo nativo a un tipo administrado
+         Jugadores.cpp
+     1>c:\users\mayron  corrales\documents\github\proyecto-est-datos-i\proyecto-est-datos-i\proyecto-est-datos-i\DetalleJugador.h(229): error C2664: 'System::Windows::Forms::DataGridViewCell::Value::set' : no se puede convertir el parámetro 1 de 'char *' a 'System::Object ^'
+                 No hay un operador de conversión definida por el usuario disponible, o
+                 No se puede convertir un tipo nativo a un tipo administrado
+     1>c:\users\mayron  corrales\documents\github\proyecto-est-datos-i\proyecto-est-datos-i\proyecto-est-datos-i\DetalleJugador.h(230): error C2664: 'System::Windows::Forms::DataGridViewCell::Value::set' : no se puede convertir el parámetro 1 de 'char *' a 'System::Object ^'
+                 No hay un operador de conversión definida por el usuario disponible, o
+                 No se puede convertir un tipo nativo a un tipo administrado
+     1>c:\users\mayron  corrales\documents\github\proyecto-est-datos-i\proyecto-est-datos-i\proyecto-est-datos-i\DetalleJugador.h(234): error C2664: 'System::Windows::Forms::DataGridViewCell::Value::set' : no se puede convertir el parámetro 1 de 'char *' a 'System::Object ^'
+                 No hay un operador de conversión definida por el usuario disponible, o
+                 No se puede convertir un tipo nativo a un tipo administrado
+     1>c:\users\mayron  corrales\documents\github\proyecto-est-datos-i\proyecto-est-datos-i\proyecto-est-datos-i\DetalleJugador.h(235): error C2664: 'System::Windows::Forms::DataGridViewCell::Value::set' : no se puede convertir el parámetro 1 de 'char *' a 'System::Object ^'
+                 No hay un operador de conversión definida por el usuario disponible, o
+                 No se puede convertir un tipo nativo a un tipo administrado
+     1>c:\users\mayron  corrales\documents\github\proyecto-est-datos-i\proyecto-est-datos-i\proyecto-est-datos-i\DetalleJugador.h(237): error C2664: 'System::Windows::Forms::DataGridViewCell::Value::set' : no se puede convertir el parámetro 1 de 'char *' a 'System::Object ^'
+                 No hay un operador de conversión definida por el usuario disponible, o
+                 No se puede convertir un tipo nativo a un tipo administrado
+     1>c:\users\mayron  corrales\documents\github\proyecto-est-datos-i\proyecto-est-datos-i\proyecto-est-datos-i\DetalleJugador.h(238): error C2664: 'System::Windows::Forms::DataGridViewCell::Value::set' : no se puede convertir el parámetro 1 de 'char *' a 'System::Object ^'
+                 No hay un operador de conversión definida por el usuario disponible, o
+                 No se puede convertir un tipo nativo a un tipo administrado
+         MyForm.cpp
+     1>MyForm.cpp(1): fatal error C1083: No se puede abrir el archivo incluir: 'MyForm.h': No such file or directory
+         PantallaPrincipal.cpp
+     1>c:\users\mayron  corrales\documents\github\proyecto-est-datos-i\proyecto-est-datos-i\proyecto-est-datos-i\PantallaPrincipal.h(163): error C2039: 'jugadoresToolStripMenuItem_Click' : no es un miembro de 'ProyectoEstDatosI::PantallaPrincipal'
+                 c:\users\mayron  corrales\documents\github\proyecto-est-datos-i\proyecto-est-datos-i\proyecto-est-datos-i\PantallaPrincipal.h(15) : vea la declaración de 'ProyectoEstDatosI::PantallaPrincipal'
+     1>c:\users\mayron  corrales\documents\github\proyecto-est-datos-i\proyecto-est-datos-i\proyecto-est-datos-i\PantallaPrincipal.h(163): error C2065: 'jugadoresToolStripMenuItem_Click' : identificador no declarado
+     1>c:\users\mayron  corrales\documents\github\proyecto-est-datos-i\proyecto-est-datos-i\proyecto-est-datos-i\PantallaPrincipal.h(163): error C3350: 'System::EventHandler' : un constructor de delegado espera 2 argumentos
+         VentanaEquipos.cpp
+     1>c:\users\mayron  corrales\documents\github\proyecto-est-datos-i\proyecto-est-datos-i\proyecto-est-datos-i\VentanaEquipos.h(2): fatal error C1083: No se puede abrir el archivo incluir: 'MyForm.h': No such file or directory
+         Generando código...
+     1>Compilación del proyecto terminada "C:\Users\Mayron  Corrales\Documents\GitHub\Proyecto-Est-Datos-I\Proyecto-Est-Datos-I\Proyecto-Est-Datos-I\Proyecto-Est-Datos-I.vcxproj" (Build destinos) -- ERROR.
 
-Build FAILED.
+ERROR al compilar.
 
-Time Elapsed 00:00:22.43
+Tiempo transcurrido 00:00:02.61

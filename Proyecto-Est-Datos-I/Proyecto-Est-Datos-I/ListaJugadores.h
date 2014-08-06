@@ -7,11 +7,13 @@ private:
 	NodoJugador * cabeza;
 	int tamano;
 
-	NodoJugador * DirNodo(int);
+	
 
 public:
 	ListaJugadores(void);
 	~ListaJugadores(void);
+
+	NodoJugador * DirNodo(int);
 
 	NodoJugador * GetCabeza();
 	void SetCabeza(NodoJugador *);

@@ -5,10 +5,12 @@ class ListaEquipos
 private:
 	NodoEquipo *cab;
 	int tamano;
-	NodoEquipo *DirNodo(int);
+	
 public:
 	ListaEquipos(void);
 	~ListaEquipos(void);
+
+	NodoEquipo *DirNodo(int);
 
 	NodoEquipo *GetCab();
 	void SetCab(NodoEquipo *);

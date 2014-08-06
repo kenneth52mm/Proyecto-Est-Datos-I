@@ -68,9 +68,9 @@ namespace ProyectoEstDatosI {
 	private: System::Windows::Forms::Label^  lblTitulo;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^  idEquipo;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^  nombreEquipo;
-	private: System::Windows::Forms::DataGridView^  dtEquipos;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  idEquipos;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  entrenador;
+
+
+
 	private: System::Windows::Forms::DataGridView^  dtJugadores;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^  nombre;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^  fecha_nac;
@@ -106,30 +106,27 @@ namespace ProyectoEstDatosI {
 			this->grupoBToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->equiposToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->alemaniaToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->jugadoresToolStripMenuItem2 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->argentinaToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->jugadoresToolStripMenuItem3 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->austriaToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->jugadorToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->costaDeMarfilToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->jugadoresToolStripMenuItem4 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->costaRicaToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->jugadoresToolStripMenuItem5 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->espanaToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->jugadoresToolStripMenuItem6 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->holandaToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->jugadoresToolStripMenuItem7 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->japonToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->jugadoresToolStripMenuItem8 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->jugadoresToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->partidosToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->jugadoresToolStripMenuItem2 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->jugadoresToolStripMenuItem3 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->jugadorToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->jugadoresToolStripMenuItem4 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->jugadoresToolStripMenuItem5 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->jugadoresToolStripMenuItem6 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->jugadoresToolStripMenuItem7 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->jugadoresToolStripMenuItem8 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->dtGrupos = (gcnew System::Windows::Forms::DataGridView());
-			this->lblTitulo = (gcnew System::Windows::Forms::Label());
 			this->idEquipo = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->nombreEquipo = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->dtEquipos = (gcnew System::Windows::Forms::DataGridView());
-			this->idEquipos = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->entrenador = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->lblTitulo = (gcnew System::Windows::Forms::Label());
 			this->dtJugadores = (gcnew System::Windows::Forms::DataGridView());
 			this->nombre = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->fecha_nac = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
@@ -143,7 +140,6 @@ namespace ProyectoEstDatosI {
 			this->club = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->menu_principal->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dtGrupos))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dtEquipos))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dtJugadores))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -194,12 +190,24 @@ namespace ProyectoEstDatosI {
 			this->alemaniaToolStripMenuItem->Size = System::Drawing::Size(154, 22);
 			this->alemaniaToolStripMenuItem->Text = L"Alemania";
 			// 
+			// jugadoresToolStripMenuItem2
+			// 
+			this->jugadoresToolStripMenuItem2->Name = L"jugadoresToolStripMenuItem2";
+			this->jugadoresToolStripMenuItem2->Size = System::Drawing::Size(127, 22);
+			this->jugadoresToolStripMenuItem2->Text = L"Jugadores";
+			// 
 			// argentinaToolStripMenuItem
 			// 
 			this->argentinaToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) {this->jugadoresToolStripMenuItem3});
 			this->argentinaToolStripMenuItem->Name = L"argentinaToolStripMenuItem";
 			this->argentinaToolStripMenuItem->Size = System::Drawing::Size(154, 22);
 			this->argentinaToolStripMenuItem->Text = L"Argentina";
+			// 
+			// jugadoresToolStripMenuItem3
+			// 
+			this->jugadoresToolStripMenuItem3->Name = L"jugadoresToolStripMenuItem3";
+			this->jugadoresToolStripMenuItem3->Size = System::Drawing::Size(127, 22);
+			this->jugadoresToolStripMenuItem3->Text = L"Jugadores";
 			// 
 			// austriaToolStripMenuItem
 			// 
@@ -208,12 +216,24 @@ namespace ProyectoEstDatosI {
 			this->austriaToolStripMenuItem->Size = System::Drawing::Size(154, 22);
 			this->austriaToolStripMenuItem->Text = L"Australia";
 			// 
+			// jugadorToolStripMenuItem
+			// 
+			this->jugadorToolStripMenuItem->Name = L"jugadorToolStripMenuItem";
+			this->jugadorToolStripMenuItem->Size = System::Drawing::Size(127, 22);
+			this->jugadorToolStripMenuItem->Text = L"Jugadores";
+			// 
 			// costaDeMarfilToolStripMenuItem
 			// 
 			this->costaDeMarfilToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) {this->jugadoresToolStripMenuItem4});
 			this->costaDeMarfilToolStripMenuItem->Name = L"costaDeMarfilToolStripMenuItem";
 			this->costaDeMarfilToolStripMenuItem->Size = System::Drawing::Size(154, 22);
 			this->costaDeMarfilToolStripMenuItem->Text = L"Costa de Marfil";
+			// 
+			// jugadoresToolStripMenuItem4
+			// 
+			this->jugadoresToolStripMenuItem4->Name = L"jugadoresToolStripMenuItem4";
+			this->jugadoresToolStripMenuItem4->Size = System::Drawing::Size(127, 22);
+			this->jugadoresToolStripMenuItem4->Text = L"Jugadores";
 			// 
 			// costaRicaToolStripMenuItem
 			// 
@@ -222,12 +242,24 @@ namespace ProyectoEstDatosI {
 			this->costaRicaToolStripMenuItem->Size = System::Drawing::Size(154, 22);
 			this->costaRicaToolStripMenuItem->Text = L"Costa Rica";
 			// 
+			// jugadoresToolStripMenuItem5
+			// 
+			this->jugadoresToolStripMenuItem5->Name = L"jugadoresToolStripMenuItem5";
+			this->jugadoresToolStripMenuItem5->Size = System::Drawing::Size(127, 22);
+			this->jugadoresToolStripMenuItem5->Text = L"Jugadores";
+			// 
 			// espanaToolStripMenuItem
 			// 
 			this->espanaToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) {this->jugadoresToolStripMenuItem6});
 			this->espanaToolStripMenuItem->Name = L"espanaToolStripMenuItem";
 			this->espanaToolStripMenuItem->Size = System::Drawing::Size(154, 22);
 			this->espanaToolStripMenuItem->Text = L"Espana";
+			// 
+			// jugadoresToolStripMenuItem6
+			// 
+			this->jugadoresToolStripMenuItem6->Name = L"jugadoresToolStripMenuItem6";
+			this->jugadoresToolStripMenuItem6->Size = System::Drawing::Size(127, 22);
+			this->jugadoresToolStripMenuItem6->Text = L"Jugadores";
 			// 
 			// holandaToolStripMenuItem
 			// 
@@ -236,12 +268,24 @@ namespace ProyectoEstDatosI {
 			this->holandaToolStripMenuItem->Size = System::Drawing::Size(154, 22);
 			this->holandaToolStripMenuItem->Text = L"Holanda";
 			// 
+			// jugadoresToolStripMenuItem7
+			// 
+			this->jugadoresToolStripMenuItem7->Name = L"jugadoresToolStripMenuItem7";
+			this->jugadoresToolStripMenuItem7->Size = System::Drawing::Size(127, 22);
+			this->jugadoresToolStripMenuItem7->Text = L"Jugadores";
+			// 
 			// japonToolStripMenuItem
 			// 
 			this->japonToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) {this->jugadoresToolStripMenuItem8});
 			this->japonToolStripMenuItem->Name = L"japonToolStripMenuItem";
 			this->japonToolStripMenuItem->Size = System::Drawing::Size(154, 22);
 			this->japonToolStripMenuItem->Text = L"Japon";
+			// 
+			// jugadoresToolStripMenuItem8
+			// 
+			this->jugadoresToolStripMenuItem8->Name = L"jugadoresToolStripMenuItem8";
+			this->jugadoresToolStripMenuItem8->Size = System::Drawing::Size(127, 22);
+			this->jugadoresToolStripMenuItem8->Text = L"Jugadores";
 			// 
 			// jugadoresToolStripMenuItem1
 			// 
@@ -254,54 +298,6 @@ namespace ProyectoEstDatosI {
 			this->partidosToolStripMenuItem->Name = L"partidosToolStripMenuItem";
 			this->partidosToolStripMenuItem->Size = System::Drawing::Size(62, 20);
 			this->partidosToolStripMenuItem->Text = L"Partidos";
-			// 
-			// jugadoresToolStripMenuItem2
-			// 
-			this->jugadoresToolStripMenuItem2->Name = L"jugadoresToolStripMenuItem2";
-			this->jugadoresToolStripMenuItem2->Size = System::Drawing::Size(152, 22);
-			this->jugadoresToolStripMenuItem2->Text = L"Jugadores";
-			// 
-			// jugadoresToolStripMenuItem3
-			// 
-			this->jugadoresToolStripMenuItem3->Name = L"jugadoresToolStripMenuItem3";
-			this->jugadoresToolStripMenuItem3->Size = System::Drawing::Size(152, 22);
-			this->jugadoresToolStripMenuItem3->Text = L"Jugadores";
-			// 
-			// jugadorToolStripMenuItem
-			// 
-			this->jugadorToolStripMenuItem->Name = L"jugadorToolStripMenuItem";
-			this->jugadorToolStripMenuItem->Size = System::Drawing::Size(152, 22);
-			this->jugadorToolStripMenuItem->Text = L"Jugadores";
-			// 
-			// jugadoresToolStripMenuItem4
-			// 
-			this->jugadoresToolStripMenuItem4->Name = L"jugadoresToolStripMenuItem4";
-			this->jugadoresToolStripMenuItem4->Size = System::Drawing::Size(152, 22);
-			this->jugadoresToolStripMenuItem4->Text = L"Jugadores";
-			// 
-			// jugadoresToolStripMenuItem5
-			// 
-			this->jugadoresToolStripMenuItem5->Name = L"jugadoresToolStripMenuItem5";
-			this->jugadoresToolStripMenuItem5->Size = System::Drawing::Size(152, 22);
-			this->jugadoresToolStripMenuItem5->Text = L"Jugadores";
-			// 
-			// jugadoresToolStripMenuItem6
-			// 
-			this->jugadoresToolStripMenuItem6->Name = L"jugadoresToolStripMenuItem6";
-			this->jugadoresToolStripMenuItem6->Size = System::Drawing::Size(152, 22);
-			this->jugadoresToolStripMenuItem6->Text = L"Jugadores";
-			// 
-			// jugadoresToolStripMenuItem7
-			// 
-			this->jugadoresToolStripMenuItem7->Name = L"jugadoresToolStripMenuItem7";
-			this->jugadoresToolStripMenuItem7->Size = System::Drawing::Size(152, 22);
-			this->jugadoresToolStripMenuItem7->Text = L"Jugadores";
-			// 
-			// jugadoresToolStripMenuItem8
-			// 
-			this->jugadoresToolStripMenuItem8->Name = L"jugadoresToolStripMenuItem8";
-			this->jugadoresToolStripMenuItem8->Size = System::Drawing::Size(152, 22);
-			this->jugadoresToolStripMenuItem8->Text = L"Jugadores";
 			// 
 			// dtGrupos
 			// 
@@ -316,15 +312,6 @@ namespace ProyectoEstDatosI {
 			this->dtGrupos->Size = System::Drawing::Size(203, 44);
 			this->dtGrupos->TabIndex = 0;
 			this->dtGrupos->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &PantallaPrincipal::dataGridView1_CellContentClick);
-			// 
-			// lblTitulo
-			// 
-			this->lblTitulo->AutoSize = true;
-			this->lblTitulo->Location = System::Drawing::Point(13, 44);
-			this->lblTitulo->Name = L"lblTitulo";
-			this->lblTitulo->Size = System::Drawing::Size(40, 13);
-			this->lblTitulo->TabIndex = 2;
-			this->lblTitulo->Text = L"-----------";
 			// 
 			// idEquipo
 			// 
@@ -346,27 +333,14 @@ namespace ProyectoEstDatosI {
 			this->nombreEquipo->ReadOnly = true;
 			this->nombreEquipo->Width = 65;
 			// 
-			// dtEquipos
+			// lblTitulo
 			// 
-			this->dtEquipos->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dtEquipos->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(2) {this->idEquipos, 
-				this->entrenador});
-			this->dtEquipos->Location = System::Drawing::Point(188, 183);
-			this->dtEquipos->Name = L"dtEquipos";
-			this->dtEquipos->Size = System::Drawing::Size(240, 76);
-			this->dtEquipos->TabIndex = 1;
-			// 
-			// idEquipos
-			// 
-			this->idEquipos->HeaderText = L"Id de Equipo";
-			this->idEquipos->Name = L"idEquipos";
-			this->idEquipos->ReadOnly = true;
-			// 
-			// entrenador
-			// 
-			this->entrenador->HeaderText = L"Nombre entrenador";
-			this->entrenador->Name = L"entrenador";
-			this->entrenador->ReadOnly = true;
+			this->lblTitulo->AutoSize = true;
+			this->lblTitulo->Location = System::Drawing::Point(13, 44);
+			this->lblTitulo->Name = L"lblTitulo";
+			this->lblTitulo->Size = System::Drawing::Size(40, 13);
+			this->lblTitulo->TabIndex = 2;
+			this->lblTitulo->Text = L"-----------";
 			// 
 			// dtJugadores
 			// 
@@ -444,7 +418,6 @@ namespace ProyectoEstDatosI {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1069, 471);
 			this->Controls->Add(this->dtJugadores);
-			this->Controls->Add(this->dtEquipos);
 			this->Controls->Add(this->lblTitulo);
 			this->Controls->Add(this->dtGrupos);
 			this->Controls->Add(this->menu_principal);
@@ -454,7 +427,6 @@ namespace ProyectoEstDatosI {
 			this->menu_principal->ResumeLayout(false);
 			this->menu_principal->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dtGrupos))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dtEquipos))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dtJugadores))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
