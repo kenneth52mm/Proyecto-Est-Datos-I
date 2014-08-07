@@ -5,15 +5,15 @@ class Jugador
 {
 private:
 	int id;
-	string posicion;
-	string primer_partido;
-	string nombre;
+	char * posicion;
+	char * primer_partido;
+	char * nombre;
 	int partidos_jugados;
 	int cantidad_goles;
 	int edad;
 	int altura;
-	string fecha_nac;
-	string club;
+	char * fecha_nac;
+	char * club;
 public:
 	Jugador(void);
 	~Jugador(void);
@@ -21,14 +21,14 @@ public:
 	int GetId();
 	void SetId(int);
 
-	string GetPosicion();
-	void SetPosicion(string );
+	char * GetPosicion();
+	void SetPosicion(char *);
 
-	string  GetPrimerPartido();
-	void SetPrimerPartido(string);
+	char * GetPrimerPartido();
+	void SetPrimerPartido(char *);
 
-	string  GetNombre();
-	void SetNombre(string );
+	char * GetNombre();
+	void SetNombre(char *);
 
 	int GetPartidosJugados();
 	void SetPartidosJugados(int);
@@ -42,10 +42,10 @@ public:
 	int GetAltura();
 	void SetAltura(int);
 
-	string  GetFechaNac();
-	void SetFechaNac(string );
+	char * GetFechaNac();
+	void SetFechaNac(char *);
 
-	string  GetClub();
-	void SetClub(string);
+	char * GetClub();
+	void SetClub(char *);
 };
 
