@@ -3,8 +3,8 @@
 
 NodoEquipoXGrupo::NodoEquipoXGrupo(void)
 {
-    this->getAnterior(NULL);
-    this->getSiguiente(NULL);
+    this->setAnterior(NULL);
+    this->setSiguiente(NULL);
     this->setEnlaceEquipo(NULL);
     this->setEnlaceGrupo(NULL);
     this->setEquipo(NULL);
@@ -26,7 +26,7 @@ NodoEquipoXGrupo* NodoEquipoXGrupo::getAnterior()
 {
     return this->anterior;
 }
-void NodoEquipoXGrupo::serAnterior(NodoEquipoXGrupo* _anterior)
+void NodoEquipoXGrupo::setAnterior(NodoEquipoXGrupo* _anterior)
 {
     this->anterior= _anterior;
 

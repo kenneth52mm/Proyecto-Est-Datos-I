@@ -20,7 +20,7 @@ public:
     NodoEquipoXGrupo(NodoGrupos*, NodoEquipo*);
 
     NodoEquipoXGrupo* getAnterior();
-    void serAnterior(NodoEquipoXGrupo*);
+    void setAnterior(NodoEquipoXGrupo*);
 
     NodoEquipoXGrupo* getSiguiente();
     void setSiguiente(NodoEquipoXGrupo*);
