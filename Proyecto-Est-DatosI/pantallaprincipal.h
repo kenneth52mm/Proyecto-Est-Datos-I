@@ -15,6 +15,9 @@ public:
     explicit PantallaPrincipal(QWidget *parent = 0);
     ~PantallaPrincipal();
 
+private slots:
+    void on_actionGrupo_A_hovered();
+
 private:
     Ui::PantallaPrincipal *ui;
 };
