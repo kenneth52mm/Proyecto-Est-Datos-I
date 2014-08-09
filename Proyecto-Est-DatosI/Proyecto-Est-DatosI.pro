@@ -27,7 +27,6 @@ SOURCES += main.cpp\
     NodoEquipo.cpp \
     NodoEquipoXGrupo.cpp \
     NodoEquipoxPais.cpp \
-    NodoEquipoxPartido.cpp \
     NodoGrupos.cpp \
     NodoJugador.cpp \
     NodoJugadorxEquipo.cpp \
@@ -48,7 +47,6 @@ HEADERS  += pantallaprincipal.h \
     ListaEquipos.h \
     ListaEquipoXGrupo.h \
     ListaEquipoxPais.h \
-    ListaEquipoxPartido.h \
     ListaGrupos.h \
     ListaJugadores.h \
     ListaJugadorxEquipo.h \

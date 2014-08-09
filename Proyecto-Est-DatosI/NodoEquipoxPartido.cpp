@@ -1,4 +1,4 @@
-#include "NodoEquipoxPartido.h"
+#include "NodoPartidoxEquipo.h"
 
 
 NodoEquipoxPartido::NodoEquipoxPartido(void)

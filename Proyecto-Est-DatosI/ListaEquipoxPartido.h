@@ -1,5 +1,5 @@
 #pragma once
-#include "NodoEquipoxPartido.h"
+#include "NodoPartidoxEquipo.h"
 class ListaEquipoxPartido
 {
 private:
