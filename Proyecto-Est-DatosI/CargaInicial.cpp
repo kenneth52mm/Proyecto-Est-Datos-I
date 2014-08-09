@@ -40,13 +40,19 @@ void CargaInicial::CargarPaisesXEquiposGrupos(ListaGrupos * lista_grupos, ListaE
 
 		while (getline(archivoPaises, linea1) && getline(archivoEquipos, linea2)) // Recorrido de lineas del archivo.
 		{
-            id_pais = std::stoi(getline(archivoPaises, linea1));
-            nombre = getline(archivoPaises, linea1);
-            abreviatura = std::getline(archivoPaises, linea1);
+            getline(archivoPaises, linea1);
+            id_pais = stoi(linea1);
+            getline(archivoPaises, linea1);
+            nombre = linea1;
+            getline(archivoPaises, linea1);
+            abreviatura = linea1;
 
-            id_equipo = std::stoi(getline(archivoEquipos, linea2));
-            entrenador = std::getline(archivoEquipos, linea2);
-            letra_equipo = std::getline(archivoEquipos, linea2);
+            getline(archivoEquipos, linea2);
+            id_equipo = stoi(linea2);
+            getline(archivoEquipos, linea2);
+            entrenador = linea2;
+            getline(archivoEquipos, linea2);
+            letra_equipo = linea2;
 
             pais = new Pais(id_pais, nombre, abreviatura); // Se crean los objetos a partir del contenido de los archivos.
             equipo = new Equipo(id_equipo, entrenador);
@@ -99,18 +105,29 @@ void CargaInicial::CargarJugadoresXEquipos(ListaJugadorxEquipo * lista_jugadores
 
 		while (getline(archivoJugadores, linea)) // Recorrido de lineas del archivo.
 		{
-            id_jugador = stoi(getline(archivoPaises, linea));
-            posicion = getline(archivoPaises, linea);
-            primer_partido = getline(archivoPaises, linea);
-            nombre = getline(archivoPaises, linea);
-            partidos_jugados = stoi(getline(archivoPaises, linea));
-            cantidad_goles = stoi(getline(archivoPaises, linea));
-            edad = stoi(getline(archivoPaises, linea));
-            altura = stoi(getline(archivoPaises, linea));
-            fecha_nac = getline(archivoPaises, linea);
-            club = getline(archivoPaises, linea);
+            getline(archivoJugadores, linea);
+            id_jugador = stoi(linea);
+            getline(archivoJugadores, linea);
+            posicion = linea;
+            getline(archivoJugadores, linea);
+            primer_partido = linea;
+            getline(archivoJugadores, linea);
+            nombre = linea;
+            getline(archivoJugadores, linea);
+            partidos_jugados = stoi(linea);
+            getline(archivoJugadores, linea);
+            cantidad_goles = stoi(linea);
+            getline(archivoJugadores, linea);
+            edad = stoi(linea);
+            getline(archivoJugadores, linea);
+            altura = stoi(linea);
+            getline(archivoJugadores, linea);
+            fecha_nac = linea;
+            getline(archivoJugadores, linea);
+            club = linea;
 
-            id_equipo = stoi(getline(archivoPaises, linea));
+            getline(archivoJugadores, linea);
+            id_equipo = stoi(linea);
 
             jugador = new Jugador(id_jugador, posicion, primer_partido, nombre, partidos_jugados,
                 cantidad_goles, edad, altura, fecha_nac, club);
