@@ -40,7 +40,7 @@ NodoGrupos *ListaGrupos::DirNodo(int _id)
 	}
 }
 
-int ListaGrupos::Agregar(char *_grupo,ListaEquipos *_equipos)
+int ListaGrupos::Agregar(string _grupo, ListaEquipos *_equipos)
 {
 	NodoGrupos* nuevo_nodo = new NodoGrupos(_grupo,_equipos); 
 
@@ -108,7 +108,7 @@ ListaGrupos *ListaGrupos::MostarLista()
 }
 ListaEquipos *ListaGrupos::MostrarGrupo(int _id)
 {
-	ListaEquipos *nueva=new ListaEquipos();
+    ListaEquipos * nueva = new ListaEquipos();
 	NodoGrupos *aux=DirNodo(_id);
 	if(aux!=NULL)
 		return aux->GetEquipos();

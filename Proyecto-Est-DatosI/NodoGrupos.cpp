@@ -11,7 +11,7 @@ NodoGrupos::~NodoGrupos(void)
 {
 }
 
-NodoGrupos::NodoGrupos(char *_grupo,ListaEquipos *equipos)
+NodoGrupos::NodoGrupos(string _grupo,ListaEquipos *equipos)
 {
 	SetGrupo(_grupo);
 	SetEquipos(	equipos);
@@ -28,11 +28,11 @@ void NodoGrupos::SetId(int _id)
 	this->id=_id;
 }
 
-char *NodoGrupos::GetGrupo()
+string NodoGrupos::GetGrupo()
 {
 	return this->grupo;
 }
-void NodoGrupos::SetGrupo(char *_grupo)
+void NodoGrupos::SetGrupo(string _grupo)
 {
 	this->grupo=_grupo;
 }

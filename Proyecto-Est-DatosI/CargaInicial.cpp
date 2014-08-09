@@ -35,21 +35,21 @@ void CargaInicial::CargarPaisesXEquiposGrupos(ListaGrupos * lista_grupos, ListaE
 
 	if (archivoPaises.is_open() && archivoEquipos.is_open())
 	{
-		getline(archivoPaises, linea1); // Saltarse la primera linea (Contiene una descripción).
+        getline(archivoPaises, linea1); // Saltarse la primera linea (Contiene una descripcion).
 		getline(archivoEquipos, linea2);
 
 		while (getline(archivoPaises, linea1) && getline(archivoEquipos, linea2)) // Recorrido de lineas del archivo.
 		{
-            id_pais = stoi(getline(archivoPaises, linea1));
+            id_pais = std::stoi(getline(archivoPaises, linea1));
             nombre = getline(archivoPaises, linea1);
-            abreviatura = getline(archivoPaises, linea1);
+            abreviatura = std::getline(archivoPaises, linea1);
 
-            id_equipo = stoi(getline(archivoEquipos, linea2));
-            entrenador = getline(archivoEquipos, linea2);
-            letra_equipo = getline(archivoEquipos, linea2);
+            id_equipo = std::stoi(getline(archivoEquipos, linea2));
+            entrenador = std::getline(archivoEquipos, linea2);
+            letra_equipo = std::getline(archivoEquipos, linea2);
 
             pais = new Pais(id_pais, nombre, abreviatura); // Se crean los objetos a partir del contenido de los archivos.
-            equipo = new Equipo(id, entrenador);
+            equipo = new Equipo(id_equipo, entrenador);
 
 			lista_pais->Agregar(pais);
 			lista_equipos->Agregar(equipo);
@@ -58,7 +58,7 @@ void CargaInicial::CargarPaisesXEquiposGrupos(ListaGrupos * lista_grupos, ListaE
             lista_equipos_pais->agregar(id_pais, id_equipo, lista_equipos, lista_pais);
 
 			// Se agregan los equipos a los grupos.
-            lista_grupos->Agregar(letra_equipo, id_equipo, lista_equipos);
+            lista_grupos->Agregar(letra_equipo, lista_equipos);
 		}
 
 		archivoPaises.close();

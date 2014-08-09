@@ -12,7 +12,7 @@ public:
 	Pais(void);
 	~Pais(void);
 
-	Pais(int,char*);
+    Pais(int, string, string);
 
 	int GetId();
 	void SetId(int);

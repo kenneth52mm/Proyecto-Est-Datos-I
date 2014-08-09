@@ -58,7 +58,6 @@ SOURCES       = ..\Proyecto-Est-DatosI\main.cpp \
 		..\Proyecto-Est-DatosI\NodoEquipo.cpp \
 		..\Proyecto-Est-DatosI\NodoEquipoXGrupo.cpp \
 		..\Proyecto-Est-DatosI\NodoEquipoxPais.cpp \
-		..\Proyecto-Est-DatosI\NodoEquipoxPartido.cpp \
 		..\Proyecto-Est-DatosI\NodoGrupos.cpp \
 		..\Proyecto-Est-DatosI\NodoJugador.cpp \
 		..\Proyecto-Est-DatosI\NodoJugadorxEquipo.cpp \
@@ -93,7 +92,6 @@ OBJECTS       = debug\main.obj \
 		debug\NodoEquipo.obj \
 		debug\NodoEquipoXGrupo.obj \
 		debug\NodoEquipoxPais.obj \
-		debug\NodoEquipoxPartido.obj \
 		debug\NodoGrupos.obj \
 		debug\NodoJugador.obj \
 		debug\NodoJugadorxEquipo.obj \
@@ -216,7 +214,7 @@ dist:
 	$(ZIP) Proyecto-Est-DatosI.zip $(SOURCES) $(DIST) ..\Proyecto-Est-DatosI\Proyecto-Est-DatosI.pro C:\Qt\5.3\msvc2012_opengl\mkspecs\features\spec_pre.prf C:\Qt\5.3\msvc2012_opengl\mkspecs\common\shell-win32.conf C:\Qt\5.3\msvc2012_opengl\mkspecs\qconfig.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_axbase.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_axbase_private.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_axcontainer.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_axcontainer_private.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_axserver.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_axserver_private.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_bluetooth.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_bluetooth_private.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_bootstrap_private.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_clucene_private.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_concurrent.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_concurrent_private.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_core.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_core_private.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_declarative.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_declarative_private.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_designer.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_designer_private.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_designercomponents_private.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_enginio.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_enginio_private.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_gui.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_gui_private.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_help.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_help_private.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_multimedia.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_multimedia_private.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_multimediawidgets.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_multimediawidgets_private.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_network.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_network_private.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_nfc.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_nfc_private.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_opengl.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_opengl_private.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_openglextensions.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_openglextensions_private.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_platformsupport_private.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_positioning.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_positioning_private.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_printsupport.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_printsupport_private.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_qml.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_qml_private.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_qmldevtools_private.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_qmltest.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_qmltest_private.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_quick.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_quick_private.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_quickparticles_private.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_quickwidgets.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_quickwidgets_private.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_script.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_script_private.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_scripttools.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_scripttools_private.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_sensors.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_sensors_private.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_serialport.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_serialport_private.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_sql.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_sql_private.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_svg.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_svg_private.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_testlib.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_testlib_private.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_uitools.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_uitools_private.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_webkit.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_webkit_private.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_webkitwidgets.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_webkitwidgets_private.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_websockets.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_websockets_private.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_widgets.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_widgets_private.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_winextras.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_winextras_private.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_xml.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_xml_private.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_xmlpatterns.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\modules\qt_lib_xmlpatterns_private.pri C:\Qt\5.3\msvc2012_opengl\mkspecs\features\qt_functions.prf C:\Qt\5.3\msvc2012_opengl\mkspecs\features\qt_config.prf C:\Qt\5.3\msvc2012_opengl\mkspecs\features\win32\qt_config.prf C:\Qt\5.3\msvc2012_opengl\mkspecs\win32-msvc2012\qmake.conf C:\Qt\5.3\msvc2012_opengl\mkspecs\features\spec_post.prf C:\Qt\5.3\msvc2012_opengl\mkspecs\features\exclusive_builds.prf C:\Qt\5.3\msvc2012_opengl\mkspecs\features\default_pre.prf C:\Qt\5.3\msvc2012_opengl\mkspecs\features\win32\default_pre.prf C:\Qt\5.3\msvc2012_opengl\mkspecs\features\resolve_config.prf C:\Qt\5.3\msvc2012_opengl\mkspecs\features\exclusive_builds_post.prf C:\Qt\5.3\msvc2012_opengl\mkspecs\features\default_post.prf C:\Qt\5.3\msvc2012_opengl\mkspecs\features\build_pass.prf C:\Qt\5.3\msvc2012_opengl\mkspecs\features\win32\rtti.prf C:\Qt\5.3\msvc2012_opengl\mkspecs\features\precompile_header.prf C:\Qt\5.3\msvc2012_opengl\mkspecs\features\warn_on.prf C:\Qt\5.3\msvc2012_opengl\mkspecs\features\qt.prf C:\Qt\5.3\msvc2012_opengl\mkspecs\features\resources.prf C:\Qt\5.3\msvc2012_opengl\mkspecs\features\moc.prf C:\Qt\5.3\msvc2012_opengl\mkspecs\features\win32\opengl.prf C:\Qt\5.3\msvc2012_opengl\mkspecs\features\uic.prf C:\Qt\5.3\msvc2012_opengl\mkspecs\features\win32\windows.prf C:\Qt\5.3\msvc2012_opengl\mkspecs\features\testcase_targets.prf C:\Qt\5.3\msvc2012_opengl\mkspecs\features\exceptions.prf C:\Qt\5.3\msvc2012_opengl\mkspecs\features\yacc.prf C:\Qt\5.3\msvc2012_opengl\mkspecs\features\lex.prf ..\Proyecto-Est-DatosI\Proyecto-Est-DatosI.pro C:/Qt/5.3/msvc2012_opengl/lib/qtmaind.prl C:/Qt/5.3/msvc2012_opengl/lib/Qt5Cored.prl C:/Qt/5.3/msvc2012_opengl/lib/Qt5Widgetsd.prl C:/Qt/5.3/msvc2012_opengl/lib/Qt5Guid.prl  NO_PCH_SOURCES RESOURCES HEADERS SOURCES OBJECTIVE_SOURCES FORMS YACCSOURCES YACCSOURCES LEXSOURCES 
 
 clean: compiler_clean 
-	-$(DEL_FILE) debug\main.obj debug\pantallaprincipal.obj debug\Jugador.obj debug\ListaEquipos.obj debug\ListaEquipoXGrupo.obj debug\ListaEquipoxPais.obj debug\ListaGrupos.obj debug\ListaJugadores.obj debug\ListaJugadorxEquipo.obj debug\ListaPais.obj debug\ListaPartidos.obj debug\ListaPartidoxEquipo.obj debug\NodoEquipo.obj debug\NodoEquipoXGrupo.obj debug\NodoEquipoxPais.obj debug\NodoEquipoxPartido.obj debug\NodoGrupos.obj debug\NodoJugador.obj debug\NodoJugadorxEquipo.obj debug\NodoPais.obj debug\NodoPartido.obj debug\NodoPartidoxEquipo.obj debug\Pais.obj debug\Partido.obj debug\stdafx.obj debug\Equipo.obj debug\grupos.obj debug\verpartidos.obj debug\verjudagor.obj debug\verequipo.obj debug\CargaInicial.obj debug\moc_pantallaprincipal.obj debug\moc_grupos.obj debug\moc_verpartidos.obj debug\moc_verjudagor.obj debug\moc_verequipo.obj
+	-$(DEL_FILE) debug\main.obj debug\pantallaprincipal.obj debug\Jugador.obj debug\ListaEquipos.obj debug\ListaEquipoXGrupo.obj debug\ListaEquipoxPais.obj debug\ListaGrupos.obj debug\ListaJugadores.obj debug\ListaJugadorxEquipo.obj debug\ListaPais.obj debug\ListaPartidos.obj debug\ListaPartidoxEquipo.obj debug\NodoEquipo.obj debug\NodoEquipoXGrupo.obj debug\NodoEquipoxPais.obj debug\NodoGrupos.obj debug\NodoJugador.obj debug\NodoJugadorxEquipo.obj debug\NodoPais.obj debug\NodoPartido.obj debug\NodoPartidoxEquipo.obj debug\Pais.obj debug\Partido.obj debug\stdafx.obj debug\Equipo.obj debug\grupos.obj debug\verpartidos.obj debug\verjudagor.obj debug\verequipo.obj debug\CargaInicial.obj debug\moc_pantallaprincipal.obj debug\moc_grupos.obj debug\moc_verpartidos.obj debug\moc_verjudagor.obj debug\moc_verequipo.obj
 	-$(DEL_FILE) debug\Proyecto-Est-DatosI.exp debug\Proyecto-Est-DatosI.ilk debug\Proyecto-Est-DatosI.idb debug\Proyecto-Est-DatosI.exe.embed.manifest debug\Proyecto-Est-DatosI.exe_manifest.rc debug\Proyecto-Est-DatosI.exe_manifest.res
 
 distclean: clean 
@@ -1019,6 +1017,8 @@ debug\pantallaprincipal.obj: ..\Proyecto-Est-DatosI\pantallaprincipal.cpp ..\Pro
 		..\Proyecto-Est-DatosI\ListaEquipos.h \
 		..\Proyecto-Est-DatosI\NodoEquipo.h \
 		..\Proyecto-Est-DatosI\Equipo.h \
+		..\Proyecto-Est-DatosI\stdafx.h \
+		..\Proyecto-Est-DatosI\targetver.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QMessageBox \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qmessagebox.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qdialog.h
@@ -1037,11 +1037,11 @@ debug\ListaEquipoXGrupo.obj: ..\Proyecto-Est-DatosI\ListaEquipoXGrupo.cpp ..\Pro
 		..\Proyecto-Est-DatosI\ListaGrupos.h \
 		..\Proyecto-Est-DatosI\NodoGrupos.h \
 		..\Proyecto-Est-DatosI\Equipo.h \
+		..\Proyecto-Est-DatosI\stdafx.h \
+		..\Proyecto-Est-DatosI\targetver.h \
 		..\Proyecto-Est-DatosI\ListaEquipos.h \
 		..\Proyecto-Est-DatosI\NodoEquipo.h \
-		..\Proyecto-Est-DatosI\NodoEquipoXGrupo.h \
-		..\Proyecto-Est-DatosI\stdafx.h \
-		..\Proyecto-Est-DatosI\targetver.h
+		..\Proyecto-Est-DatosI\NodoEquipoXGrupo.h
 
 debug\ListaEquipoxPais.obj: ..\Proyecto-Est-DatosI\ListaEquipoxPais.cpp ..\Proyecto-Est-DatosI\ListaEquipoxPais.h \
 		..\Proyecto-Est-DatosI\NodoEquipoxPais.h \
@@ -1057,10 +1057,10 @@ debug\ListaEquipoxPais.obj: ..\Proyecto-Est-DatosI\ListaEquipoxPais.cpp ..\Proye
 debug\ListaGrupos.obj: ..\Proyecto-Est-DatosI\ListaGrupos.cpp ..\Proyecto-Est-DatosI\ListaGrupos.h \
 		..\Proyecto-Est-DatosI\NodoGrupos.h \
 		..\Proyecto-Est-DatosI\Equipo.h \
-		..\Proyecto-Est-DatosI\ListaEquipos.h \
-		..\Proyecto-Est-DatosI\NodoEquipo.h \
 		..\Proyecto-Est-DatosI\stdafx.h \
-		..\Proyecto-Est-DatosI\targetver.h
+		..\Proyecto-Est-DatosI\targetver.h \
+		..\Proyecto-Est-DatosI\ListaEquipos.h \
+		..\Proyecto-Est-DatosI\NodoEquipo.h
 
 debug\ListaJugadores.obj: ..\Proyecto-Est-DatosI\ListaJugadores.cpp ..\Proyecto-Est-DatosI\ListaJugadores.h \
 		..\Proyecto-Est-DatosI\NodoJugador.h \
@@ -1072,10 +1072,10 @@ debug\ListaJugadorxEquipo.obj: ..\Proyecto-Est-DatosI\ListaJugadorxEquipo.cpp ..
 		..\Proyecto-Est-DatosI\NodoJugadorxEquipo.h \
 		..\Proyecto-Est-DatosI\NodoEquipo.h \
 		..\Proyecto-Est-DatosI\Equipo.h \
-		..\Proyecto-Est-DatosI\NodoJugador.h \
-		..\Proyecto-Est-DatosI\Jugador.h \
 		..\Proyecto-Est-DatosI\stdafx.h \
 		..\Proyecto-Est-DatosI\targetver.h \
+		..\Proyecto-Est-DatosI\NodoJugador.h \
+		..\Proyecto-Est-DatosI\Jugador.h \
 		..\Proyecto-Est-DatosI\ListaEquipos.h \
 		..\Proyecto-Est-DatosI\ListaJugadores.h
 
@@ -1103,7 +1103,9 @@ debug\ListaPartidoxEquipo.obj: ..\Proyecto-Est-DatosI\ListaPartidoxEquipo.cpp ..
 		..\Proyecto-Est-DatosI\ListaEquipos.h
 
 debug\NodoEquipo.obj: ..\Proyecto-Est-DatosI\NodoEquipo.cpp ..\Proyecto-Est-DatosI\NodoEquipo.h \
-		..\Proyecto-Est-DatosI\Equipo.h
+		..\Proyecto-Est-DatosI\Equipo.h \
+		..\Proyecto-Est-DatosI\stdafx.h \
+		..\Proyecto-Est-DatosI\targetver.h
 
 debug\NodoEquipoXGrupo.obj: ..\Proyecto-Est-DatosI\NodoEquipoXGrupo.cpp ..\Proyecto-Est-DatosI\NodoEquipoXGrupo.h \
 		..\Proyecto-Est-DatosI\stdafx.h \
@@ -1121,10 +1123,10 @@ debug\NodoEquipoxPais.obj: ..\Proyecto-Est-DatosI\NodoEquipoxPais.cpp ..\Proyect
 		..\Proyecto-Est-DatosI\NodoPais.h \
 		..\Proyecto-Est-DatosI\Pais.h
 
-debug\NodoEquipoxPartido.obj: ..\Proyecto-Est-DatosI\NodoEquipoxPartido.cpp 
-
 debug\NodoGrupos.obj: ..\Proyecto-Est-DatosI\NodoGrupos.cpp ..\Proyecto-Est-DatosI\NodoGrupos.h \
 		..\Proyecto-Est-DatosI\Equipo.h \
+		..\Proyecto-Est-DatosI\stdafx.h \
+		..\Proyecto-Est-DatosI\targetver.h \
 		..\Proyecto-Est-DatosI\ListaEquipos.h \
 		..\Proyecto-Est-DatosI\NodoEquipo.h
 
@@ -1136,13 +1138,15 @@ debug\NodoJugador.obj: ..\Proyecto-Est-DatosI\NodoJugador.cpp ..\Proyecto-Est-Da
 debug\NodoJugadorxEquipo.obj: ..\Proyecto-Est-DatosI\NodoJugadorxEquipo.cpp ..\Proyecto-Est-DatosI\NodoJugadorxEquipo.h \
 		..\Proyecto-Est-DatosI\NodoEquipo.h \
 		..\Proyecto-Est-DatosI\Equipo.h \
-		..\Proyecto-Est-DatosI\NodoJugador.h \
-		..\Proyecto-Est-DatosI\Jugador.h \
 		..\Proyecto-Est-DatosI\stdafx.h \
-		..\Proyecto-Est-DatosI\targetver.h
+		..\Proyecto-Est-DatosI\targetver.h \
+		..\Proyecto-Est-DatosI\NodoJugador.h \
+		..\Proyecto-Est-DatosI\Jugador.h
 
 debug\NodoPais.obj: ..\Proyecto-Est-DatosI\NodoPais.cpp ..\Proyecto-Est-DatosI\NodoPais.h \
-		..\Proyecto-Est-DatosI\Pais.h
+		..\Proyecto-Est-DatosI\Pais.h \
+		..\Proyecto-Est-DatosI\stdafx.h \
+		..\Proyecto-Est-DatosI\targetver.h
 
 debug\NodoPartido.obj: ..\Proyecto-Est-DatosI\NodoPartido.cpp ..\Proyecto-Est-DatosI\NodoPartido.h \
 		..\Proyecto-Est-DatosI\Partido.h \
@@ -1159,7 +1163,9 @@ debug\NodoPartidoxEquipo.obj: ..\Proyecto-Est-DatosI\NodoPartidoxEquipo.cpp ..\P
 		..\Proyecto-Est-DatosI\ListaPartidos.h \
 		..\Proyecto-Est-DatosI\ListaEquipos.h
 
-debug\Pais.obj: ..\Proyecto-Est-DatosI\Pais.cpp ..\Proyecto-Est-DatosI\Pais.h
+debug\Pais.obj: ..\Proyecto-Est-DatosI\Pais.cpp ..\Proyecto-Est-DatosI\Pais.h \
+		..\Proyecto-Est-DatosI\stdafx.h \
+		..\Proyecto-Est-DatosI\targetver.h
 
 debug\Partido.obj: ..\Proyecto-Est-DatosI\Partido.cpp ..\Proyecto-Est-DatosI\Partido.h \
 		..\Proyecto-Est-DatosI\stdafx.h \
@@ -1168,7 +1174,9 @@ debug\Partido.obj: ..\Proyecto-Est-DatosI\Partido.cpp ..\Proyecto-Est-DatosI\Par
 debug\stdafx.obj: ..\Proyecto-Est-DatosI\stdafx.cpp ..\Proyecto-Est-DatosI\stdafx.h \
 		..\Proyecto-Est-DatosI\targetver.h
 
-debug\Equipo.obj: ..\Proyecto-Est-DatosI\Equipo.cpp ..\Proyecto-Est-DatosI\Equipo.h
+debug\Equipo.obj: ..\Proyecto-Est-DatosI\Equipo.cpp ..\Proyecto-Est-DatosI\Equipo.h \
+		..\Proyecto-Est-DatosI\stdafx.h \
+		..\Proyecto-Est-DatosI\targetver.h
 
 debug\grupos.obj: ..\Proyecto-Est-DatosI\grupos.cpp ..\Proyecto-Est-DatosI\grupos.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QMainWindow \

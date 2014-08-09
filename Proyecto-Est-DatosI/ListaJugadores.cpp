@@ -115,13 +115,14 @@ int ListaJugadores::Agregar(Jugador * jugador)
 		}
 		return 2;
 	}
+    return NULL;
 }
 int ListaJugadores::Eliminar(int id)
 {
 	/*
 	Elimina un jugador de la lista.
 	Devuelve:
-	1: Se eliminó correctamente.
+    1: Se elimino correctamente.
 	2: Error: Jugador no encontrado (No se elimina).
 	*/
 

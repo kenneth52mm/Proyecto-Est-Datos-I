@@ -25,7 +25,7 @@ int ListaEquipoxPais::getTamano()
 {
     return this->tamano;
 }
-void ListaEquipoxPais::setTamno(int _tamano)
+void ListaEquipoxPais::setTamano(int _tamano)
 {
     this->tamano= _tamano;
 }

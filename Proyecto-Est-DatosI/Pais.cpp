@@ -33,11 +33,11 @@ void Pais::SetNombre(string _nombre)
     this->nombre = _nombre;
 }
 
-string GetAbreviatura()
+string Pais::GetAbreviatura()
 {
     return this->abreviatura;
 }
-void SetAbreviatura(string abreviatura)
+void Pais::SetAbreviatura(string abreviatura)
 {
     this->abreviatura = abreviatura;
 }
