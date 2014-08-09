@@ -8,7 +8,7 @@ Grupos::Grupos(QWidget *parent) :
     ui->setupUi(this);
 
     ListaGrupos * listaGrupos = Lista;
-    NodoGrupos * nodoGrupos = Lista->GetCabeza();
+    NodoGrupos * nodoGrupos = listaGrupos->GetCabeza();
     ListaEquipos * listaEquipos = nodoGrupos->GetListaEquipos();
     NodoEquipos * nodoEquipos = listaEquipos->GetCabeza();
     QString dato;
