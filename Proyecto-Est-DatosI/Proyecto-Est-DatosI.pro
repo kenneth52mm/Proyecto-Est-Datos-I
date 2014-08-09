@@ -41,7 +41,10 @@ SOURCES += main.cpp\
     stdafx.cpp \
     CargaInicial.cpp \
     Equipo.cpp\
-    string.hpp
+    grupos.cpp \
+    verpartidos.cpp \
+    verjudagor.cpp \
+    verequipo.cpp
 
 HEADERS  += pantallaprincipal.h \
     Jugador.h \
@@ -69,6 +72,14 @@ HEADERS  += pantallaprincipal.h \
     stdafx.h \
     targetver.h \
     CargaInicial.h \
-    Equipo.h
+    Equipo.h \
+    grupos.h \
+    verpartidos.h \
+    verjudagor.h \
+    verequipo.h
 
-FORMS    += pantallaprincipal.ui
+FORMS    += pantallaprincipal.ui \
+    grupos.ui \
+    verpartidos.ui \
+    verjudagor.ui \
+    verequipo.ui

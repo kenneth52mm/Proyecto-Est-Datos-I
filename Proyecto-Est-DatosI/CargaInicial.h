@@ -2,11 +2,10 @@
 #include "stdafx.h"
 #include <fstream> // Para poder abrir archivos y leerlos
 #include <vector> // Para poder usar vectores.
-#include <boost\algorithm\string.hpp> // Incluir librería de boost que permite utilizar el split de strings
 #include "ListaGrupos.h"
 #include "ListaEquipoxPais.h"
 #include "ListaJugadorxEquipo.h"
-
+#include "boost/algorithm/string.hpp"
 class CargaInicial
 {
 public:
