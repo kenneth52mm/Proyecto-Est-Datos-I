@@ -18,6 +18,8 @@ public:
 private slots:
     void on_actionGrupo_A_hovered();
 
+    void on_btnGrupos_clicked();
+
 private:
     Ui::PantallaPrincipal *ui;
 };
