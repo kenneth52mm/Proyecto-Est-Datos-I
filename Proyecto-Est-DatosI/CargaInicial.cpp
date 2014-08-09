@@ -10,7 +10,7 @@ CargaInicial::~CargaInicial(void)
 
 void CargaInicial::CargarPaisesXEquiposGrupos(ListaGrupos * lista_grupos, ListaEquipoxPais * lista_equipos_pais, ListaPais * lista_pais, ListaEquipos * lista_equipos)
 {
-	// Asumiendo que todos los datos son válidos.
+    // Asumiendo que todos los datos son validos.
 
 	string linea1; // Linea que lee el archivo de paises.
 	string linea2; // Linea que lee el archivo de equipos.
@@ -40,8 +40,8 @@ void CargaInicial::CargarPaisesXEquiposGrupos(ListaGrupos * lista_grupos, ListaE
 
 		while (getline(archivoPaises, linea1) && getline(archivoEquipos, linea2)) // Recorrido de lineas del archivo.
 		{
-            id_pais = getline(archivoPaises, linea1);
-            nombre = stoi(getline(archivoPaises, linea1));
+            id_pais = stoi(getline(archivoPaises, linea1));
+            nombre = getline(archivoPaises, linea1);
             abreviatura = getline(archivoPaises, linea1);
 
             id_equipo = stoi(getline(archivoEquipos, linea2));
