@@ -113,7 +113,7 @@ int ListaPartidos::Agregar(Partido * partido)
 
 			return 1;
 		}
-		return 2;
+        return 2;
 	}
 }
 int ListaPartidos::Eliminar(int id)

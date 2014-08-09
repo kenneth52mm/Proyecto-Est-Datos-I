@@ -41,10 +41,25 @@ int ListaEquipoXGrupo::agregar(int _idGrupo, int _idEquipo, ListaEquipos* _equip
         return 2;
     else
     {
-
-        NodoEquipoXGrupo* nuevo_Nodo = new NodoEquipoXGrupo(grupo, equipo);
-        return 1;
+        if(this->getCabeza()== NULL)
+            return 2;
+        else
+        {
+            NodoEquipoXGrupo* aux = this->getCabeza();
+            NodoEquipoXGrupo* nuevo_Nodo = new NodoEquipoXGrupo(grupo, equipo);
+            if(nuevo_Nodo->getEnlaceEquipo()->GetEquipo()->GetId() != aux->getEnlaceEquipo()->GetEquipo()->GetId())
+            {
+                nuevo_Nodo->setSiguiente(aux);
+                nuevo_Nodo->setAnterior(aux->getSiguiente());
+                aux->getAnterior()->setSiguiente(nuevo_Nodo);
+                aux->setAnterior(nuevo_Nodo);
+                this->setTamano(this->getTamano()+1);
+            }else
+                aux = aux->getSiguiente();
+            return 1;
+        }
     }
+    return 2;
 }
 int ListaEquipoXGrupo::elmininar(int idEquipo, int idGrupo)
 {
@@ -59,15 +74,12 @@ int ListaEquipoXGrupo::elmininar(int idEquipo, int idGrupo)
         NodoEquipoXGrupo* recorrido = this->getCabeza();
         do
         {
-<<<<<<< HEAD
-            if(recorrido->getEnlaceEquipo()->GetEquipo()->GetId()== idEquipo && recorrido->getEnlaceGrupo()->GetId()== idGrupo)
-=======
             if(recorrido->getEnlaceEquipo()->GetEquipo()->GetId()== idEquipo &&recorrido->getEnlaceGrupo()->GetId()== idGrupo)
->>>>>>> origin/master
             {
                 recorrido->getAnterior()->setSiguiente(recorrido->getSiguiente());
                 recorrido->getSiguiente()->setAnterior(recorrido->getAnterior());
                 delete recorrido;
+                this->setTamano(this->getTamano()-1);
                 return 1;
             }else
                 recorrido = recorrido->getSiguiente();

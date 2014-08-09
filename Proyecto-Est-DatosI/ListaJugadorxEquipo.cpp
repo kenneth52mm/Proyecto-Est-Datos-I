@@ -38,10 +38,27 @@ int ListaJugadorxEquipo::agregar(int _idJugador, int _idEquipo, ListaJugadores* 
 	NodoJugador* jugador = _jugador->DirNodo(_idJugador);
 	if(equipo == NULL && jugador == NULL)
 		return 2;
-	else{
-		NodoJugadorxEquipo* nodo_Nuevo = new NodoJugadorxEquipo(equipo, jugador);
-		return 1;
-	}	
+    else
+    {
+        if(this->getCabeza()== NULL)
+            return 2;
+        else
+        {
+            NodoJugadorxEquipo* aux = this->getCabeza();
+            NodoJugadorxEquipo* nodo_Nuevo = new NodoJugadorxEquipo(equipo, jugador);
+            if(nodo_Nuevo->getEnlaceJugador()->GetJugador()->GetId()!= aux->getEnlaceJugador()->GetJugador()->GetId())
+            {
+                nodo_Nuevo->setSiguiente(aux);
+                nodo_Nuevo->setAnterior(aux->getSiguiente());
+                aux->getAnterior()->setSiguiente(nodo_Nuevo);
+                aux->setAnterior(nodo_Nuevo);
+                this->setTamano(this->getTamano()+1);
+                return 1;
+            }else
+                aux= aux->getSiguiente();
+        }
+    }
+    return 2;
 }
 
 int ListaJugadorxEquipo::eliminar(int _idJugador, int _idEquipo)

@@ -1009,7 +1009,8 @@ release\pantallaprincipal.obj: ..\Proyecto-Est-DatosI\pantallaprincipal.cpp ..\P
 		..\Proyecto-Est-DatosI\targetver.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QMessageBox \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qmessagebox.h \
-		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qdialog.h
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qdialog.h \
+		..\Proyecto-Est-DatosI\grupos.h
 
 release\Jugador.obj: ..\Proyecto-Est-DatosI\Jugador.cpp ..\Proyecto-Est-DatosI\Jugador.h \
 		..\Proyecto-Est-DatosI\stdafx.h \
