@@ -10,8 +10,6 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = Proyecto-Est-DatosI
 TEMPLATE = app
-INCLUDEPATH += C:\Users\Kenneth\Documents\boost_1_55_0\boost_1_55_0\
-LIBS +=C:\Users\Kenneth\Documents\boost_1_55_0\boost_1_55_0\boost\algorithm\string.hpp
 
 
 SOURCES += main.cpp\
@@ -39,7 +37,6 @@ SOURCES += main.cpp\
     Pais.cpp \
     Partido.cpp \
     stdafx.cpp \
-    CargaInicial.cpp \
     Equipo.cpp\
     grupos.cpp \
     verpartidos.cpp \
@@ -71,7 +68,6 @@ HEADERS  += pantallaprincipal.h \
     Partido.h \
     stdafx.h \
     targetver.h \
-    CargaInicial.h \
     Equipo.h \
     grupos.h \
     verpartidos.h \
