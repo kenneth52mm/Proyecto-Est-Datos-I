@@ -40,9 +40,25 @@ int ListaEquipoxPais::agregar(int _idEquipo, int _idPais, ListaEquipos*_equipo, 
 		return 2;
 	else
 	{
-		NodoEquipoxPais* nodo_Nuevo = new NodoEquipoxPais(equipo, pais);
-		return 1;
+        if(this->getCabeza()== NULL)
+            return 2;
+        else
+        {
+            NodoEquipoxPais* aux = this->getCabeza();
+            NodoEquipoxPais* nodo_Nuevo = new NodoEquipoxPais(equipo, pais);
+            if(nodo_Nuevo->getEnlaceEquipo()->GetEquipo()->GetId() != aux->getEnlaceEquipo()->GetEquipo()->GetId())
+            {
+                nodo_Nuevo->setAnterior(aux->getSiguiente());
+                nodo_Nuevo->setSiguiente(aux);
+                aux->getAnterior()->setSiguiente(nodo_Nuevo);
+                aux->setAnterior(nodo_Nuevo);
+                this->setTamano(this->getTamano()+1);
+            }else
+                aux= aux->getSiguiente();
+            return 1;
+        }
 	}
+    return 2;
 }
 int ListaEquipoxPais::eliminar(int _idEquipo, int _idPais)
 {
@@ -61,12 +77,13 @@ int ListaEquipoxPais::eliminar(int _idEquipo, int _idPais)
 				recorrido->getAnterior()->setSiguiente(recorrido->getSiguiente());
 				recorrido->getSiguiente()->setAnterior(recorrido->getAnterior());
 				delete recorrido;
+                this->setTamano(this->getTamano()-1);
 				return 1;
 			}else
 				recorrido= recorrido->getSiguiente();
 		}while(recorrido!= this->getCabeza());
 	}
-    return 1;
+    return 2;
 }
 void ListaEquipoxPais::mostrarLista()
 {
