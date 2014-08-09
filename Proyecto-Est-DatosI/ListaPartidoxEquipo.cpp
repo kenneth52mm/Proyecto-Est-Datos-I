@@ -42,6 +42,19 @@ int ListaPartidoxEquipo:: agregar(int _idEquipo1, int _idEquipo2, int _idPartido
 		return 2;
 	else{
 		NodoPartidoxEquipo* nodo_Nuevo = new NodoPartidoxEquipo(equipo1,equipo2,partido);
+        NodoPartidoxEquipo* aux = this->getCabeza();
+        do
+        {
+            if(nodo_Nuevo->getPartido()->GetPartido()->GetId() != aux->getPartido()->GetPartido()->GetId())
+            {
+                nodo_Nuevo->setAnterior(aux->getAnterior());
+                aux->getAnterior()->setSiguiente(nodo_Nuevo);
+                aux->setAnterior(nodo_Nuevo);
+                nodo_Nuevo->setSiguiente(aux);
+            }else
+                aux= aux->getSguiente();
+        } while (aux != this->getCabeza());
+
 		return 1;
 	}
 }
@@ -67,6 +80,7 @@ int ListaPartidoxEquipo::eliminar(int _idPartido, int _idEquipo1, int _idEquipo2
 				recorrido = recorrido->getSguiente();
 		} while (recorrido!= this->getCabeza());
 	}
+    return 2;
 }
 void ListaPartidoxEquipo::mostrarLista()
 {

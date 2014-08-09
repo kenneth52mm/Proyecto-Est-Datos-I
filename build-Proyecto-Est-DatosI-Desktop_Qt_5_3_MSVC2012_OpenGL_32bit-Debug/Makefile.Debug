@@ -339,7 +339,7 @@ debug\moc_pantallaprincipal.cpp: C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QMa
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtGui\qicon.h \
 		..\Proyecto-Est-DatosI\pantallaprincipal.h
-	C:\Qt\5.3\msvc2012_opengl\bin\moc.exe $(DEFINES) -D_MSC_VER=1700 -D_WIN32 -IC:/Qt/5.3/msvc2012_opengl/mkspecs/win32-msvc2012 -I"C:/Users/Daniel Aguilar/Documents/GitHub/Proyecto-Est-Datos-I/Proyecto-Est-DatosI" -IC:/Qt/5.3/msvc2012_opengl/include -IC:/Qt/5.3/msvc2012_opengl/include/QtWidgets -IC:/Qt/5.3/msvc2012_opengl/include/QtGui -IC:/Qt/5.3/msvc2012_opengl/include/QtCore -I. ..\Proyecto-Est-DatosI\pantallaprincipal.h -o debug\moc_pantallaprincipal.cpp
+	C:\Qt\5.3\msvc2012_opengl\bin\moc.exe $(DEFINES) -D_MSC_VER=1700 -D_WIN32 -IC:/Qt/5.3/msvc2012_opengl/mkspecs/win32-msvc2012 -I"C:/Users/Mayron  Corrales/Documents/GitHub/Proyecto-Est-Datos-I/Proyecto-Est-DatosI" -IC:/Qt/5.3/msvc2012_opengl/include -IC:/Qt/5.3/msvc2012_opengl/include/QtWidgets -IC:/Qt/5.3/msvc2012_opengl/include/QtGui -IC:/Qt/5.3/msvc2012_opengl/include/QtCore -I. ..\Proyecto-Est-DatosI\pantallaprincipal.h -o debug\moc_pantallaprincipal.cpp
 
 debug\moc_grupos.cpp: C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QMainWindow \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qmainwindow.h \
@@ -445,7 +445,7 @@ debug\moc_grupos.cpp: C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QMainWindow \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtGui\qicon.h \
 		..\Proyecto-Est-DatosI\grupos.h
-	C:\Qt\5.3\msvc2012_opengl\bin\moc.exe $(DEFINES) -D_MSC_VER=1700 -D_WIN32 -IC:/Qt/5.3/msvc2012_opengl/mkspecs/win32-msvc2012 -I"C:/Users/Daniel Aguilar/Documents/GitHub/Proyecto-Est-Datos-I/Proyecto-Est-DatosI" -IC:/Qt/5.3/msvc2012_opengl/include -IC:/Qt/5.3/msvc2012_opengl/include/QtWidgets -IC:/Qt/5.3/msvc2012_opengl/include/QtGui -IC:/Qt/5.3/msvc2012_opengl/include/QtCore -I. ..\Proyecto-Est-DatosI\grupos.h -o debug\moc_grupos.cpp
+	C:\Qt\5.3\msvc2012_opengl\bin\moc.exe $(DEFINES) -D_MSC_VER=1700 -D_WIN32 -IC:/Qt/5.3/msvc2012_opengl/mkspecs/win32-msvc2012 -I"C:/Users/Mayron  Corrales/Documents/GitHub/Proyecto-Est-Datos-I/Proyecto-Est-DatosI" -IC:/Qt/5.3/msvc2012_opengl/include -IC:/Qt/5.3/msvc2012_opengl/include/QtWidgets -IC:/Qt/5.3/msvc2012_opengl/include/QtGui -IC:/Qt/5.3/msvc2012_opengl/include/QtCore -I. ..\Proyecto-Est-DatosI\grupos.h -o debug\moc_grupos.cpp
 
 debug\moc_verpartidos.cpp: C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QMainWindow \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qmainwindow.h \
@@ -551,7 +551,7 @@ debug\moc_verpartidos.cpp: C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QMainWind
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtGui\qicon.h \
 		..\Proyecto-Est-DatosI\verpartidos.h
-	C:\Qt\5.3\msvc2012_opengl\bin\moc.exe $(DEFINES) -D_MSC_VER=1700 -D_WIN32 -IC:/Qt/5.3/msvc2012_opengl/mkspecs/win32-msvc2012 -I"C:/Users/Daniel Aguilar/Documents/GitHub/Proyecto-Est-Datos-I/Proyecto-Est-DatosI" -IC:/Qt/5.3/msvc2012_opengl/include -IC:/Qt/5.3/msvc2012_opengl/include/QtWidgets -IC:/Qt/5.3/msvc2012_opengl/include/QtGui -IC:/Qt/5.3/msvc2012_opengl/include/QtCore -I. ..\Proyecto-Est-DatosI\verpartidos.h -o debug\moc_verpartidos.cpp
+	C:\Qt\5.3\msvc2012_opengl\bin\moc.exe $(DEFINES) -D_MSC_VER=1700 -D_WIN32 -IC:/Qt/5.3/msvc2012_opengl/mkspecs/win32-msvc2012 -I"C:/Users/Mayron  Corrales/Documents/GitHub/Proyecto-Est-Datos-I/Proyecto-Est-DatosI" -IC:/Qt/5.3/msvc2012_opengl/include -IC:/Qt/5.3/msvc2012_opengl/include/QtWidgets -IC:/Qt/5.3/msvc2012_opengl/include/QtGui -IC:/Qt/5.3/msvc2012_opengl/include/QtCore -I. ..\Proyecto-Est-DatosI\verpartidos.h -o debug\moc_verpartidos.cpp
 
 debug\moc_verjudagor.cpp: C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QMainWindow \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qmainwindow.h \
@@ -657,7 +657,7 @@ debug\moc_verjudagor.cpp: C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QMainWindo
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtGui\qicon.h \
 		..\Proyecto-Est-DatosI\verjudagor.h
-	C:\Qt\5.3\msvc2012_opengl\bin\moc.exe $(DEFINES) -D_MSC_VER=1700 -D_WIN32 -IC:/Qt/5.3/msvc2012_opengl/mkspecs/win32-msvc2012 -I"C:/Users/Daniel Aguilar/Documents/GitHub/Proyecto-Est-Datos-I/Proyecto-Est-DatosI" -IC:/Qt/5.3/msvc2012_opengl/include -IC:/Qt/5.3/msvc2012_opengl/include/QtWidgets -IC:/Qt/5.3/msvc2012_opengl/include/QtGui -IC:/Qt/5.3/msvc2012_opengl/include/QtCore -I. ..\Proyecto-Est-DatosI\verjudagor.h -o debug\moc_verjudagor.cpp
+	C:\Qt\5.3\msvc2012_opengl\bin\moc.exe $(DEFINES) -D_MSC_VER=1700 -D_WIN32 -IC:/Qt/5.3/msvc2012_opengl/mkspecs/win32-msvc2012 -I"C:/Users/Mayron  Corrales/Documents/GitHub/Proyecto-Est-Datos-I/Proyecto-Est-DatosI" -IC:/Qt/5.3/msvc2012_opengl/include -IC:/Qt/5.3/msvc2012_opengl/include/QtWidgets -IC:/Qt/5.3/msvc2012_opengl/include/QtGui -IC:/Qt/5.3/msvc2012_opengl/include/QtCore -I. ..\Proyecto-Est-DatosI\verjudagor.h -o debug\moc_verjudagor.cpp
 
 debug\moc_verequipo.cpp: C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QMainWindow \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qmainwindow.h \
@@ -763,7 +763,7 @@ debug\moc_verequipo.cpp: C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QMainWindow
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtGui\qicon.h \
 		..\Proyecto-Est-DatosI\verequipo.h
-	C:\Qt\5.3\msvc2012_opengl\bin\moc.exe $(DEFINES) -D_MSC_VER=1700 -D_WIN32 -IC:/Qt/5.3/msvc2012_opengl/mkspecs/win32-msvc2012 -I"C:/Users/Daniel Aguilar/Documents/GitHub/Proyecto-Est-Datos-I/Proyecto-Est-DatosI" -IC:/Qt/5.3/msvc2012_opengl/include -IC:/Qt/5.3/msvc2012_opengl/include/QtWidgets -IC:/Qt/5.3/msvc2012_opengl/include/QtGui -IC:/Qt/5.3/msvc2012_opengl/include/QtCore -I. ..\Proyecto-Est-DatosI\verequipo.h -o debug\moc_verequipo.cpp
+	C:\Qt\5.3\msvc2012_opengl\bin\moc.exe $(DEFINES) -D_MSC_VER=1700 -D_WIN32 -IC:/Qt/5.3/msvc2012_opengl/mkspecs/win32-msvc2012 -I"C:/Users/Mayron  Corrales/Documents/GitHub/Proyecto-Est-Datos-I/Proyecto-Est-DatosI" -IC:/Qt/5.3/msvc2012_opengl/include -IC:/Qt/5.3/msvc2012_opengl/include/QtWidgets -IC:/Qt/5.3/msvc2012_opengl/include/QtGui -IC:/Qt/5.3/msvc2012_opengl/include/QtCore -I. ..\Proyecto-Est-DatosI\verequipo.h -o debug\moc_verequipo.cpp
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
