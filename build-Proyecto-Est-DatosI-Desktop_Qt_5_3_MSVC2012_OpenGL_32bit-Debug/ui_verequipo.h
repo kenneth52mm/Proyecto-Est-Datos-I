@@ -17,6 +17,7 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QStatusBar>
+#include <QtWidgets/QTableWidget>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -24,8 +25,9 @@ QT_BEGIN_NAMESPACE
 class Ui_VerEquipo
 {
 public:
-    QMenuBar *menubar;
     QWidget *centralwidget;
+    QTableWidget *tbEquipos;
+    QMenuBar *menubar;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *VerEquipo)
@@ -33,12 +35,22 @@ public:
         if (VerEquipo->objectName().isEmpty())
             VerEquipo->setObjectName(QStringLiteral("VerEquipo"));
         VerEquipo->resize(800, 600);
-        menubar = new QMenuBar(VerEquipo);
-        menubar->setObjectName(QStringLiteral("menubar"));
-        VerEquipo->setMenuBar(menubar);
         centralwidget = new QWidget(VerEquipo);
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
+        tbEquipos = new QTableWidget(centralwidget);
+        if (tbEquipos->columnCount() < 2)
+            tbEquipos->setColumnCount(2);
+        QTableWidgetItem *__qtablewidgetitem = new QTableWidgetItem();
+        tbEquipos->setHorizontalHeaderItem(0, __qtablewidgetitem);
+        QTableWidgetItem *__qtablewidgetitem1 = new QTableWidgetItem();
+        tbEquipos->setHorizontalHeaderItem(1, __qtablewidgetitem1);
+        tbEquipos->setObjectName(QStringLiteral("tbEquipos"));
+        tbEquipos->setGeometry(QRect(70, 40, 211, 411));
         VerEquipo->setCentralWidget(centralwidget);
+        menubar = new QMenuBar(VerEquipo);
+        menubar->setObjectName(QStringLiteral("menubar"));
+        menubar->setGeometry(QRect(0, 0, 800, 21));
+        VerEquipo->setMenuBar(menubar);
         statusbar = new QStatusBar(VerEquipo);
         statusbar->setObjectName(QStringLiteral("statusbar"));
         VerEquipo->setStatusBar(statusbar);
@@ -51,6 +63,10 @@ public:
     void retranslateUi(QMainWindow *VerEquipo)
     {
         VerEquipo->setWindowTitle(QApplication::translate("VerEquipo", "MainWindow", 0));
+        QTableWidgetItem *___qtablewidgetitem = tbEquipos->horizontalHeaderItem(0);
+        ___qtablewidgetitem->setText(QApplication::translate("VerEquipo", "Id Equipo", 0));
+        QTableWidgetItem *___qtablewidgetitem1 = tbEquipos->horizontalHeaderItem(1);
+        ___qtablewidgetitem1->setText(QApplication::translate("VerEquipo", "Equipo", 0));
     } // retranslateUi
 
 };

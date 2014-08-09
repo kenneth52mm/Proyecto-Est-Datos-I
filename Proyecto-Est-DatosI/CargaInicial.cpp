@@ -14,11 +14,8 @@ void CargaInicial::CargarPaisesXEquiposGrupos(ListaGrupos * lista_grupos, ListaE
 
 	string linea1; // Linea que lee el archivo de paises.
 	string linea2; // Linea que lee el archivo de equipos.
-	vector<string> paises;
-	vector<string> equipos;
-
-	ifstream archivoPaises ("C:\\Users\\Daniel Aguilar\\Downloads\\CargaInicialPaises.txt");
-	ifstream archivoEquipos ("C:\\Users\\Daniel Aguilar\\Downloads\\CargaInicialEquipos.txt");
+    ifstream archivoPaises("C:\Users\Kenneth\Desktop\CargaInicialPaises.txt","r");
+    ifstream archivoEquipos=fopen("C:\Users\Kenneth\Desktop\CargaInicialEquipos.txt","r");
 
 	Pais * pais;
 	Equipo * equipo;
@@ -33,8 +30,8 @@ void CargaInicial::CargarPaisesXEquiposGrupos(ListaGrupos * lista_grupos, ListaE
     string entrenador;
     string letra_equipo;
 
-	if (archivoPaises.is_open() && archivoEquipos.is_open())
-	{
+    if (archivoPaises!=NULL && archivoEquipos!=NULL)
+    {
         getline(archivoPaises, linea1); // Saltarse la primera linea (Contiene una descripcion).
 		getline(archivoEquipos, linea2);
 
@@ -69,18 +66,17 @@ void CargaInicial::CargarPaisesXEquiposGrupos(ListaGrupos * lista_grupos, ListaE
 
 		archivoPaises.close();
 		archivoEquipos.close();
-	}
-	else
-		cout << "Error: No se ha podido cargar los datos (Paises y Equipos)." << endl;
+    }
+    else
+        cout << "Error: No se ha podido cargar los datos (Paises y Equipos)." << endl;
 }
 void CargaInicial::CargarJugadoresXEquipos(ListaJugadorxEquipo * lista_jugadores_equipos, ListaEquipos * lista_equipos, ListaJugadores * lista_jugadores)
 {
 	// Asumiendo que todos los datos son válidos, y la lista de equipos está poblada.
 
 	string linea; // Linea que lee el archivo de jugadores.
-	vector<string> jugadores;
 
-	ifstream archivoJugadores ("C:\\Users\\Daniel Aguilar\\Downloads\\CargaInicialJugadores.txt");
+    ifstream archivoJugadores ("C:\Users\Kenneth\Desktop\CargaInicialJugadores.txt");
 
 	Jugador * jugador;
 

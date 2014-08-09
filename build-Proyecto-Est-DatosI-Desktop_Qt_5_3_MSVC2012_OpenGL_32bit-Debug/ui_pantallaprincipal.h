@@ -36,8 +36,8 @@ public:
     QWidget *centralWidget;
     QPushButton *btnGrupos;
     QPushButton *btnEquipos;
-    QPushButton *pushButton;
-    QPushButton *pushButton_3;
+    QPushButton *btnJugadores;
+    QPushButton *btnPartidos;
 
     void setupUi(QMainWindow *PantallaPrincipal)
     {
@@ -78,12 +78,12 @@ public:
         btnEquipos = new QPushButton(centralWidget);
         btnEquipos->setObjectName(QStringLiteral("btnEquipos"));
         btnEquipos->setGeometry(QRect(200, 210, 75, 23));
-        pushButton = new QPushButton(centralWidget);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(290, 210, 75, 23));
-        pushButton_3 = new QPushButton(centralWidget);
-        pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
-        pushButton_3->setGeometry(QRect(390, 210, 75, 23));
+        btnJugadores = new QPushButton(centralWidget);
+        btnJugadores->setObjectName(QStringLiteral("btnJugadores"));
+        btnJugadores->setGeometry(QRect(290, 210, 75, 23));
+        btnPartidos = new QPushButton(centralWidget);
+        btnPartidos->setObjectName(QStringLiteral("btnPartidos"));
+        btnPartidos->setGeometry(QRect(390, 210, 75, 23));
         PantallaPrincipal->setCentralWidget(centralWidget);
 
         retranslateUi(PantallaPrincipal);
@@ -106,8 +106,8 @@ public:
         actionJap_n->setText(QApplication::translate("PantallaPrincipal", "Jap\303\263n", 0));
         btnGrupos->setText(QApplication::translate("PantallaPrincipal", "Grupos", 0));
         btnEquipos->setText(QApplication::translate("PantallaPrincipal", "Equipos", 0));
-        pushButton->setText(QApplication::translate("PantallaPrincipal", "Jugadores", 0));
-        pushButton_3->setText(QApplication::translate("PantallaPrincipal", "Partidos", 0));
+        btnJugadores->setText(QApplication::translate("PantallaPrincipal", "Jugadores", 0));
+        btnPartidos->setText(QApplication::translate("PantallaPrincipal", "Partidos", 0));
     } // retranslateUi
 
 };
