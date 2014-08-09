@@ -14,8 +14,10 @@ void CargaInicial::CargarPaisesXEquiposGrupos(ListaGrupos * lista_grupos, ListaE
 
 	string linea1; // Linea que lee el archivo de paises.
 	string linea2; // Linea que lee el archivo de equipos.
-    ifstream archivoPaises("C:\Users\Kenneth\Desktop\CargaInicialPaises.txt");
-    ifstream archivoEquipos("C:\Users\Kenneth\Desktop\CargaInicialEquipos.txt");
+    const char *pathPaises="C:/Users/Kenneth/Desktop/CargaInicialPaises.txt";
+    const char *pathEquipos="C:\/Users\/Kenneth\/Desktop\/CargaInicialEquipos.txt";
+    ifstream archivoPaises(pathPaises);
+    ifstream archivoEquipos(pathEquipos);
 
 	Pais * pais;
 	Equipo * equipo;
@@ -30,7 +32,7 @@ void CargaInicial::CargarPaisesXEquiposGrupos(ListaGrupos * lista_grupos, ListaE
     string entrenador;
     string letra_equipo;
 
-    if (archivoPaises!=NULL && archivoEquipos!=NULL)
+    if (archivoPaises.is_open() && archivoEquipos.is_open())
     {
         getline(archivoPaises, linea1); // Saltarse la primera linea (Contiene una descripcion).
 		getline(archivoEquipos, linea2);
@@ -76,7 +78,7 @@ void CargaInicial::CargarJugadoresXEquipos(ListaJugadorxEquipo * lista_jugadores
 
 	string linea; // Linea que lee el archivo de jugadores.
 
-    ifstream archivoJugadores ("C:\Users\Kenneth\Desktop\CargaInicialJugadores.txt");
+    ifstream archivoJugadores ("C:/Users/Kenneth/Desktop/CargaInicialJugadores.txt");
 
 	Jugador * jugador;
 
