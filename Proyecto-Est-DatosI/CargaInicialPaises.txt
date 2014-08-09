@@ -1,0 +1,25 @@
+id | Nombre País | Abreviatura
+1
+Alemania
+DEU
+2
+Argentina
+ARG
+3
+Australia
+AUS
+4
+Costa de Marfil
+CIV
+5
+Costa Rica
+CRI
+6
+Espana
+ESP
+7
+Holanda
+NLD
+8
+Japon
+JPN

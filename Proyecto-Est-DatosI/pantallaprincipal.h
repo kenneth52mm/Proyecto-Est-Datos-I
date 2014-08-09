@@ -20,6 +20,10 @@ private slots:
 
     void on_btnGrupos_clicked();
 
+    void on_btnEquipos_clicked();
+
+    void on_btnJugadores_clicked();
+
 private:
     Ui::PantallaPrincipal *ui;
 };

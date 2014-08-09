@@ -1,16 +1,18 @@
 #pragma once
+#include "stdafx.h"
 #include "NodoPartidoxEquipo.h"
+
 class ListaEquipoxPartido
 {
 private:
-	NodoEquipoxPartido* cabeza;
+    NodoPartidoxEquipo* cabeza;
     int tamano;
 public:
 	ListaEquipoxPartido(void);
 	~ListaEquipoxPartido(void);
 
-	NodoEquipoxPartido* getCabeza();
-	void setCabeza(NodoEquipoxPartido*);
+    NodoPartidoxEquipo *getCabeza();
+    void setCabeza(NodoPartidoxEquipo*);
 
     int getTamano();
     void setTamano(int);

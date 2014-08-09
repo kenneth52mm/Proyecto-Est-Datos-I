@@ -1,0 +1,25 @@
+id | Entrenador (Nombre) | Grupo
+1
+Entrenador1
+A
+2
+Entrenador2
+A
+3
+Entrenador3
+A
+4
+Entrenador4
+A
+5
+Entrenador5
+B
+6
+Entrenador6
+B
+7
+Entrenador7
+B
+8
+Entrenador8
+B
