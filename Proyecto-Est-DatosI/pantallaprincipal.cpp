@@ -51,8 +51,8 @@ void PantallaPrincipal::on_actionGrupo_A_hovered()
 
 void PantallaPrincipal::on_btnGrupos_clicked()
 {
-    Grupos*grupos=new Grupos();
-    grupos->show();
+    Grupos*grupo=new Grupos(grupos);
+    grupo->show();
 }
 
 void PantallaPrincipal::on_btnEquipos_clicked()

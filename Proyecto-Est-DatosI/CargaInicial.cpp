@@ -14,8 +14,8 @@ void CargaInicial::CargarPaisesXEquiposGrupos(ListaGrupos * lista_grupos, ListaE
 
 	string linea1; // Linea que lee el archivo de paises.
 	string linea2; // Linea que lee el archivo de equipos.
-    ifstream archivoPaises("C:\Users\Kenneth\Desktop\CargaInicialPaises.txt","r");
-    ifstream archivoEquipos=fopen("C:\Users\Kenneth\Desktop\CargaInicialEquipos.txt","r");
+    ifstream archivoPaises("C:\Users\Kenneth\Desktop\CargaInicialPaises.txt");
+    ifstream archivoEquipos("C:\Users\Kenneth\Desktop\CargaInicialEquipos.txt");
 
 	Pais * pais;
 	Equipo * equipo;
