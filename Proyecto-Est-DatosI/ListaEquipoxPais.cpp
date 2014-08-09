@@ -34,7 +34,7 @@ int ListaEquipoxPais::agregar(int _idEquipo, int _idPais, ListaEquipos*_equipo, 
 {
 	// 1 agrega correctamente
 	// 2 no agrega
-	NodoEquipo* equipo = _equipo->DirNodo(_idEquipo);
+    NodoEquipo* equipo = _equipo->DirNodo(_idEquipo);
 	NodoPais* pais = _pais->DirNodo(_idPais);
 	if (equipo == NULL || pais == NULL)
 		return 2;
@@ -48,16 +48,16 @@ int ListaEquipoxPais::eliminar(int _idEquipo, int _idPais)
 {
 	// 1 elimina correctamente
 	// 2 si no elimina porque no se encuentra alguno de los dos nodos
-	// 3 no existe alguno de los dos nodos
+
 	if (this->getCabeza() == NULL)
-		return 3;
+        return 2;
 	else
 	{
 		NodoEquipoxPais* recorrido = this->getCabeza();
 		do
 		{
 			if(recorrido->getEnlaceEquipo()->GetEquipo()->GetId() == _idEquipo && 
-				recorrido->getEnlacePais()->GetPais()->GetId() == _idPais){ // si se cumplenlas dos condiciones
+                recorrido->getEnlacePais()->GetPais()->GetId() == _idPais){ // si se cumplen las dos condiciones
 				recorrido->getAnterior()->setSiguiente(recorrido->getSiguiente());
 				recorrido->getSiguiente()->setAnterior(recorrido->getAnterior());
 				delete recorrido;
@@ -66,7 +66,7 @@ int ListaEquipoxPais::eliminar(int _idEquipo, int _idPais)
 				recorrido= recorrido->getSiguiente();
 		}while(recorrido!= this->getCabeza());
 	}
-	return 2;
+    return 1;
 }
 void ListaEquipoxPais::mostrarLista()
 {
