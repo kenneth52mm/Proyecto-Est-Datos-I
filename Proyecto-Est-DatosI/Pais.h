@@ -4,7 +4,8 @@ class Pais
 
 private:
 	int id;
-	char *nombre;
+    string nombre;
+    string abreviatura;
 public:
 	Pais(void);
 	~Pais(void);
@@ -14,7 +15,10 @@ public:
 	int GetId();
 	void SetId(int);
 
-	char *GetNombre();
-	void SetNombre(char *);
+    string GetNombre();
+    void SetNombre(string);
+
+    string GetAbreviatura();
+    void SetAbreviatura(string);
 };
 
