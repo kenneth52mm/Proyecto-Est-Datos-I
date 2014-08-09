@@ -59,7 +59,11 @@ int ListaEquipoXGrupo::elmininar(int idEquipo, int idGrupo)
         NodoEquipoXGrupo* recorrido = this->getCabeza();
         do
         {
+<<<<<<< HEAD
             if(recorrido->getEnlaceEquipo()->GetEquipo()->GetId()== idEquipo && recorrido->getEnlaceGrupo()->GetId()== idGrupo)
+=======
+            if(recorrido->getEnlaceEquipo()->GetEquipo()->GetId()== idEquipo &&recorrido->getEnlaceGrupo()->GetId()== idGrupo)
+>>>>>>> origin/master
             {
                 recorrido->getAnterior()->setSiguiente(recorrido->getSiguiente());
                 recorrido->getSiguiente()->setAnterior(recorrido->getAnterior());

@@ -15,10 +15,7 @@
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenu>
-#include <QtWidgets/QMenuBar>
-#include <QtWidgets/QStatusBar>
-#include <QtWidgets/QToolBar>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -37,13 +34,10 @@ public:
     QAction *actionHolanda;
     QAction *actionJap_n;
     QWidget *centralWidget;
-    QMenuBar *menuBar;
-    QMenu *menuGrupos;
-    QMenu *menuEquipos;
-    QMenu *menuJugadores;
-    QMenu *menuPartidos;
-    QToolBar *mainToolBar;
-    QStatusBar *statusBar;
+    QPushButton *btnGrupos;
+    QPushButton *btnEquipos;
+    QPushButton *pushButton;
+    QPushButton *pushButton_3;
 
     void setupUi(QMainWindow *PantallaPrincipal)
     {
@@ -78,40 +72,19 @@ public:
         actionJap_n->setObjectName(QStringLiteral("actionJap_n"));
         centralWidget = new QWidget(PantallaPrincipal);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
+        btnGrupos = new QPushButton(centralWidget);
+        btnGrupos->setObjectName(QStringLiteral("btnGrupos"));
+        btnGrupos->setGeometry(QRect(110, 210, 75, 23));
+        btnEquipos = new QPushButton(centralWidget);
+        btnEquipos->setObjectName(QStringLiteral("btnEquipos"));
+        btnEquipos->setGeometry(QRect(200, 210, 75, 23));
+        pushButton = new QPushButton(centralWidget);
+        pushButton->setObjectName(QStringLiteral("pushButton"));
+        pushButton->setGeometry(QRect(290, 210, 75, 23));
+        pushButton_3 = new QPushButton(centralWidget);
+        pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
+        pushButton_3->setGeometry(QRect(390, 210, 75, 23));
         PantallaPrincipal->setCentralWidget(centralWidget);
-        menuBar = new QMenuBar(PantallaPrincipal);
-        menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 713, 21));
-        menuGrupos = new QMenu(menuBar);
-        menuGrupos->setObjectName(QStringLiteral("menuGrupos"));
-        menuEquipos = new QMenu(menuBar);
-        menuEquipos->setObjectName(QStringLiteral("menuEquipos"));
-        menuJugadores = new QMenu(menuBar);
-        menuJugadores->setObjectName(QStringLiteral("menuJugadores"));
-        menuPartidos = new QMenu(menuBar);
-        menuPartidos->setObjectName(QStringLiteral("menuPartidos"));
-        PantallaPrincipal->setMenuBar(menuBar);
-        mainToolBar = new QToolBar(PantallaPrincipal);
-        mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
-        PantallaPrincipal->addToolBar(Qt::TopToolBarArea, mainToolBar);
-        statusBar = new QStatusBar(PantallaPrincipal);
-        statusBar->setObjectName(QStringLiteral("statusBar"));
-        PantallaPrincipal->setStatusBar(statusBar);
-
-        menuBar->addAction(menuGrupos->menuAction());
-        menuBar->addAction(menuEquipos->menuAction());
-        menuBar->addAction(menuJugadores->menuAction());
-        menuBar->addAction(menuPartidos->menuAction());
-        menuGrupos->addAction(actionGrupo_A);
-        menuGrupos->addAction(actionGrupo_B);
-        menuEquipos->addAction(actionAlemania);
-        menuEquipos->addAction(actionArgentina);
-        menuEquipos->addAction(actionAustralia);
-        menuEquipos->addAction(actionCosta_de_Marfil);
-        menuEquipos->addAction(actionCosta_Rica);
-        menuEquipos->addAction(actionEspa_a);
-        menuEquipos->addAction(actionHolanda);
-        menuEquipos->addAction(actionJap_n);
 
         retranslateUi(PantallaPrincipal);
 
@@ -131,10 +104,10 @@ public:
         actionEspa_a->setText(QApplication::translate("PantallaPrincipal", "Espa\303\261a", 0));
         actionHolanda->setText(QApplication::translate("PantallaPrincipal", "Holanda", 0));
         actionJap_n->setText(QApplication::translate("PantallaPrincipal", "Jap\303\263n", 0));
-        menuGrupos->setTitle(QApplication::translate("PantallaPrincipal", "Grupos", 0));
-        menuEquipos->setTitle(QApplication::translate("PantallaPrincipal", "Equipos", 0));
-        menuJugadores->setTitle(QApplication::translate("PantallaPrincipal", "Jugadores", 0));
-        menuPartidos->setTitle(QApplication::translate("PantallaPrincipal", "Partidos", 0));
+        btnGrupos->setText(QApplication::translate("PantallaPrincipal", "Grupos", 0));
+        btnEquipos->setText(QApplication::translate("PantallaPrincipal", "Equipos", 0));
+        pushButton->setText(QApplication::translate("PantallaPrincipal", "Jugadores", 0));
+        pushButton_3->setText(QApplication::translate("PantallaPrincipal", "Partidos", 0));
     } // retranslateUi
 
 };
