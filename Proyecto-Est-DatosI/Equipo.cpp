@@ -6,13 +6,11 @@ Equipo::Equipo(void)
 	SetId(0);
 	SetEntrenador("");
 }
-
-
 Equipo::~Equipo(void)
 {
 }
 
-Equipo::Equipo(int _id,char *_entrenador)
+Equipo::Equipo(int _id, string _entrenador)
 {
 	SetId(_id);
 	SetEntrenador(_entrenador);
@@ -27,11 +25,11 @@ void Equipo::SetId(int _id)
 	this->id=_id;
 }
 
-char *Equipo::GetEntrenador()
+string Equipo::GetEntrenador()
 {
 	return this->entrenador;
 }
-void Equipo::SetEntrenador(char *_entrenador)
+void Equipo::SetEntrenador(string _entrenador)
 {
 	this->entrenador=_entrenador;
 }

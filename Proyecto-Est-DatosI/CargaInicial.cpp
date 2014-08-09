@@ -23,6 +23,16 @@ void CargaInicial::CargarPaisesXEquiposGrupos(ListaGrupos * lista_grupos, ListaE
 	Pais * pais;
 	Equipo * equipo;
 
+    // Atributos de pais
+    int id_pais;
+    string nombre;
+    string abreviatura;
+
+    // Atributos de equipo
+    int id_equipo;
+    string entrenador;
+    string letra_equipo;
+
 	if (archivoPaises.is_open() && archivoEquipos.is_open())
 	{
 		getline(archivoPaises, linea1); // Saltarse la primera linea (Contiene una descripción).
@@ -30,20 +40,25 @@ void CargaInicial::CargarPaisesXEquiposGrupos(ListaGrupos * lista_grupos, ListaE
 
 		while (getline(archivoPaises, linea1) && getline(archivoEquipos, linea2)) // Recorrido de lineas del archivo.
 		{
-			boost::split(paises, linea1, boost::is_any_of("|")); // Split.
-			boost::split(equipos, linea2, boost::is_any_of("|"));
+            id_pais = getline(archivoPaises, linea1);
+            nombre = stoi(getline(archivoPaises, linea1));
+            abreviatura = getline(archivoPaises, linea1);
 
-			pais = new Pais(stoi(paises[0]), paises[1], paises[2]); // Se crean los objetos a partir del contenido de los archivos.
-			equipo = new Equipo(stoi(equipos[0]), equipos[1]);
+            id_equipo = stoi(getline(archivoEquipos, linea2));
+            entrenador = getline(archivoEquipos, linea2);
+            letra_equipo = getline(archivoEquipos, linea2);
+
+            pais = new Pais(id_pais, nombre, abreviatura); // Se crean los objetos a partir del contenido de los archivos.
+            equipo = new Equipo(id, entrenador);
 
 			lista_pais->Agregar(pais);
 			lista_equipos->Agregar(equipo);
 
 			// Se agregan los objetos a la lista de enlaces (Paises + Equipos).
-			lista_equipos_pais->agregar(stoi(paises[0]), stoi(equipos[0]), lista_equipos, lista_pais); 
+            lista_equipos_pais->agregar(id_pais, id_equipo, lista_equipos, lista_pais);
 
 			// Se agregan los equipos a los grupos.
-			lista_grupos->Agregar(equipos[2], stoi(equipos[0]), lista_equipos);
+            lista_grupos->Agregar(letra_equipo, id_equipo, lista_equipos);
 		}
 
 		archivoPaises.close();
@@ -67,17 +82,43 @@ void CargaInicial::CargarJugadoresXEquipos(ListaJugadorxEquipo * lista_jugadores
 	{
 		getline(archivoJugadores, linea); // Saltarse la primera linea (Contiene una descripción).
 
+        // Atributos de Jugador
+        int id_jugador;
+        string posicion;
+        string primer_partido;
+        string nombre;
+        int partidos_jugados;
+        int cantidad_goles;
+        int edad;
+        int altura;
+        string fecha_nac;
+        string club;
+
+        // Enlace
+        int id_equipo;
+
 		while (getline(archivoJugadores, linea)) // Recorrido de lineas del archivo.
 		{
-			boost::split(jugadores, linea, boost::is_any_of("|"));
+            id_jugador = stoi(getline(archivoPaises, linea));
+            posicion = getline(archivoPaises, linea);
+            primer_partido = getline(archivoPaises, linea);
+            nombre = getline(archivoPaises, linea);
+            partidos_jugados = stoi(getline(archivoPaises, linea));
+            cantidad_goles = stoi(getline(archivoPaises, linea));
+            edad = stoi(getline(archivoPaises, linea));
+            altura = stoi(getline(archivoPaises, linea));
+            fecha_nac = getline(archivoPaises, linea);
+            club = getline(archivoPaises, linea);
 
-			jugador = new Jugador(stoi(jugadores[0]), jugadores[1], jugadores[2], jugadores[3], stoi(jugadores[4]),
-				stoi(jugadores[5]), stoi(jugadores[6]), stoi(jugadores[7]), jugadores[8], jugadores[9]);
+            id_equipo = stoi(getline(archivoPaises, linea));
+
+            jugador = new Jugador(id_jugador, posicion, primer_partido, nombre, partidos_jugados,
+                cantidad_goles, edad, altura, fecha_nac, club);
 
 			lista_jugadores->Agregar(jugador);
 
 			// Se agregan los objetos a la lista de enlaces.
-			lista_jugadores_equipos->agregar(stoi(jugadores[0]), stoi(jugadores[10]), lista_jugadores, lista_equipos);	
+            lista_jugadores_equipos->agregar(id_jugador, id_equipo, lista_jugadores, lista_equipos);
 		}
 	}
 	else
