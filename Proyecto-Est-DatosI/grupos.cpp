@@ -27,9 +27,9 @@ Grupos::Grupos(ListaGrupos *grupos,QWidget *parent) :
     while (nodoEquipos != listaEquipos->GetCab());
 
     fila = 0;
-    nodoGrupos = nodoGrupos->GetSgte();
-    listaEquipos = nodoGrupos->GetEquipos();
-    nodoEquipos = listaEquipos->GetCab();
+    nodoGrupos = nodoGrupos->GetSiguiente();
+    ListaEquipos* listaEquipos = nodoGrupos->GetListaEquipos();
+    NodoEquipos* nodoEquipos = listaEquipos->GetCabeza();
 
     do
     {
