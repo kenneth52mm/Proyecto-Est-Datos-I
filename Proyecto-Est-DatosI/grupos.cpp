@@ -7,6 +7,7 @@ Grupos::Grupos(ListaGrupos *grupos,QWidget *parent) :
 {
     ui->setupUi(this);
 
+    /*
     ListaGrupos * listaGrupos = grupos;
     NodoGrupos * nodoGrupos = listaGrupos->GetCab();
     ListaEquipos * listaEquipos = nodoGrupos->GetEquipos();
@@ -39,6 +40,8 @@ Grupos::Grupos(ListaGrupos *grupos,QWidget *parent) :
       fila++;
     }
     while (nodoEquipos != listaEquipos->GetCab());
+
+    */
 }
 
 Grupos::~Grupos()

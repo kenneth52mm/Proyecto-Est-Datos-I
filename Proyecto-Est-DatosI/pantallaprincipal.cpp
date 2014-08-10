@@ -14,9 +14,6 @@
 #include "ListaGrupos.h"
 #include "ListaJugadores.h"
 #include "ListaJugadorxEquipo.h"\
-#include "ListaPais.h"
-#include "ListaPartidos.h"
-#include "ListaPartidoxEquipo.h"
 
 CargaInicial *datos=new CargaInicial();
 ListaEquipos *equipos=new ListaEquipos();
@@ -33,9 +30,8 @@ PantallaPrincipal::PantallaPrincipal(QWidget *parent) :
     ui(new Ui::PantallaPrincipal)
 {
     ui->setupUi(this);
-    datos->CargarJugadoresXEquipos(jugador_equipo,equipos,jugadores);
-    datos->CargarPaisesXEquiposGrupos(grupos,equipo_pais,paises,equipos);
-
+    //datos->CargarJugadoresXEquipos(jugador_equipo,equipos,jugadores);
+    //datos->CargarPaisesXEquiposGrupos(grupos,equipo_pais,paises,equipos);
 }
 
 PantallaPrincipal::~PantallaPrincipal()
@@ -51,7 +47,7 @@ void PantallaPrincipal::on_actionGrupo_A_hovered()
 
 void PantallaPrincipal::on_btnGrupos_clicked()
 {
-    Grupos*grupo=new Grupos(grupos);
+    Grupos * grupo = new Grupos(grupos);
     grupo->show();
 }
 
@@ -63,5 +59,5 @@ void PantallaPrincipal::on_btnEquipos_clicked()
 
 void PantallaPrincipal::on_btnJugadores_clicked()
 {
-    VerJudagor *jugador=new VerJudagor();
+    // VerJudagor *jugador = new VerJudagor();
 }
