@@ -2,6 +2,7 @@
 #define VERJUDAGOR_H
 
 #include <QMainWindow>
+#include "ListaJugadores.h"
 
 namespace Ui {
 class VerJudagor;
@@ -12,7 +13,7 @@ class VerJudagor : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit VerJudagor(QWidget *parent = 0);
+    explicit VerJudagor(ListaJugadores* ,QWidget *parent = 0);
     ~VerJudagor();
 
 private:
