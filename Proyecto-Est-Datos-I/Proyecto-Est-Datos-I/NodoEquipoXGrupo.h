@@ -1,35 +1,29 @@
 #pragma once
-#include "stdafx.h"
 #include"NodoEquipoXPais.h"
-#include "NodoGrupos.h"
+#include"NodoEquipoXGrupo.h"
+
+
 class NodoEquipoXGrupo
 {
 private:
     NodoEquipoXGrupo * anterior;
     NodoEquipoXGrupo * siguiente;
 	NodoEquipoXPais * enlace_equipo;
+
 public:
 	NodoEquipoXGrupo(void);
 	~NodoEquipoXGrupo(void);
 
-    NodoEquipoXGrupo(NodoGrupos*, NodoEquipo*);
+    NodoEquipoXGrupo * GetAnterior();
+    void SetAnterior(NodoEquipoXGrupo *);
 
-    NodoEquipoXGrupo* getAnterior();
-    void setAnterior(NodoEquipoXGrupo*);
+    NodoEquipoXGrupo * GetSiguiente();
+    void SetSiguiente(NodoEquipoXGrupo *);
 
-    NodoEquipoXGrupo* getSiguiente();
-    void setSiguiente(NodoEquipoXGrupo*);
+    NodoEquipoXPais * GetEnlaceEquipo();
+    void SetEquipo(NodoEquipo *);
 
-    NodoEquipo* getEquipo();
-    void setEquipo(NodoEquipo*);
-
-    NodoEquipo* getEnlaceEquipo();
-    void setEnlaceEquipo(NodoEquipo*);
-
-    NodoGrupos* getGrupo();
-    void setGrupo(NodoGrupos*);
-
-    NodoGrupos* getEnlaceGrupo();
-    void setEnlaceGrupo(NodoGrupos*);
+    NodoEquipoXPais * GetEnlaceEquipo();
+    void SetEnlaceEquipo(NodoEquipoXPais *);
 };
 

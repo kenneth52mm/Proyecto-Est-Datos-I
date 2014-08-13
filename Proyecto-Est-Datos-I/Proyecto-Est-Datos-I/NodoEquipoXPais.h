@@ -10,6 +10,7 @@ private:
 
 	NodoEquipo * equipo;
 	NodoPais * pais;
+
 public:
 	NodoEquipoXPais(void);
 	~NodoEquipoXPais(void);

@@ -22,23 +22,26 @@ int ListaGrupos::GetTama()
 	return this->tamano;
 }
 
-NodoGrupos *ListaGrupos::DirNodo(int _id)
+NodoGrupos * ListaGrupos::DirNodo(string letra)
 {
-	if(GetCab()==NULL)
+	if (GetCab() == NULL)
 		return NULL;
-	else{
-		NodoGrupos *aux=GetCab();
-		do{
-			if(aux->GetId()==_id)
+	else 
+	{
+		NodoGrupos * aux=GetCab();
+		do
+		{
+			if (aux->GetGrupo().compare(letra) == 0)
 				return aux;
-			aux=aux->GetSgte();
+			else
+				aux = aux->GetSgte();
 		}
-		while(aux!=GetCab());
+		while(aux != GetCab());
 		return NULL;
 	}
 }
 
-int ListaGrupos::Agregar(string _grupo, ListaEquipos *_equipos)
+int ListaGrupos::Agregar(string _grupo, ListaEquipoXGrupo * _equipos)
 {
 	NodoGrupos* nuevo_nodo = new NodoGrupos(_grupo, _equipos); 
 
@@ -96,22 +99,44 @@ int ListaGrupos::Eliminar(int _id)
 }
 void ListaGrupos::MostarLista()
 {
-	NodoGrupos * aux = GetCab();
+	NodoGrupos * recorrido = GetCab();
+	NodoEquipoXGrupo * recorrido2 = recorrido->GetEquipos()->getCabeza();
 	do
 	{
-		cout << "-- Grupo: " << aux->GetGrupo() << " --" << endl
+		do
+		{
+			cout << "-- Grupo: " << recorrido->GetGrupo() << " --" << endl
 		<< "-- Equipos --" << endl
-		<< aux->GetEquipos()->MostarLista() << endl;
-	}
-	while (aux != this->GetCab());
-}
-void ListaGrupos::MostrarGrupo(int _id)
-{
-    ListaEquipos * nueva = new ListaEquipos();
-	NodoGrupos * aux = DirNodo(_id);
-	if(aux != NULL)
-		return aux->GetEquipos();
-	else
-		return NULL;
+		<< "ID Equipo: " << recorrido2->GetEnlaceEquipo()->GetEnlaceEquipo()->GetEquipo()->GetId()
+		<< "Equipo: " << recorrido2->GetEnlaceEquipo()->GetEnlacePais()->GetPais()->GetNombre()
+		<< "Abreviatura" << recorrido2->GetEnlaceEquipo()->GetEnlacePais()->GetPais()->GetAbreviatura()
+		<< "Entrenador: " << recorrido2->GetEnlaceEquipo()->GetEnlaceEquipo()->GetEquipo()->GetEntrenador() << endl;
 
+			recorrido2 = recorrido2->GetSiguiente();
+		}
+		while (recorrido2 != recorrido->GetEquipos()->getCabeza());
+
+		recorrido = recorrido->GetSgte();
+	}
+	while (recorrido != this->GetCab());
+}
+void ListaGrupos::MostrarGrupo(string letra)
+{
+	NodoGrupos * recorrido = DirNodo(letra);
+	NodoEquipoXGrupo * recorrido2 = recorrido->GetEquipos()->getCabeza();
+
+	if (recorrido != NULL)
+
+		do
+		{
+			cout << "-- Grupo: " << recorrido->GetGrupo() << " --" << endl
+		<< "-- Equipos --" << endl
+		<< "ID Equipo: " << recorrido2->GetEnlaceEquipo()->GetEnlaceEquipo()->GetEquipo()->GetId()
+		<< "Equipo: " << recorrido2->GetEnlaceEquipo()->GetEnlacePais()->GetPais()->GetNombre()
+		<< "Abreviatura" << recorrido2->GetEnlaceEquipo()->GetEnlacePais()->GetPais()->GetAbreviatura()
+		<< "Entrenador: " << recorrido2->GetEnlaceEquipo()->GetEnlaceEquipo()->GetEquipo()->GetEntrenador() << endl;
+
+			recorrido2 = recorrido2->GetSiguiente();
+		}
+		while (recorrido2 != recorrido->GetEquipos()->getCabeza());
 }

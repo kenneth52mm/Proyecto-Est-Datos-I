@@ -8,6 +8,7 @@ class ListaEquipoXGrupo
 private:
     NodoEquipoXGrupo * cabeza;
     int tamano;
+
 public:
 	ListaEquipoXGrupo(void);
 	~ListaEquipoXGrupo(void);

@@ -1,5 +1,4 @@
 #include "ListaEquipos.h"
-#include "stdafx.h"
 
 
 ListaEquipos::ListaEquipos(void)
@@ -9,27 +8,30 @@ ListaEquipos::~ListaEquipos(void)
 {
 }
 
-NodoEquipo * ListaEquipos::DirNodo(int _id)
+NodoEquipoXPais * ListaEquipos::DirNodo(int _id)
 {
-	if(GetCab()==NULL)
+	if(GetCab() == NULL)
 		return NULL;
-	else{
-		NodoEquipo *aux=GetCab();
-		do{
-			if(aux->GetEquipo()->GetId()==_id)
+	else
+	{
+		NodoEquipoXPais * aux = GetCab();
+		do
+		{
+			if (aux->GetEnlaceEquipo()->GetEquipo()->GetId())
 				return aux;
-			aux=aux->GetSgte();
+			else
+				aux = aux->GetSiguiente();
 		}
-		while(aux!=GetCab());
+		while(aux != GetCab());
 		return NULL;
 	}
 }
 
-NodoEquipo * ListaEquipos::GetCab()
+NodoEquipoXPais * ListaEquipos::GetCab()
 {
 	return this->cab;
 }
-void ListaEquipos::SetCab(NodoEquipo *_cab)
+void ListaEquipos::SetCab(NodoEquipoXPais * _cab)
 {
 	this->cab=_cab;
 }
@@ -104,19 +106,68 @@ int ListaEquipos::Eliminar(int _id)
 
 void ListaEquipos::MostarLista()
 {
-	NodoEquipo * aux = GetCab();
+	NodoEquipoXPais * recorrido = GetCab();
+	NodoJugadorxEquipo * recorrido2 = recorrido->GetEnlaceEquipo()->GetJugadores()->getCabeza();
+
+	cout << "-- Equipos --" << endl;
+
 	do
 	{
-		aux->GetEquipo();
-	}
-	while (aux != GetCab());
-}
+		cout << "ID Equipo: " << recorrido->GetEnlaceEquipo()->GetEquipo()->GetId()
+			 << "Equipo: " << recorrido->GetEnlacePais()->GetPais()->GetNombre()
+			 << "Abreviatura" << recorrido->GetEnlacePais()->GetPais()->GetAbreviatura()
+			 << "Entrenador: " << recorrido->GetEnlaceEquipo()->GetEquipo()->GetEntrenador() << endl 
+			 << "-- Jugadores --" << endl;
 
+		do
+		{
+			cout << "Nombre: " << recorrido2->getEnlaceJugador()->GetJugador()->GetNombre() << endl
+				<< "Edad: " << recorrido2->getEnlaceJugador()->GetJugador()->GetEdad() << endl
+				<< "Fecha de Nacimiento: " << recorrido2->getEnlaceJugador()->GetJugador()->GetFechaNac() << endl
+				<< "Altura: " << recorrido2->getEnlaceJugador()->GetJugador()->GetAltura() << endl
+				<< "Camiseta: " << recorrido2->getEnlaceJugador()->GetJugador()->GetId() << endl
+				<< "Posicion: " << recorrido2->getEnlaceJugador()->GetJugador()->GetPosicion() << endl
+				<< "Primer Partido: " << recorrido2->getEnlaceJugador()->GetJugador()->GetPrimerPartido() << endl
+				<< "Partidos Jugados: " << recorrido2->getEnlaceJugador()->GetJugador()->GetPartidosJugados() << endl
+				<< "Goles marcados: " << recorrido2->getEnlaceJugador()->GetJugador()->GetCantidadGoles() << endl
+				<< "Club actual: " << recorrido2->getEnlaceJugador()->GetJugador()->GetClub() << endl;
+
+			recorrido2 = recorrido2->getSiguiente();
+		}
+		while (recorrido2 != recorrido->GetEnlaceEquipo()->GetJugadores()->getCabeza());
+
+			recorrido = recorrido->GetSiguiente();
+	}
+	while (recorrido != this->GetCab());
+}
 void ListaEquipos::MostrarEquipo(int _id)
 {
-	NodoEquipo * aux = DirNodo(_id);
-	if(aux!=NULL)
-		return aux->GetEquipo();
+	NodoEquipoXPais * recorrido = this->DirNodo(_id);
+	NodoJugadorxEquipo * recorrido2 = recorrido->GetEnlaceEquipo()->GetJugadores()->getCabeza();
+
+	if (recorrido != NULL)
+	{
+		cout << "ID Equipo: " << recorrido->GetEnlaceEquipo()->GetEquipo()->GetId()
+			 << "Equipo: " << recorrido->GetEnlacePais()->GetPais()->GetNombre()
+			 << "Abreviatura" << recorrido->GetEnlacePais()->GetPais()->GetAbreviatura() << endl;
+
+		do
+		{
+			cout << "Nombre: " << recorrido2->getEnlaceJugador()->GetJugador()->GetNombre() << endl
+				<< "Edad: " << recorrido2->getEnlaceJugador()->GetJugador()->GetEdad() << endl
+				<< "Fecha de Nacimiento: " << recorrido2->getEnlaceJugador()->GetJugador()->GetFechaNac() << endl
+				<< "Altura: " << recorrido2->getEnlaceJugador()->GetJugador()->GetAltura() << endl
+				<< "Camiseta: " << recorrido2->getEnlaceJugador()->GetJugador()->GetId() << endl
+				<< "Posicion: " << recorrido2->getEnlaceJugador()->GetJugador()->GetPosicion() << endl
+				<< "Primer Partido: " << recorrido2->getEnlaceJugador()->GetJugador()->GetPrimerPartido() << endl
+				<< "Partidos Jugados: " << recorrido2->getEnlaceJugador()->GetJugador()->GetPartidosJugados() << endl
+				<< "Goles marcados: " << recorrido2->getEnlaceJugador()->GetJugador()->GetCantidadGoles() << endl
+				<< "Club actual: " << recorrido2->getEnlaceJugador()->GetJugador()->GetClub() << endl;
+
+			recorrido2 = recorrido2->getSiguiente();
+		}
+		while (recorrido2 != recorrido->GetEnlaceEquipo()->GetJugadores()->getCabeza());
+	}
 	else
-		return NULL;
+		cout<< "No hay Equipos en la lista"<<endl;
 }

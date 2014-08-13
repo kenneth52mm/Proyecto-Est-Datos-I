@@ -103,10 +103,105 @@ int _tmain(int argc, _TCHAR* argv[])
 
 				break;
 			case 2:
+
+				do
+				{
+					system("pause");
+
+					cout << 
+						"-- Equipos --" << endl << endl <<
+
+						"( 0 ) Atras" << endl << endl <<
+
+						"( 1 ) Ver Equipos" << endl << 
+						"( 2 ) Agregar Equipos" << endl << 
+						"( 3 ) Editar Equipos" << endl << 
+						"( 4 ) Eliminar Equipos" << endl << 
+						"--" << endl <<
+						"Opcion: ";
+
+					cin >> opcion;
+					cout << "---" << endl;
+
+					switch (opcion)
+					{
+						case 0:
+							break;
+						case 1:
+							lista_equipos->MostarLista();
+							break;
+					}
+				}
+				while (opcion != 0);
+				opcion = -1;
+
 				break;
+
 			case 3:
+				do
+				{
+					system("pause");
+
+					cout << 
+						"-- Jugadores --" << endl << endl <<
+
+						"( 0 ) Atras" << endl << endl <<
+
+						"( 1 ) Ver Equipos" << endl << 
+						"( 2 ) Agregar Equipos" << endl << 
+						"( 3 ) Editar Equipos" << endl << 
+						"( 4 ) Eliminar Equipos" << endl << 
+						"--" << endl <<
+						"Opcion: ";
+
+					cin >> opcion;
+					cout << "---" << endl;
+
+					switch (opcion)
+					{
+						case 0:
+							break;
+						case 1:
+							lista_jugadores->MostrarLista();
+							break;
+					}
+				}
+				while (opcion != 0);
+				opcion = -1;
+
 				break;
 			case 4:
+				do
+				{
+					system("pause");
+
+					cout << 
+						"-- Partidos --" << endl << endl <<
+
+						"( 0 ) Atras" << endl << endl <<
+
+						"( 1 ) Ver Equipos" << endl << 
+						"( 2 ) Agregar Equipos" << endl << 
+						"( 3 ) Editar Equipos" << endl << 
+						"( 4 ) Eliminar Equipos" << endl << 
+						"--" << endl <<
+						"Opcion: ";
+
+					cin >> opcion;
+					cout << "---" << endl;
+
+					switch (opcion)
+					{
+						case 0:
+							break;
+						case 1:
+							lista_jugadores->MostrarLista();
+							break;
+					}
+				}
+				while (opcion != 0);
+				opcion = -1;
+
 				break;
 			default:
 				break;

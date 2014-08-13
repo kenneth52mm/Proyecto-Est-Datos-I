@@ -147,7 +147,6 @@ int ListaJugadores::Eliminar(int id)
 }
 void ListaJugadores::MostrarLista()
 {
-	/*
 	if (this->GetCabeza() == NULL)
 		cout << "-- La lista esta vacia --" << endl;
 	else
@@ -157,7 +156,7 @@ void ListaJugadores::MostrarLista()
 		do
 		{
 			cout << "- Jugador -" << endl <<
-				"ID: " << recorrido->GetJugador()->GetId() << endl <<
+				"Camiseta: " << recorrido->GetJugador()->GetId() << endl <<
 				"Nombre: " << recorrido->GetJugador()->GetNombre() << endl <<
 				"Fecha de Nacimiento: " << recorrido->GetJugador()->GetFechaNac() << endl <<
 				"Edad: " << recorrido->GetJugador()->GetEdad() << endl <<
@@ -174,11 +173,9 @@ void ListaJugadores::MostrarLista()
 		while (recorrido != this->GetCabeza());
 		cout << "-- Fin de Lista --" << endl;
 	}
-	*/
 }
 void ListaJugadores::MostrarJugador(int id)
 {
-	/*
 	if (this->DirNodo(id) == NULL)
 		cout << "-- Jugador no encontrado --" << endl;
 	else
@@ -197,5 +194,4 @@ void ListaJugadores::MostrarJugador(int id)
 			"Cantidad de Goles: " << jugador->GetJugador()->GetCantidadGoles() << endl <<
 			"- - -" << endl;
 	}
-	*/
 }

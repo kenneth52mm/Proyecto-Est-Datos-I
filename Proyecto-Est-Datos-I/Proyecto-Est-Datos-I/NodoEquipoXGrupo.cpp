@@ -3,77 +3,38 @@
 
 NodoEquipoXGrupo::NodoEquipoXGrupo(void)
 {
-    this->setAnterior(NULL);
-    this->setSiguiente(NULL);
-    this->setEnlaceEquipo(NULL);
-    this->setEnlaceGrupo(NULL);
-    this->setEquipo(NULL);
-    this->setGrupo(NULL);
+    this->SetAnterior(NULL);
+    this->SetSiguiente(NULL);
+    this->SetEnlaceEquipo(NULL);
 }
-
-
 NodoEquipoXGrupo::~NodoEquipoXGrupo(void)
 {
 }
 
-NodoEquipoXGrupo::NodoEquipoXGrupo(NodoGrupos* _grupo, NodoEquipo* _equipo)
-{
-    this->setGrupo(_grupo);
-    this->setEquipo(_equipo);
-}
-
-NodoEquipoXGrupo* NodoEquipoXGrupo::getAnterior()
+NodoEquipoXGrupo * NodoEquipoXGrupo::GetAnterior()
 {
     return this->anterior;
 }
-void NodoEquipoXGrupo::setAnterior(NodoEquipoXGrupo* _anterior)
+void NodoEquipoXGrupo::SetAnterior(NodoEquipoXGrupo* _anterior)
 {
     this->anterior= _anterior;
 
 }
 
-NodoEquipoXGrupo*NodoEquipoXGrupo:: getSiguiente()
+NodoEquipoXGrupo * NodoEquipoXGrupo::GetSiguiente()
 {
     return this->siguiente;
 }
-void NodoEquipoXGrupo::setSiguiente(NodoEquipoXGrupo* _siguiente)
+void NodoEquipoXGrupo::SetSiguiente(NodoEquipoXGrupo* _siguiente)
 {
     this->siguiente= _siguiente;
-
 }
 
-NodoEquipo* NodoEquipoXGrupo::getEquipo()
+NodoEquipoXPais * NodoEquipoXGrupo::GetEnlaceEquipo()
 {
-    return this->equipo;
+    return this->enlace_equipo;
 }
-void NodoEquipoXGrupo::setEquipo(NodoEquipo*_equipo)
+void NodoEquipoXGrupo::SetEnlaceEquipo(NodoEquipoXPais * _enlaceEquipo)
 {
-    this->equipo= _equipo;
-}
-
-NodoEquipo* NodoEquipoXGrupo::getEnlaceEquipo()
-{
-    return this->EnlaceEquipo;
-}
-void NodoEquipoXGrupo::setEnlaceEquipo(NodoEquipo* _enlaceEquipo)
-{
-    this->EnlaceEquipo= _enlaceEquipo;
-}
-
-NodoGrupos* NodoEquipoXGrupo::getGrupo()
-{
-    return this->grupo;
-}
-void NodoEquipoXGrupo::setGrupo(NodoGrupos* _grupo)
-{
-    this->grupo = _grupo;
-}
-
-NodoGrupos* NodoEquipoXGrupo::getEnlaceGrupo()
-{
-    return this->enlaceGrupo;
-}
-void NodoEquipoXGrupo::setEnlaceGrupo(NodoGrupos* _enlaceGrupo)
-{
-    this->enlaceGrupo= _enlaceGrupo;
+    this->enlace_equipo = _enlaceEquipo;
 }

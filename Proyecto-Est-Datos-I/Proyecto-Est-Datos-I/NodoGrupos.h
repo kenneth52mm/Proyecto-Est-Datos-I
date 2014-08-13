@@ -1,30 +1,25 @@
 #pragma once
 #include "Equipo.h"
-#include "ListaEquipos.h"
+#include "ListaEquipoXGrupo.h"
 
 
 class NodoGrupos
 {
 private :
-	int id;
     string grupo;
-	ListaEquipos * equipos;
+	ListaEquipoXGrupo * equipos;
 	NodoGrupos * sgte;
 	NodoGrupos * ante;
+
 public:
 	NodoGrupos(void);
 	~NodoGrupos(void);
 
-	NodoGrupos(string, ListaEquipos *);
-
-	int GetId();
-	void SetId(int);
-
     string GetGrupo();
     void SetGrupo(string);
 
-	ListaEquipos *GetEquipos();
-	void SetEquipos(ListaEquipos *);
+	ListaEquipoXGrupo * GetEquipos();
+	void SetEquipos(ListaEquipoXGrupo *);
 
 	NodoGrupos *GetSgte();
 	void SetSgte(NodoGrupos*);
