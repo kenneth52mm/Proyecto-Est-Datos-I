@@ -33,3 +33,7 @@ void Equipo::SetEntrenador(string _entrenador)
 {
 	this->entrenador=_entrenador;
 }
+
+void Equipo::toString()
+{
+}

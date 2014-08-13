@@ -1,6 +1,7 @@
 #include "ListaEquipos.h"
 #include "stdafx.h"
 
+
 ListaEquipos::ListaEquipos(void)
 {
 }
@@ -101,19 +102,19 @@ int ListaEquipos::Eliminar(int _id)
 	}
 }
 
-ListaEquipos * ListaEquipos::MostarLista()
+void ListaEquipos::MostarLista()
 {
-	ListaEquipos *nueva=new ListaEquipos();
-	NodoEquipo *aux=GetCab();
-	do{
-		nueva->Agregar(aux->GetEquipo());
-	}while(aux!=GetCab());
-	return nueva;
+	NodoEquipo * aux = GetCab();
+	do
+	{
+		aux->GetEquipo();
+	}
+	while (aux != GetCab());
 }
 
-Equipo * ListaEquipos::MostrarEquipo(int _id)
+void ListaEquipos::MostrarEquipo(int _id)
 {
-	NodoEquipo *aux=DirNodo(_id);
+	NodoEquipo * aux = DirNodo(_id);
 	if(aux!=NULL)
 		return aux->GetEquipo();
 	else

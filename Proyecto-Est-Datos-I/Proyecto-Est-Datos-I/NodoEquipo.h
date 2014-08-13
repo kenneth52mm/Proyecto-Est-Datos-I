@@ -5,20 +5,20 @@ class NodoEquipo
 {
 private:
 	Equipo * equipo;
-	NodoEquipo *sgte;
-	NodoEquipo *ante;
+	NodoEquipo * sgte;
+	NodoEquipo * ante;
 public:
 	NodoEquipo(void);
 	~NodoEquipo(void);
 
 	NodoEquipo(Equipo *);
-	Equipo *GetEquipo();
+	Equipo * GetEquipo();
 	void SetEquipo(Equipo *);
 
-	NodoEquipo *GetSgte();
+	NodoEquipo * GetSgte();
 	void SetSgte(NodoEquipo *);
 
-	NodoEquipo *GetAnte();
+	NodoEquipo * GetAnte();
 	void SetAnte(NodoEquipo *);
 
 };

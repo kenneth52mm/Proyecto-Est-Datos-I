@@ -18,5 +18,6 @@ public:
     string GetEntrenador();
     void SetEntrenador(string);
 
+	void toString();
 };
 

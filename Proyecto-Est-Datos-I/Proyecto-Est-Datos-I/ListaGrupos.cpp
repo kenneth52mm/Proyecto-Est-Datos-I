@@ -94,18 +94,18 @@ int ListaGrupos::Eliminar(int _id)
 		return true;
 	}
 }
-ListaGrupos *ListaGrupos::MostarLista()
+void ListaGrupos::MostarLista()
 {
-	ListaGrupos * nueva = new ListaGrupos();
 	NodoGrupos * aux = GetCab();
 	do
 	{
-		nueva->Agregar(aux->GetGrupo(),aux->GetEquipos());
+		cout << "-- Grupo: " << aux->GetGrupo() << " --" << endl
+		<< "-- Equipos --" << endl
+		<< aux->GetEquipos()->MostarLista() << endl;
 	}
-	while(aux != this->GetCab());
-	return nueva;
+	while (aux != this->GetCab());
 }
-ListaEquipos * ListaGrupos::MostrarGrupo(int _id)
+void ListaGrupos::MostrarGrupo(int _id)
 {
     ListaEquipos * nueva = new ListaEquipos();
 	NodoGrupos * aux = DirNodo(_id);

@@ -94,6 +94,7 @@ int _tmain(int argc, _TCHAR* argv[])
 						case 0:
 							break;
 						case 1:
+							lista_grupos->MostarLista();
 							break;
 					}
 				}

@@ -3,7 +3,6 @@
 
 #include <fstream> // Para poder abrir archivos y leerlos
 #include <vector> // Para poder usar vectores.
-#include <string>
 #include <boost/algorithm/string.hpp>
 
 #include "ListaGrupos.h"
