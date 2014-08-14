@@ -5,12 +5,12 @@
 class NodoJugadorxEquipo
 {
 private:
-	NodoEquipo* equipo;
-	NodoJugador* jugador;
-	NodoJugadorxEquipo* siguiente;
-	NodoJugadorxEquipo* anterior;
-	NodoEquipo* enlaceEquipo;
-	NodoJugador* enlaceJugador;
+	NodoEquipo *equipo;
+	NodoJugador * jugador;
+	NodoJugadorxEquipo * siguiente;
+	NodoJugadorxEquipo * anterior;
+	NodoEquipo * enlaceEquipo;
+	NodoJugador * enlaceJugador;
 	
 
 public:

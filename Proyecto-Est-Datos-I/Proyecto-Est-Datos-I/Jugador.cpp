@@ -7,6 +7,21 @@ Jugador::Jugador(void)
 Jugador::~Jugador(void)
 {
 }
+Jugador::Jugador(int id, string posicion, string primer_partido, string nombre,
+            int partidos_jugados, int cantidad_goles, int edad, int altura,
+            string fecha_nac, string club)
+{
+	SetId(id);
+	SetPosicion(posicion);
+	SetPrimerPartido(primer_partido);
+	SetNombre(nombre);
+	SetPartidosJugados(partidos_jugados);
+	SetCantidadGoles(cantidad_goles);
+	SetEdad(edad);
+	SetAltura(altura);
+	SetFechaNac(fecha_nac);
+	SetClub(club);
+}
 
 int Jugador::GetId()
 {
