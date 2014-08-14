@@ -44,3 +44,12 @@ void NodoEquipoXGrupo::SetEquipo(NodoEquipo * equipo)
 {
     this->equipo = equipo;
 }
+
+NodoGrupos * NodoEquipoXGrupo::GetGrupo()
+{
+	return this->grupo;
+}
+void NodoEquipoXGrupo::SetGrupo(NodoGrupos *)
+{
+	this->grupo = grupo;
+}

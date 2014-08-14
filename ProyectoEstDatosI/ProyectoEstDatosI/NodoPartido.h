@@ -12,6 +12,8 @@ public:
 	NodoPartido(void);
 	~NodoPartido(void);
 
+	NodoPartido(Partido *);
+
 	Partido * GetPartido();
 	void SetPartido(Partido *);
 

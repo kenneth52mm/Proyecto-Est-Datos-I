@@ -17,6 +17,8 @@ public:
 	NodoPartidoxEquipo(void);
 	~NodoPartidoxEquipo(void);
 
+	NodoPartidoxEquipo(NodoEquipo *, NodoEquipo *, NodoPartido *);
+
 	NodoPartidoxEquipo * GetAnterior();
 	void SetAnterior(NodoPartidoxEquipo *);
 

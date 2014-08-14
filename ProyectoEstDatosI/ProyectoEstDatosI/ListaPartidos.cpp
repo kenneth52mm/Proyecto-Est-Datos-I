@@ -44,3 +44,38 @@ NodoPartido * ListaPartidos::DirNodo(int id)
 		return NULL;
 	}
 }
+
+int ListaPartidos::Agregar(Partido * partido)
+{
+	/*
+	1: Insertado
+	2: Repetido
+	*/
+
+	if (this->DirNodo(partido->GetId()) != NULL)
+	{
+		NodoPartido * nuevo_nodo = new NodoPartido(partido);
+
+		if (this->GetCabeza() != NULL)
+		{
+			this->SetCabeza(nuevo_nodo);
+
+			nuevo_nodo->SetAnterior(nuevo_nodo);
+			nuevo_nodo->SetSiguiente(nuevo_nodo);
+
+			return 1;
+		}
+		else
+		{
+			nuevo_nodo->SetAnterior(this->GetCabeza()->GetAnterior());
+			nuevo_nodo->SetSiguiente(this->GetCabeza());
+
+			this->GetCabeza()->GetAnterior()->SetSiguiente(nuevo_nodo);
+			this->GetCabeza()->SetAnterior(nuevo_nodo);
+
+			return 1;
+		}
+	}
+	else
+		return 2;
+}

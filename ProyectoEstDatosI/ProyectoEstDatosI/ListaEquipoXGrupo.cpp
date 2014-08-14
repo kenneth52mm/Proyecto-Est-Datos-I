@@ -38,12 +38,14 @@ int ListaEquipoXGrupo::Agregar(int id_equipo, string grupo, ListaEquipos * lista
 	NodoEquipo * nodo_equipo = lista_equipos->DirNodo(id_equipo);
 	NodoGrupos * nodo_grupo = lista_grupos->DirNodo(grupo);
 
+	bool repetido = false;
+
 	if (nodo_equipo != NULL && nodo_grupo != NULL)
 	{
-		NodoEquipoXGrupo * nuevo_nodo = new NodoEquipoXGrupo(nodo_equipo, nodo_grupo);
-
 		if (this->GetCabeza() != NULL)
 		{
+			NodoEquipoXGrupo * nuevo_nodo = new NodoEquipoXGrupo(nodo_equipo, nodo_grupo);
+
 			this->SetCabeza(nuevo_nodo);
 
 			nuevo_nodo->SetSiguiente(nuevo_nodo);
@@ -53,13 +55,31 @@ int ListaEquipoXGrupo::Agregar(int id_equipo, string grupo, ListaEquipos * lista
 		}
 		else
 		{
-			nuevo_nodo->SetSiguiente(this->GetCabeza());
-			nuevo_nodo->SetAnterior(this->GetCabeza()->GetAnterior());
+			NodoEquipoXGrupo * recorrido = this->GetCabeza();
 
-			this->GetCabeza()->GetAnterior()->SetSiguiente(nuevo_nodo);
-			this->GetCabeza()->SetAnterior(nuevo_nodo);
+			do
+			{
+				if (true) // Dir nodo!
+					repetido = true;
 
-			return 2;
+				recorrido = recorrido->GetSiguiente();
+			}
+			while (recorrido != this->GetCabeza());
+
+			if (!repetido)
+			{
+				NodoEquipoXGrupo * nuevo_nodo = new NodoEquipoXGrupo(nodo_equipo, nodo_grupo);
+
+				nuevo_nodo->SetSiguiente(this->GetCabeza());
+				nuevo_nodo->SetAnterior(this->GetCabeza()->GetAnterior());
+
+				this->GetCabeza()->GetAnterior()->SetSiguiente(nuevo_nodo);
+				this->GetCabeza()->SetAnterior(nuevo_nodo);
+
+				return 1;
+			}
+			else
+				return 2;
 		}
 	}
 	else

@@ -11,6 +11,8 @@ public:
 	NodoEquipo(void);
 	~NodoEquipo(void);
 
+	NodoEquipo(Equipo *);
+
 	NodoEquipo * GetSiguiente();
 	void SetSiguiente(NodoEquipo *);
 
