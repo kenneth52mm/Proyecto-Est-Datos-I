@@ -18,9 +18,9 @@ public:
 
 	NodoGrupos * DirNodo(string);
 
-    /*int Agregar(string);
+    int Agregar(string);
 	int Eliminar(string);
 	void MostarLista();
-	void MostrarGrupo(string);*/
+	void MostrarGrupo(string);
 };
 

@@ -52,6 +52,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	int altura;
 	string fecha_nac;
 	string club;
+
 	do
 	{
 		system("pause");
@@ -88,20 +89,11 @@ int _tmain(int argc, _TCHAR* argv[])
 
 					"( 0 ) Atras" << endl << endl <<
 
-<<<<<<< HEAD
-						"( 1 ) Ver Grupos" << endl <<
-						"( 2 ) Agregar Grupo" << endl <<
-						"( 3 ) Editar Grupo" << endl <<
-						"( 4 ) Eliminar Grupo (Los equipos siguien existiendo)" << endl << 
-						"--" << endl <<
-						"Opcion: ";
-=======
 					"( 1 ) Ver Grupos" << endl << 
 					"( 2 ) Agregar Grupo" << endl << 
 					"( 3 ) Eliminar Grupo (Los equipos siguien existiendo)" << endl << 
 					"--" << endl <<
 					"Opcion: ";
->>>>>>> origin/master
 
 				cin >> opcion;
 				cout << "---" << endl;
@@ -111,7 +103,7 @@ int _tmain(int argc, _TCHAR* argv[])
 				case 0:
 					break;
 				case 1:
-					lista_grupos->MostarLista();
+					//lista_grupos->MostarLista();
 					break;
 				}
 			}
@@ -121,116 +113,118 @@ int _tmain(int argc, _TCHAR* argv[])
 			break;
 		case 2:
 
-			do
-			{
-				system("pause");
+			//do
+			//{
+			//	system("pause");
 
-				cout << 
-					"-- Equipos --" << endl << endl <<
+			//	cout << 
+			//		"-- Equipos --" << endl << endl <<
 
-					"( 0 ) Atras" << endl << endl <<
+			//		"( 0 ) Atras" << endl << endl <<
 
-					"( 1 ) Ver Equipos" << endl << 
-					"( 2 ) Agregar Equipos" << endl << 
-					"( 3 ) Eliminar Equipos" << endl << 
-					"--" << endl <<
-					"Opcion: ";
+			//		"( 1 ) Ver Equipos" << endl << 
+			//		"( 2 ) Agregar Equipos" << endl << 
+			//		"( 3 ) Eliminar Equipos" << endl << 
+			//		"--" << endl <<
+			//		"Opcion: ";
 
-				cin >> opcion;
-				cout << "---" << endl;
+			//	cin >> opcion;
+			//	cout << "---" << endl;
 
-				switch (opcion)
-				{
-				case 0:
-					break;
-				case 1:
-					lista_equipos->MostarLista();
-					break;
-				}
-			}
-			while (opcion != 0);
-			opcion = -1;
-			break;
+			//	switch (opcion)
+			//	{
+			//	case 0:
+			//		break;
+			//	case 1:
+			//		//lista_equipos->MostarLista();
+			//		break;
+			//	}
+			//}
+			//while (opcion != 0);
+			//opcion = -1;
+			//break;
 
 		case 3:
-			do
-			{
-				system("pause");
+			//do
+			//{
+			//	system("pause");
 
-				cout << 
-					"-- Jugadores --" << endl << endl <<
+			//	cout << 
+			//		"-- Jugadores --" << endl << endl <<
 
-					"( 0 ) Atras" << endl << endl <<
+			//		"( 0 ) Atras" << endl << endl <<
 
-					"( 1 ) Ver Judagores" << endl << 
-					"( 2 ) Agregar Jugadores" << endl << 
-					"( 3 ) Eliminar Jugadores" << endl << 
-					"--" << endl <<
-					"Opcion: ";
+			//		"( 1 ) Ver Judagores" << endl << 
+			//		"( 2 ) Agregar Jugadores" << endl << 
+			//		"( 3 ) Eliminar Jugadores" << endl << 
+			//		"--" << endl <<
+			//		"Opcion: ";
 
-				cin >> opcion;
-				cout << "---" << endl;
+			//	cin >> opcion;
+			//	cout << "---" << endl;
 
-				switch (opcion)
-				{
-				case 0:
-					break;
-				case 1:
-					lista_jugadores->MostrarLista();
-					break;
-				case 2:
-					cout<<"Numero de jugador"<<endl;
-					cin>>id;
-					cout<<"Posicion en la que juega"<<endl;
-					cin>>posicion;
-					cout<<"Primer partido jugado"<<endl;
-					cin>>primer_partido;
-					cout<<"Nombre"<<endl;
-					cin>>nombre;
-					cout<<"Cantidad de partidos jugados"<<endl;
-					cin>>partidos_jugados;
-					cout<<"Cantidad de goles anotados"<<endl;
-					cin>>cantidad_goles;
-					cout<<"Edad"<<endl;
-					cin>>edad;
-					cout<<"Altura"<<endl;
-					cin>>altura;
-					cout<<"Fecha nacimiento"<<endl;
-					cin>>fecha_nac;
-					cout<<"Equipo en el que juega"<<endl;
-					cin>>club;
-					Jugador *jugador=new Jugador(id,posicion,primer_partido,nombre,partidos_jugados,cantidad_goles,edad,altura,fecha_nac,club);
-					int respuesta=lista_jugadores->Agregar(jugador);
-					switch (respuesta)
-					{
-					case 1:
-						cout<<"Agregado correctamente"<<endl;
-						break;
-					case 2:
-						cout<<"El jugador no fue agregado"<<endl;
-						break;
-					}
-					break;
-				case 3:
-					int res;
-					cout<<"Digite el numero de jugador que desea eliminar"<<endl;
-					cin>>res;
-					int respuesta=lista_jugadores->Eliminar(res);
-					switch(respuesta){
-					case 1:
-						cout<<"El jugador fue eliminado correctamente"<<endl;
-						break;
-					case 2:
-						cout<<"El jugador especificado no se pudo eliminar, ya que no existe"<<endl;
-						break;
-					}
-					break;
-				}
-			}
-			while (opcion != 0);
-			opcion = -1;
+			//	switch (opcion)
+			//	{
+			//	case 0:
+			//		break;
+			//	case 1:
+			//		//lista_jugadores->MostrarLista();
+			//		break;
+			//	case 2:
+			//		cout<<"Numero de jugador"<<endl;
+			//		cin>>id;
+			//		cout<<"Posicion en la que juega"<<endl;
+			//		cin>>posicion;
+			//		cout<<"Primer partido jugado"<<endl;
+			//		cin>>primer_partido;
+			//		cout<<"Nombre"<<endl;
+			//		cin>>nombre;
+			//		cout<<"Cantidad de partidos jugados"<<endl;
+			//		cin>>partidos_jugados;
+			//		cout<<"Cantidad de goles anotados"<<endl;
+			//		cin>>cantidad_goles;
+			//		cout<<"Edad"<<endl;
+			//		cin>>edad;
+			//		cout<<"Altura"<<endl;
+			//		cin>>altura;
+			//		cout<<"Fecha nacimiento"<<endl;
+			//		cin>>fecha_nac;
+			//		cout<<"Equipo en el que juega"<<endl;
+			//		cin>>club;
+			//		Jugador *jugador=new Jugador(id,posicion,primer_partido,nombre,partidos_jugados,cantidad_goles,edad,altura,fecha_nac,club);
+			//		//int respuesta=lista_jugadores->Agregar(jugador);
+			//		int respuesta=0;
+			//		switch (respuesta)
+			//		{
+			//		case 1:
+			//			cout<<"Agregado correctamente"<<endl;
+			//			break;
+			//		case 2:
+			//			cout<<"El jugador no fue agregado"<<endl;
+			//			break;
+			//		}
+			//		break;
+			//	case 3:
+			//		int res;
+			//		cout<<"Digite el numero de jugador que desea eliminar"<<endl;
+			//		cin>>res;
+			//		//int respuesta=lista_jugadores->Eliminar(res);
+			//		respuesta=0;
+			//		switch(respuesta){
+			//		case 1:
+			//			cout<<"El jugador fue eliminado correctamente"<<endl;
+			//			break;
+			//		case 2:
+			//			cout<<"El jugador especificado no se pudo eliminar, ya que no existe"<<endl;
+			//			break;
+			//		}
+			//		break;
+			//	}
+			//}
+			//while (opcion != 0);
+			//opcion = -1;
 
-			break;
+			//break;
 		case 4:
 			do
 			{
@@ -255,7 +249,7 @@ int _tmain(int argc, _TCHAR* argv[])
 				case 0:
 					break;
 				case 1:
-					lista_jugadores->MostrarLista();
+					//lista_jugadores->MostrarLista();
 					break;
 				}
 			}

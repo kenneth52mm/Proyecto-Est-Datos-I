@@ -8,6 +8,11 @@ NodoJugador::~NodoJugador(void)
 {
 }
 
+NodoJugador::NodoJugador(Jugador * jugador)
+{
+	this->SetJugador(jugador);
+}
+
 NodoJugador * NodoJugador::GetAnterior()
 {
 	return this->anterior;

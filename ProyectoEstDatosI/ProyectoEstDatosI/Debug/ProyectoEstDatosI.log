@@ -1,0 +1,86 @@
+﻿Build started 8/14/2014 1:38:27 PM.
+     1>Project "C:\Users\Daniel\Documents\GitHub\Proyecto-Est-Datos-I\ProyectoEstDatosI\ProyectoEstDatosI\ProyectoEstDatosI.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /IC:\Users\Daniel\Downloads\boost_1_55_0 /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt CargaInicial.cpp Equipo.cpp Jugador.cpp ListaEquipoXGrupo.cpp ListaEquipos.cpp ListaGrupos.cpp ListaJugadores.cpp ListaJugadorxEquipo.cpp ListaPartidoXEquipo.cpp NodoEquipo.cpp NodoEquipoXGrupo.cpp NodoGrupos.cpp NodoJugador.cpp NodoJugadorxEquipo.cpp NodoPartidoxEquipo.cpp ProyectoEstDatosI.cpp
+         ProyectoEstDatosI.cpp
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\nodoequipoxgrupo.h(11): error C2143: syntax error : missing ';' before '*'
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\nodoequipoxgrupo.h(11): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\nodoequipoxgrupo.h(17): error C2061: syntax error : identifier 'NodoGrupos'
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\nodoequipoxgrupo.h(28): error C2143: syntax error : missing ';' before '*'
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\nodoequipoxgrupo.h(28): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\nodoequipoxgrupo.h(28): warning C4183: 'GetGrupo': missing return type; assumed to be a member function returning 'int'
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\nodoequipoxgrupo.h(29): error C2061: syntax error : identifier 'NodoGrupos'
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\listaequipoxgrupo.h(21): error C2061: syntax error : identifier 'ListaGrupos'
+         NodoJugadorxEquipo.cpp
+         NodoJugador.cpp
+         NodoGrupos.cpp
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\nodoequipoxgrupo.h(11): error C2143: syntax error : missing ';' before '*'
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\nodoequipoxgrupo.h(11): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\nodoequipoxgrupo.h(17): error C2061: syntax error : identifier 'NodoGrupos'
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\nodoequipoxgrupo.h(28): error C2143: syntax error : missing ';' before '*'
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\nodoequipoxgrupo.h(28): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\nodoequipoxgrupo.h(28): warning C4183: 'GetGrupo': missing return type; assumed to be a member function returning 'int'
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\nodoequipoxgrupo.h(29): error C2061: syntax error : identifier 'NodoGrupos'
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\listagrupos.h(7): error C2143: syntax error : missing ';' before '*'
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\listagrupos.h(7): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\listagrupos.h(13): error C2143: syntax error : missing ';' before '*'
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\listagrupos.h(13): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\listagrupos.h(13): warning C4183: 'GetCabeza': missing return type; assumed to be a member function returning 'int'
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\listagrupos.h(14): error C2061: syntax error : identifier 'NodoGrupos'
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\listagrupos.h(19): error C2143: syntax error : missing ';' before '*'
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\listagrupos.h(19): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\listagrupos.h(19): warning C4183: 'DirNodo': missing return type; assumed to be a member function returning 'int'
+         NodoEquipoXGrupo.cpp
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\listagrupos.h(7): error C2143: syntax error : missing ';' before '*'
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\listagrupos.h(7): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\listagrupos.h(13): error C2143: syntax error : missing ';' before '*'
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\listagrupos.h(13): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\listagrupos.h(13): warning C4183: 'GetCabeza': missing return type; assumed to be a member function returning 'int'
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\listagrupos.h(14): error C2061: syntax error : identifier 'NodoGrupos'
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\listagrupos.h(19): error C2143: syntax error : missing ';' before '*'
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\listagrupos.h(19): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\listagrupos.h(19): warning C4183: 'DirNodo': missing return type; assumed to be a member function returning 'int'
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\listaequipoxgrupo.h(9): error C2143: syntax error : missing ';' before '*'
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\listaequipoxgrupo.h(9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\listaequipoxgrupo.h(15): error C2143: syntax error : missing ';' before '*'
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\listaequipoxgrupo.h(15): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\listaequipoxgrupo.h(15): warning C4183: 'GetCabeza': missing return type; assumed to be a member function returning 'int'
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\listaequipoxgrupo.h(16): error C2061: syntax error : identifier 'NodoEquipoXGrupo'
+         ListaJugadorxEquipo.cpp
+         ListaJugadores.cpp
+         ListaGrupos.cpp
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\nodoequipoxgrupo.h(11): error C2143: syntax error : missing ';' before '*'
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\nodoequipoxgrupo.h(11): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\nodoequipoxgrupo.h(17): error C2061: syntax error : identifier 'NodoGrupos'
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\nodoequipoxgrupo.h(28): error C2143: syntax error : missing ';' before '*'
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\nodoequipoxgrupo.h(28): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\nodoequipoxgrupo.h(28): warning C4183: 'GetGrupo': missing return type; assumed to be a member function returning 'int'
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\nodoequipoxgrupo.h(29): error C2061: syntax error : identifier 'NodoGrupos'
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\listaequipoxgrupo.h(21): error C2061: syntax error : identifier 'ListaGrupos'
+         ListaEquipos.cpp
+         ListaEquipoXGrupo.cpp
+         Jugador.cpp
+         Equipo.cpp
+         CargaInicial.cpp
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\nodoequipoxgrupo.h(11): error C2143: syntax error : missing ';' before '*'
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\nodoequipoxgrupo.h(11): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\nodoequipoxgrupo.h(17): error C2061: syntax error : identifier 'NodoGrupos'
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\nodoequipoxgrupo.h(28): error C2143: syntax error : missing ';' before '*'
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\nodoequipoxgrupo.h(28): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\nodoequipoxgrupo.h(28): warning C4183: 'GetGrupo': missing return type; assumed to be a member function returning 'int'
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\nodoequipoxgrupo.h(29): error C2061: syntax error : identifier 'NodoGrupos'
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\listaequipoxgrupo.h(21): error C2061: syntax error : identifier 'ListaGrupos'
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\cargainicial.cpp(49): error C2660: 'ListaEquipoXGrupo::Agregar' : function does not take 4 arguments
+         Generating Code...
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\listaequipoxgrupo.cpp(67): warning C4715: 'ListaEquipoXGrupo::Agregar' : not all control paths return a value
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\listajugadores.cpp(76): warning C4715: 'ListaJugadores::Agregar' : not all control paths return a value
+     1>c:\users\daniel\documents\github\proyecto-est-datos-i\proyectoestdatosi\proyectoestdatosi\listajugadorxequipo.cpp(67): warning C4715: 'ListaJugadorxEquipo::Agregar' : not all control paths return a value
+         Skipping... (no relevant changes detected)
+         NodoPartidoxEquipo.cpp
+         NodoEquipo.cpp
+         ListaPartidoXEquipo.cpp
+     1>Done Building Project "C:\Users\Daniel\Documents\GitHub\Proyecto-Est-Datos-I\ProyectoEstDatosI\ProyectoEstDatosI\ProyectoEstDatosI.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:12.05

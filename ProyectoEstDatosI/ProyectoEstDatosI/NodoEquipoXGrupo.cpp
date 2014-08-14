@@ -5,10 +5,16 @@ NodoEquipoXGrupo::NodoEquipoXGrupo(void)
 {
     this->SetAnterior(NULL);
     this->SetSiguiente(NULL);
-    this->SetEnlaceEquipo(NULL);
+    this->SetEquipo(NULL);
 }
 NodoEquipoXGrupo::~NodoEquipoXGrupo(void)
 {
+}
+
+NodoEquipoXGrupo::NodoEquipoXGrupo(NodoEquipo * equipo, NodoGrupos * grupo)
+{
+	this->SetEquipo(equipo);
+	this->SetGrupo(grupo);
 }
 
 NodoEquipoXGrupo * NodoEquipoXGrupo::GetAnterior()
@@ -30,11 +36,11 @@ void NodoEquipoXGrupo::SetSiguiente(NodoEquipoXGrupo* _siguiente)
     this->siguiente= _siguiente;
 }
 
-NodoEquipo * NodoEquipoXGrupo::GetEnlaceEquipo()
+NodoEquipo * NodoEquipoXGrupo::GetEquipo()
 {
-    return this->enlace_equipo;
+    return this->equipo;
 }
-void NodoEquipoXGrupo::SetEnlaceEquipo(NodoEquipo * _enlaceEquipo)
+void NodoEquipoXGrupo::SetEquipo(NodoEquipo * equipo)
 {
-    this->enlace_equipo = _enlaceEquipo;
+    this->equipo = equipo;
 }

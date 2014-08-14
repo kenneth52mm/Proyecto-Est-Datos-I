@@ -1,16 +1,20 @@
 #pragma once
 #include "NodoEquipo.h"
+#include "NodoGrupos.h"
 
 class NodoEquipoXGrupo
 {
 private:
     NodoEquipoXGrupo * anterior;
     NodoEquipoXGrupo * siguiente;
-	NodoEquipo * enlace_equipo;
+	NodoEquipo * equipo;
+	NodoGrupos * grupo;
 
 public:
 	NodoEquipoXGrupo(void);
 	~NodoEquipoXGrupo(void);
+
+	NodoEquipoXGrupo(NodoEquipo *, NodoGrupos *);
 
     NodoEquipoXGrupo * GetAnterior();
     void SetAnterior(NodoEquipoXGrupo *);
@@ -18,10 +22,10 @@ public:
     NodoEquipoXGrupo * GetSiguiente();
     void SetSiguiente(NodoEquipoXGrupo *);
 
-    NodoEquipo * GetEnlaceEquipo();
+    NodoEquipo * GetEquipo();
     void SetEquipo(NodoEquipo *);
 
-    NodoEquipo * GetEnlaceEquipo();
-    void SetEnlaceEquipo(NodoEquipo *);
+	NodoGrupos * GetGrupo();
+	void SetGrupo(NodoGrupos *);
 };
 

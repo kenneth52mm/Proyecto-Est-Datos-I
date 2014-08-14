@@ -19,9 +19,9 @@ public:
 
 	NodoJugador * DirNodo(int);
 
-	/*int Agregar(Jugador * jugador);
+	int Agregar(Jugador * jugador);
 	int Eliminar(int);
 	void MostrarLista();
-	void MostrarJugador(int);*/
+	void MostrarJugador(int);
 };
 

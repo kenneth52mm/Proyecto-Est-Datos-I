@@ -1,5 +1,7 @@
 #pragma once
 #include "NodoEquipoXGrupo.h"
+#include "ListaEquipos.h"
+#include "ListaGrupos.h"
 
 class ListaEquipoXGrupo
 {
@@ -16,10 +18,10 @@ public:
     int GetTamano();
     void SetTamano(int);
 
-   /* int Agregar(int, int, ListaEquipos *, ListaGrupos *);
+    int Agregar(int, string, ListaEquipos *, ListaGrupos *);
     int Elmininar(int, int);
     void MostrarLista();
     void MostrarEquipo(int);
-    void MostrarGrupo(int);*/
+    void MostrarGrupo(int);
 };
 

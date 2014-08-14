@@ -7,71 +7,55 @@ CargaInicial::~CargaInicial(void)
 {
 }
 
-void CargaInicial::CargarPaisesXEquiposGrupos(ListaGrupos * lista_grupos, ListaEquipoxPais * lista_equipos_pais, ListaPais * lista_pais, ListaEquipos * lista_equipos)
+void CargaInicial::CargarEquiposXGrupos(ListaEquipoXGrupo * lista_equipos_grupos, ListaEquipos * lista_equipos, ListaGrupos * lista_grupos)
 {
-	ifstream archivo_paises("C:\\Users\\Daniel\\Downloads\\CargaPaises.txt");
 	ifstream archivo_equipos("C:\\Users\\Daniel\\Downloads\\CargaEquipos.txt");
 
 	// Variables de lectura de archivos
 	vector<std::string> split;
-	string linea1, linea2;
+	string linea;
 
-	if (archivo_paises.is_open() && archivo_equipos.is_open())
+	if (archivo_equipos.is_open())
 	{
-		// Atributos de pais
-		int id_pais;
+		// Atributos de equipo
+		int id;
 		string nombre;
 		string abreviatura;
-
-		// Atributos de equipo
-		int id_equipo;
 		string entrenador;
-		string letra_grupo;
 
-		// Saltarse la primera linea
-		getline(archivo_paises, linea1);
-		getline(archivo_equipos, linea2);
+		// Enlace a grupos
+		string grupo;
 
-		while (getline(archivo_paises, linea1) && getline(archivo_equipos, linea2))
+		lista_grupos->Agregar("A");
+		lista_grupos->Agregar("B");
+
+		// Saltarse la primera linea (Contiene una descripción)
+		getline(archivo_equipos, linea);
+
+		while (getline(archivo_equipos, linea))
 		{	
-			boost::split(split, linea1, boost::is_any_of("|"));
-	
-			id_pais = stoi(split[0]);
-			
-			nombre = split[1].c_str();
+			boost::split(split, linea, boost::is_any_of("|"));
 
+			id = stoi(split[0]);
+			nombre = split[1];
 			abreviatura = split[2];
+			entrenador = split[3];
 
-			boost::split(split, linea2, boost::is_any_of("|"));
+			grupo = split[4];
 
-			id_equipo = stoi(split[0]);
-
-			entrenador = split[1];
-
-			letra_grupo = split[2];
-
-			Pais * pais = new Pais(id_pais, nombre, abreviatura);	
-			lista_pais->Agregar(pais);
-
-			Equipo * equipo = new Equipo(id_equipo, entrenador);
+			Equipo * equipo = new Equipo(id, nombre, abreviatura, entrenador);
 			lista_equipos->Agregar(equipo);
 
-			 // Se agregan los objetos a la lista de enlaces (Paises + Equipos).
-			lista_equipos_pais->agregar(id_pais, id_equipo, lista_equipos, lista_pais);
-
-			// Se agregan los equipos a los grupos.
-			lista_grupos->Agregar(letra_grupo, lista_equipos);
+			lista_equipos_grupos->Agregar(id, grupo, lista_equipos, lista_grupos);
 		}
-
-		archivo_paises.close();
 		archivo_equipos.close();
 
-		cout << "-- Carga Inicial Paises + Equipos + Grupos Exitosa --" << endl;
+		cout << "-- Carga Inicial Equipos + Grupos --" << endl;
 	}
 	else
-		cout << "Error: No se pudieron cargar los archivos: CargaPaises.txt, CargaEquipos.txt" << endl;
+		cout << "Error: No se pudo cargar el archivo: CargaEquipos.txt" << endl;
 }
-void CargaInicial::CargarJugadoresXEquipos(ListaJugadorxEquipo * lista_jugadores_equipos, ListaEquipos * lista_equipos, ListaJugadores * lista_jugadores)
+void CargarJugadoresXEquipos(ListaJugadorxEquipo * lista_jugadores_equipos, ListaEquipos * lista_equipos, ListaJugadores * lista_jugadores)
 {
 	ifstream archivo_jugadores("C:\\Users\\Daniel\\Downloads\\CargaJugadores.txt");
 
@@ -79,27 +63,28 @@ void CargaInicial::CargarJugadoresXEquipos(ListaJugadorxEquipo * lista_jugadores
 	vector<std::string> split;
 	string linea;
 
-    // Atributos de Jugador
-    int id_jugador;
-    string posicion;
-    string primer_partido;
-    string nombre;
-    int partidos_jugados;
-    int cantidad_goles;
-    int edad;
-    int altura;
-    string fecha_nac;
-    string club;
-
-    // Enlace
-    int id_equipo;
-
 	if (archivo_jugadores.is_open())
 	{
+		// Atributos de jugador
+		int id_jugador;
+		string posicion;
+		string primer_partido;
+		string nombre;
+		int partidos_jugados;
+		int cantidad_goles;
+		int edad;
+		int altura;
+		string fecha_nac;
+		string club;
+
+		// Enlace a grupos
+		int id_equipo;
+
+		// Saltarse la primera linea (Contiene una descripción)
 		getline(archivo_jugadores, linea);
 
 		while (getline(archivo_jugadores, linea))
-		{
+		{	
 			boost::split(split, linea, boost::is_any_of("|"));
 
 			id_jugador = stoi(split[0]);
@@ -113,70 +98,21 @@ void CargaInicial::CargarJugadoresXEquipos(ListaJugadorxEquipo * lista_jugadores
 			fecha_nac = split[8];
 			club = split[9];
 
-			// Enlace
 			id_equipo = stoi(split[10]);
 
-			Jugador * jugador = new Jugador(id_jugador, posicion, primer_partido, nombre, partidos_jugados,
-			cantidad_goles, edad, altura, fecha_nac, club);
-
+			Jugador * jugador = new Jugador(id_jugador, posicion, primer_partido, nombre, partidos_jugados, cantidad_goles, edad, altura, fecha_nac, club);
+			
 			lista_jugadores->Agregar(jugador);
 
-			// Se agregan los objetos a la lista de enlaces.
-			lista_jugadores_equipos->agregar(id_jugador, id_equipo, lista_jugadores, lista_equipos);
+			lista_jugadores_equipos->Agregar(id_jugador, id_equipo, lista_jugadores, lista_equipos);;
 		}
 		archivo_jugadores.close();
 
-		cout << "-- Carga Inicial Jugadores Exitosa --" << endl;
+		cout << "-- Carga Inicial Jugadores + Equipos --" << endl;
 	}
 	else
-		cout << "Error: No se pudieron cargar los archivos: CargaPaises.txt, CargaJugadores.txt" << endl;
+		cout << "Error: No se pudo cargar el archivo: CargaJugadores.txt" << endl;
 }
-void CargaInicial::CargarPartidosXEquipos(ListaPartidoXEquipo * lista_partidos_equipos, ListaEquipos * lista_equipos, ListaPartidos * lista_partidos)
+void CargarPartidosXEquipos(ListaPartidoXEquipo *, ListaEquipos *, ListaPartidos *)
 {
-	ifstream archivo_partidos("C:\\Users\\Daniel\\Downloads\\CargaPartidos.txt");
-
-	// Variables de lectura de archivos
-	vector<std::string> split;
-	string linea;
-
-	// Atributos de Partido
-	int id;
-	string fecha; 
-	string hora;
-	string estadio;
-	string ubicacion;
-	string puntuacion;
-
-	// Enlaces
-	int id_equipo1, id_equipo2;
-
-	if (archivo_partidos.is_open())
-	{
-		getline(archivo_partidos, linea);
-
-		while (getline(archivo_partidos, linea))
-		{
-			boost::split(split, linea, boost::is_any_of("|"));
-
-			id = stoi(split[0]);
-			fecha = split[1];
-			hora = split[2];
-			estadio = split[3];
-			ubicacion = split[4];
-			puntuacion = split[5];
-
-			id_equipo1 = stoi(split[6]);
-			id_equipo2 = stoi(split[7]);
-
-			Partido * partido = new Partido(id, fecha, hora, estadio, ubicacion, puntuacion);
-
-			lista_partidos_equipos->agregar(id, id_equipo1, id_equipo2, lista_equipos, lista_partidos);
-		}
-
-		archivo_partidos.close();
-
-		cout << "-- Carga Inicial Partidos Exitosa --" << endl;
-	}
-	else
-		cout << "Error: No se pudieron cargar los archivos: CargaPaises.txt, CargaPartidos.txt" << endl;
 }

@@ -19,8 +19,8 @@ public:
     int GetTamano();
     void SetTamano(int);
 
-	/*int agregar(int, int, ListaJugadores*, ListaEquipos* );
+	int Agregar(int, int, ListaJugadores *, ListaEquipos *);
 	int eliminar(int , int);
 	void mostrarLista();
-	void mostrarEnlace(int, int);*/
+	void mostrarEnlace(int, int);
 };

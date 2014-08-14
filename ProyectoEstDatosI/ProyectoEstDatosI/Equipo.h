@@ -13,6 +13,8 @@ public:
 	Equipo(void);
 	~Equipo(void);
 
+	Equipo(int, string, string, string);
+
 	int GetId();
 	void SetId(int);
 

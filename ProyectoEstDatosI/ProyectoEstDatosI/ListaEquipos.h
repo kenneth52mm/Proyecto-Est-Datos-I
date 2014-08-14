@@ -19,9 +19,6 @@ public:
 
 	NodoEquipo * DirNodo(int);
 
-	/*int Agregar(Equipo *, Pais *);
-	int Eliminar(int);
-	void MostarLista();
-	void MostrarEquipo(int);*/
+	int Agregar(Equipo *);
 };
 

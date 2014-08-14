@@ -9,21 +9,19 @@ private :
 	NodoGrupos * anterior;
 	NodoGrupos * siguiente;
     string grupo;
-	ListaEquipoXGrupo * equipos;
 public:
 	NodoGrupos(void);
 	~NodoGrupos(void);
 
-    string GetGrupo();
-    void SetGrupo(string);
+	NodoGrupos::NodoGrupos(string);
 
-	ListaEquipoXGrupo * GetEquipos();
-	void SetEquipos(ListaEquipoXGrupo *);
+	NodoGrupos * GetAnterior();
+	void SetAnterior(NodoGrupos *);
 
 	NodoGrupos * GetSiguiente();
 	void SetSiguiente(NodoGrupos *);
 
-	NodoGrupos * GetAnterior();
-	void SetAnterior(NodoGrupos *);
+	string GetGrupo();
+    void SetGrupo(string);
 };
 

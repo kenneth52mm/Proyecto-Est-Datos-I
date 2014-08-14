@@ -1,6 +1,5 @@
 #pragma once
 #include "Equipo.h"
-#include "ListaJugadorxEquipo.h"
 
 class NodoEquipo
 {

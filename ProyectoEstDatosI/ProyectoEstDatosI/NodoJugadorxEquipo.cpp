@@ -12,6 +12,12 @@ NodoJugadorxEquipo::~NodoJugadorxEquipo(void)
 {
 }
 
+NodoJugadorxEquipo::NodoJugadorxEquipo(NodoJugador * jugador, NodoEquipo * equipo)
+{
+		this->SetJugador(jugador);
+	this->SetEquipo(equipo);
+}
+
 NodoJugadorxEquipo* NodoJugadorxEquipo::GetAnterior()
 {
 	return this->anterior;

@@ -6,24 +6,15 @@
 class NodoJugadorxEquipo
 {
 private:
-<<<<<<< HEAD
 	NodoJugadorxEquipo* anterior;
 	NodoJugadorxEquipo * siguiente;
 	NodoEquipo * equipo;
 	NodoJugador * jugador;
-=======
-	NodoEquipo *equipo;
-	NodoJugador * jugador;
-	NodoJugadorxEquipo * siguiente;
-	NodoJugadorxEquipo * anterior;
-	NodoEquipo * enlaceEquipo;
-	NodoJugador * enlaceJugador;
-	
-
->>>>>>> origin/master
 public:
 	NodoJugadorxEquipo(void);
 	~NodoJugadorxEquipo(void);
+
+	NodoJugadorxEquipo(NodoJugador *, NodoEquipo *);
 
 	NodoJugadorxEquipo * GetAnterior();
 	NodoJugadorxEquipo * SetAnterior(NodoJugadorxEquipo *);
@@ -34,6 +25,6 @@ public:
 	NodoEquipo * GetEquipo();
 	void SetEquipo(NodoEquipo *);
 
-	NodoJugador* GetJugador();
+	NodoJugador * GetJugador();
 	void SetJugador(NodoJugador *);
 };

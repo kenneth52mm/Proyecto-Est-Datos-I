@@ -6,7 +6,7 @@
 #include <boost/algorithm/string.hpp>
 
 #include "ListaGrupos.h"
-#include "ListaEquipoxPais.h"
+#include "ListaEquipoXGrupo.h"
 #include "ListaJugadorxEquipo.h"
 #include "ListaPartidoXEquipo.h"
 
@@ -16,7 +16,7 @@ public:
 	CargaInicial(void);
 	~CargaInicial(void);
 
-	void CargarPaisesXEquiposGrupos(ListaGrupos *, ListaEquipoxPais *, ListaPais *, ListaEquipos *);
+	void CargarEquiposXGrupos(ListaEquipoXGrupo *, ListaEquipos *, ListaGrupos *);
 	void CargarJugadoresXEquipos(ListaJugadorxEquipo *, ListaEquipos *, ListaJugadores *);
 	void CargarPartidosXEquipos(ListaPartidoXEquipo *, ListaEquipos *, ListaPartidos *);
 };

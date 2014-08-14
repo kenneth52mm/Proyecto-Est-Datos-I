@@ -8,22 +8,18 @@ NodoGrupos::~NodoGrupos(void)
 {
 }
 
-string NodoGrupos::GetGrupo()
+NodoGrupos::NodoGrupos(string grupo)
 {
-	return this->grupo;
-}
-void NodoGrupos::SetGrupo(string _grupo)
-{
-	this->grupo=_grupo;
+	this->SetGrupo(grupo);
 }
 
-ListaEquipoXGrupo * NodoGrupos::GetEquipos()
+NodoGrupos *NodoGrupos::GetAnterior()
 {
-	return this->equipos;
+	return this->anterior;
 }
-void NodoGrupos::SetEquipos(ListaEquipoXGrupo * equipos)
+void NodoGrupos::SetAnterior(NodoGrupos * anterior)
 {
-	this->equipos = equipos;
+	this->anterior = anterior;
 }
 
 NodoGrupos *NodoGrupos::GetSiguiente()
@@ -35,11 +31,11 @@ void NodoGrupos::SetSiguiente(NodoGrupos * siguiente)
 	this->siguiente = siguiente;
 }
 
-NodoGrupos *NodoGrupos::GetAnterior()
+string NodoGrupos::GetGrupo()
 {
-	return this->anterior;
+	return this->grupo;
 }
-void NodoGrupos::SetAnterior(NodoGrupos * anterior)
+void NodoGrupos::SetGrupo(string _grupo)
 {
-	this->anterior = anterior;
+	this->grupo=_grupo;
 }
