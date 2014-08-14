@@ -3,82 +3,57 @@
 
 NodoPartidoxEquipo::NodoPartidoxEquipo(void)
 {
-	this->setAnterior(NULL);
-	this->setEquipo1(NULL);
-	this->setEquipo2(NULL);
-	this->setPartido(NULL);
-	this->setSiguiente(NULL);
+	this->SetAnterior(NULL);
+	this->SetSiguiente(NULL);
+	this->SetEquipo1(NULL);
+	this->SetEquipo2(NULL);
+	this->SetPartido(NULL);
 }
 NodoPartidoxEquipo::~NodoPartidoxEquipo(void)
 {
 }
 
-NodoPartidoxEquipo::NodoPartidoxEquipo(NodoEquipo*_equipo1, NodoEquipo* _equipo2, NodoPartido*_partido)
-{
-	this->setEquipo1(_equipo1);
-	this->setEquipo2(_equipo2);
-	this->setPartido(_partido);
-
-}
-
-NodoEquipo* NodoPartidoxEquipo::getEquipo1()
-{
-	return this->equipo1;
-}
-void NodoPartidoxEquipo::setEquipo1(NodoEquipo* _equipo1)
-{
-	this->equipo1= _equipo1;
-}
-
-NodoEquipo* NodoPartidoxEquipo::getEquipo2()
-{
-	return this->equipo2;
-}
-void NodoPartidoxEquipo::setEquipo2(NodoEquipo* _equipo2)
-{
-	this->equipo2= _equipo2;
-}
-
-NodoPartido*NodoPartidoxEquipo::getPartido()
-{
-	return this->partido;
-}
-void NodoPartidoxEquipo::setPartido(NodoPartido* _partido)
-{
-	this->partido= _partido;
-}
-
-NodoPartidoxEquipo*NodoPartidoxEquipo::getSguiente()
-{
-	return this->siguiente;
-}
-void NodoPartidoxEquipo::setSiguiente(NodoPartidoxEquipo*_siguiente)
-{
-	this->siguiente= _siguiente;
-}
-
-NodoPartidoxEquipo*NodoPartidoxEquipo::getAnterior()
+NodoPartidoxEquipo * NodoPartidoxEquipo::GetAnterior()
 {
 	return this->anterior;
 }
-void NodoPartidoxEquipo::setAnterior(NodoPartidoxEquipo*_anterior)
+void NodoPartidoxEquipo::SetAnterior(NodoPartidoxEquipo * anterior)
 {
-	this->anterior= _anterior;
+	this->anterior= anterior;
 }
 
-NodoPartido*NodoPartidoxEquipo::getEnlacePartido()
+NodoPartidoxEquipo * NodoPartidoxEquipo::GetSguiente()
 {
-	return this->enlacePartido;
+	return this->siguiente;
 }
-void NodoPartidoxEquipo::setEnlacePartido(NodoPartido* _enlacePartido)
+void NodoPartidoxEquipo::SetSiguiente(NodoPartidoxEquipo * siguiente)
 {
-	this->enlacePartido= _enlacePartido;
+	this->siguiente= siguiente;
 }
-NodoEquipo* NodoPartidoxEquipo::getEnlaceEquipo()
+
+NodoEquipo * NodoPartidoxEquipo::GetEquipo1()
 {
-	return this->enlaceEquipo;
+	return this->equipo1;
 }
-void NodoPartidoxEquipo::setenlaceEquipo(NodoEquipo* _enlaceEquipo)
+void NodoPartidoxEquipo::SetEquipo1(NodoEquipo * equipo1)
 {
-	this->enlaceEquipo= _enlaceEquipo;
+	this->equipo1 = equipo1;
+}
+
+NodoEquipo * NodoPartidoxEquipo::GetEquipo2()
+{
+	return this->equipo2;
+}
+void NodoPartidoxEquipo::SetEquipo2(NodoEquipo * equipo2)
+{
+	this->equipo2 = equipo2;
+}
+
+NodoPartido *NodoPartidoxEquipo::GetPartido()
+{
+	return this->partido;
+}
+void NodoPartidoxEquipo::SetPartido(NodoPartido * partido)
+{
+	this->partido= partido;
 }

@@ -30,11 +30,11 @@ void NodoEquipoXGrupo::SetSiguiente(NodoEquipoXGrupo* _siguiente)
     this->siguiente= _siguiente;
 }
 
-NodoEquipoXPais * NodoEquipoXGrupo::GetEnlaceEquipo()
+NodoEquipo * NodoEquipoXGrupo::GetEnlaceEquipo()
 {
     return this->enlace_equipo;
 }
-void NodoEquipoXGrupo::SetEnlaceEquipo(NodoEquipoXPais * _enlaceEquipo)
+void NodoEquipoXGrupo::SetEnlaceEquipo(NodoEquipo * _enlaceEquipo)
 {
     this->enlace_equipo = _enlaceEquipo;
 }

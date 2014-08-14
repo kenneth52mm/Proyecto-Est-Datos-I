@@ -3,25 +3,9 @@
 
 NodoGrupos::NodoGrupos(void)
 {
-	
 }
 NodoGrupos::~NodoGrupos(void)
 {
-}
-
-NodoGrupos::NodoGrupos(string _grupo,ListaEquipos *equipos)
-{
-	SetGrupo(_grupo);
-	SetEquipos(	equipos);
-}
-
-int NodoGrupos::GetId()
-{
-	return this->id;
-}
-void NodoGrupos::SetId(int _id)
-{
-	this->id=_id;
 }
 
 string NodoGrupos::GetGrupo()
@@ -33,29 +17,29 @@ void NodoGrupos::SetGrupo(string _grupo)
 	this->grupo=_grupo;
 }
 
-ListaEquipos *NodoGrupos::GetEquipos()
+ListaEquipoXGrupo * NodoGrupos::GetEquipos()
 {
 	return this->equipos;
 }
-void NodoGrupos::SetEquipos(ListaEquipos *_equipos)
+void NodoGrupos::SetEquipos(ListaEquipoXGrupo * equipos)
 {
-	this->equipos=_equipos;
+	this->equipos = equipos;
 }
 
-NodoGrupos *NodoGrupos::GetSgte()
+NodoGrupos *NodoGrupos::GetSiguiente()
 {
-	return this->sgte;
+	return this->siguiente;
 }
-void NodoGrupos::SetSgte(NodoGrupos *_sgte)
+void NodoGrupos::SetSiguiente(NodoGrupos * siguiente)
 {
-	this->sgte=_sgte;
+	this->siguiente = siguiente;
 }
 
-NodoGrupos *NodoGrupos::GetAnte()
+NodoGrupos *NodoGrupos::GetAnterior()
 {
-	return this->ante;
+	return this->anterior;
 }
-void NodoGrupos::SetAnte(NodoGrupos *_ante)
+void NodoGrupos::SetAnterior(NodoGrupos * anterior)
 {
-	this->ante=_ante;
+	this->anterior = anterior;
 }

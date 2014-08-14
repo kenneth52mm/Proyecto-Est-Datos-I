@@ -8,6 +8,12 @@ Jugador::~Jugador(void)
 {
 }
 
+Jugador::Jugador(int id, string posicion, string primer_partido, string nombre,
+            int partidos_jugados, int cantidad_goles, int edad, int altura,
+            string fecha_nac, string club)
+{
+}
+
 int Jugador::GetId()
 {
 	return this->id;

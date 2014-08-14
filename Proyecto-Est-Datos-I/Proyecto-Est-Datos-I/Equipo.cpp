@@ -3,17 +3,9 @@
 
 Equipo::Equipo(void)
 {
-	SetId(0);
-	SetEntrenador("");
 }
 Equipo::~Equipo(void)
 {
-}
-
-Equipo::Equipo(int _id, string _entrenador)
-{
-	SetId(_id);
-	SetEntrenador(_entrenador);
 }
 
 int Equipo::GetId()
@@ -25,15 +17,28 @@ void Equipo::SetId(int _id)
 	this->id=_id;
 }
 
+string Equipo::GetNombre()
+{
+}
+void Equipo::SetNombre(string nombre)
+{
+	this->nombre = nombre;
+}
+
+string Equipo::GetAbreviatura()
+{
+	return this->abreviatura;
+}
+void Equipo::SetAbreviatura(string abreviatura)
+{
+	this->abreviatura = abreviatura;
+}
+
 string Equipo::GetEntrenador()
 {
 	return this->entrenador;
 }
-void Equipo::SetEntrenador(string _entrenador)
+void Equipo::SetEntrenador(string entrenador)
 {
-	this->entrenador=_entrenador;
-}
-
-void Equipo::toString()
-{
+	this->entrenador = entrenador;
 }

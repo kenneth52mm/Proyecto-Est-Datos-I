@@ -5,25 +5,20 @@
 class NodoEquipo
 {
 private:
+	NodoEquipo * siguiente;
+	NodoEquipo * anterior;
 	Equipo * equipo;
-	ListaJugadorxEquipo * jugadores;
-	NodoEquipo * sgte;
-	NodoEquipo * ante;
 public:
 	NodoEquipo(void);
 	~NodoEquipo(void);
 
+	NodoEquipo * GetSiguiente();
+	void SetSiguiente(NodoEquipo *);
+
+	NodoEquipo * GetAnterior();
+	void SetAnterior(NodoEquipo *);
+
 	Equipo * GetEquipo();
 	void SetEquipo(Equipo *);
-
-	ListaJugadorxEquipo * GetJugadores();
-	void SetJugadores(ListaJugadorxEquipo *);
-
-	NodoEquipo * GetSgte();
-	void SetSgte(NodoEquipo *);
-
-	NodoEquipo * GetAnte();
-	void SetAnte(NodoEquipo *);
-
 };
 

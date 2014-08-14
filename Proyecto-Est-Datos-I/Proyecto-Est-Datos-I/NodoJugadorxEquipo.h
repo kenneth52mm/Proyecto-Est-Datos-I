@@ -2,39 +2,27 @@
 #include "NodoEquipo.h"
 #include "NodoJugador.h"
 
+
 class NodoJugadorxEquipo
 {
 private:
-	NodoEquipo* equipo;
-	NodoJugador* jugador;
-	NodoJugadorxEquipo* siguiente;
 	NodoJugadorxEquipo* anterior;
-	NodoEquipo* enlaceEquipo;
-	NodoJugador* enlaceJugador;
-	
-
+	NodoJugadorxEquipo * siguiente;
+	NodoEquipo * equipo;
+	NodoJugador * jugador;
 public:
 	NodoJugadorxEquipo(void);
 	~NodoJugadorxEquipo(void);
 
-	NodoJugadorxEquipo(NodoEquipo*, NodoJugador*);
+	NodoJugadorxEquipo * GetAnterior();
+	NodoJugadorxEquipo * SetAnterior(NodoJugadorxEquipo *);
 
-	NodoEquipo*getEquipo();
-	void setEquipo(NodoEquipo*);
+	NodoJugadorxEquipo * GetSiguiente();
+	void SetSiguiente(NodoJugadorxEquipo *);
 
-	NodoJugador* getJugador();
-	void setJugador(NodoJugador*);
+	NodoEquipo * GetEquipo();
+	void SetEquipo(NodoEquipo *);
 
-	NodoJugadorxEquipo* getSiguiente();
-	void setSiguiente(NodoJugadorxEquipo*);
-
-	NodoJugadorxEquipo* getAnterior();
-	NodoJugadorxEquipo* setAnterior(NodoJugadorxEquipo*);
-
-	NodoEquipo* getEnlaceEquipo();
-	void setEnlaceEquipo(NodoEquipo*);
-
-	NodoJugador* getEnlaceJugador();
-	void setEnlaceJugador(NodoJugador*);
-
+	NodoJugador* GetJugador();
+	void SetJugador(NodoJugador *);
 };

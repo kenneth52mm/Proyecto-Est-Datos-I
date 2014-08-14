@@ -1,28 +1,25 @@
 #pragma once
 #include "NodoEquipoXGrupo.h"
-#include "ListaGrupos.h"
-
 
 class ListaEquipoXGrupo
 {
 private:
     NodoEquipoXGrupo * cabeza;
     int tamano;
-
 public:
 	ListaEquipoXGrupo(void);
 	~ListaEquipoXGrupo(void);
 
-    NodoEquipoXGrupo * getCabeza();
-    void setCabeza(NodoEquipoXGrupo *);
+    NodoEquipoXGrupo * GetCabeza();
+    void SetCabeza(NodoEquipoXGrupo *);
 
-    int getTamano();
-    void setTamano(int);
+    int GetTamano();
+    void SetTamano(int);
 
-    int agregar(int, int, ListaEquipos *, ListaGrupos *);
-    int elmininar(int, int);
-    void mostrarLista();
-    void mostrarEquipo(int);
-    void mostrarGrupo(int);
+   /* int Agregar(int, int, ListaEquipos *, ListaGrupos *);
+    int Elmininar(int, int);
+    void MostrarLista();
+    void MostrarEquipo(int);
+    void MostrarGrupo(int);*/
 };
 

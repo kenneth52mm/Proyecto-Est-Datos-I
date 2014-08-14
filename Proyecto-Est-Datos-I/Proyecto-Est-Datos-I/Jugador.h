@@ -18,21 +18,7 @@ public:
 	Jugador(void);
 	~Jugador(void);
 
-    Jugador(int id, string posicion, string primer_partido, string nombre,
-            int partidos_jugados, int cantidad_goles, int edad, int altura,
-            string fecha_nac, string club)
-    {
-        this->id = id;
-        this->posicion = posicion;
-        this->primer_partido = primer_partido;
-        this->nombre = nombre;
-        this->partidos_jugados = partidos_jugados;
-        this->cantidad_goles = cantidad_goles;
-        this->edad = edad;
-        this->altura = altura;
-        this->fecha_nac = fecha_nac;
-        this->club = club;
-    }
+    Jugador(int, string, string, string, int, int, int, int, string, string);
 
 	int GetId();
 	void SetId(int);

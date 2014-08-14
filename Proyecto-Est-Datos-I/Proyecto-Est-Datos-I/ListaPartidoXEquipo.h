@@ -1,6 +1,6 @@
 #pragma once
 #include "NodoPartidoxEquipo.h"
-#include "ListaPais.h"
+
 
 class ListaPartidoXEquipo
 {
@@ -11,15 +11,15 @@ public:
 	ListaPartidoXEquipo(void);
 	~ListaPartidoXEquipo(void);
 
-    NodoPartidoxEquipo * getCabeza();
-    void setCabeza(NodoPartidoxEquipo *);
+    NodoPartidoxEquipo * GetCabeza();
+    void SetCabeza(NodoPartidoxEquipo *);
 
-    int getTamano();
-    void setTamano(int);
+    int GetTamano();
+    void SetTamano(int);
 
-	int agregar(int, int, int, ListaEquipos *, ListaPartidos *);
+	/*int agregar(int, int, int, ListaEquipos *, ListaPartidos *);
 	int eliminar(int, int);
 	void mostrarLista();
 	void mostrarEquipo(int);
-	void mostrarPais(int);
+	void mostrarPais(int);*/
 };

@@ -2,25 +2,25 @@
 #include "NodoJugadorxEquipo.h"
 #include "ListaEquipos.h"
 #include "ListaJugadores.h"
-#include "stdafx.h"
+
 
 class ListaJugadorxEquipo
 {
 private:
-    int tamano;
-	NodoJugadorxEquipo* cabeza;
+	NodoJugadorxEquipo * cabeza;
+	int tamano;
 public:
 	ListaJugadorxEquipo(void);
 	~ListaJugadorxEquipo(void);
 
-	NodoJugadorxEquipo* getCabeza();
-	void setCabeza(NodoJugadorxEquipo*);
+	NodoJugadorxEquipo * GetCabeza();
+	void SetCabeza(NodoJugadorxEquipo *);
 
-    int getTamano();
-    void setTamano(int);
+    int GetTamano();
+    void SetTamano(int);
 
-	int agregar(int, int, ListaJugadores*, ListaEquipos* );
+	/*int agregar(int, int, ListaJugadores*, ListaEquipos* );
 	int eliminar(int , int);
 	void mostrarLista();
-	void mostrarEnlace(int, int);
+	void mostrarEnlace(int, int);*/
 };

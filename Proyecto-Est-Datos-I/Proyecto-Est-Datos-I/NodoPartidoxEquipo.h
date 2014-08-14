@@ -7,39 +7,29 @@ class NodoPartidoxEquipo
 
 {
 private:
-	NodoEquipo* equipo1;
-	NodoEquipo* equipo2;
+	NodoPartidoxEquipo * anterior;
+	NodoPartidoxEquipo * siguiente;
+	NodoEquipo * equipo1;
+	NodoEquipo * equipo2;
 	NodoPartido* partido;
-	NodoPartidoxEquipo* siguiente;
-	NodoPartidoxEquipo* anterior;
-	NodoPartido* enlacePartido;
-	NodoEquipo* enlaceEquipo;
 
 public:
 	NodoPartidoxEquipo(void);
 	~NodoPartidoxEquipo(void);
 
-	NodoPartidoxEquipo(NodoEquipo*, NodoEquipo*, NodoPartido*);
+	NodoPartidoxEquipo * GetAnterior();
+	void SetAnterior(NodoPartidoxEquipo *);
 
-	NodoEquipo* getEquipo1();
-	void setEquipo1(NodoEquipo*);
+	NodoPartidoxEquipo * GetSguiente();
+	void SetSiguiente(NodoPartidoxEquipo *);
 
-	NodoEquipo* getEquipo2();
-	void setEquipo2(NodoEquipo*);
+	NodoEquipo * GetEquipo1();
+	void SetEquipo1(NodoEquipo *);
 
-	NodoPartido*getPartido();
-	void setPartido(NodoPartido*);
+	NodoEquipo * GetEquipo2();
+	void SetEquipo2(NodoEquipo *);
 
-	NodoPartidoxEquipo*getSguiente();
-	void setSiguiente(NodoPartidoxEquipo*);
-
-	NodoPartidoxEquipo*getAnterior();
-	void setAnterior(NodoPartidoxEquipo*);
-
-	NodoPartido*getEnlacePartido();
-	void setEnlacePartido(NodoPartido*);
-
-	NodoEquipo* getEnlaceEquipo();
-	void setenlaceEquipo(NodoEquipo*);
+	NodoPartido * GetPartido();
+	void SetPartido(NodoPartido *);
 };
 

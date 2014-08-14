@@ -4,22 +4,20 @@
 class NodoJugador
 {
 private:
-	Jugador * jugador;
-	NodoJugador * siguiente;
 	NodoJugador * anterior;
+	NodoJugador * siguiente;
+	Jugador * jugador;
 public:
 	NodoJugador(void);
 	~NodoJugador(void);
 
-	NodoJugador(Jugador *);
-
-	Jugador * GetJugador();
-	void SetJugador(Jugador *);
+	NodoJugador * GetAnterior();
+	void SetAnterior(NodoJugador *);
 
 	NodoJugador * GetSiguiente();
 	void SetSiguiente(NodoJugador *);
 
-	NodoJugador * GetAnterior();
-	void SetAnterior(NodoJugador *);
+	Jugador * GetJugador();
+	void SetJugador(Jugador *);
 };
 

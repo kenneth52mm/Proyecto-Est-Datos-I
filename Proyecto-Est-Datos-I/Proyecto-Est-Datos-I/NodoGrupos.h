@@ -6,11 +6,10 @@
 class NodoGrupos
 {
 private :
+	NodoGrupos * anterior;
+	NodoGrupos * siguiente;
     string grupo;
 	ListaEquipoXGrupo * equipos;
-	NodoGrupos * sgte;
-	NodoGrupos * ante;
-
 public:
 	NodoGrupos(void);
 	~NodoGrupos(void);
@@ -21,10 +20,10 @@ public:
 	ListaEquipoXGrupo * GetEquipos();
 	void SetEquipos(ListaEquipoXGrupo *);
 
-	NodoGrupos *GetSgte();
-	void SetSgte(NodoGrupos*);
+	NodoGrupos * GetSiguiente();
+	void SetSiguiente(NodoGrupos *);
 
-	NodoGrupos *GetAnte();
-	void SetAnte(NodoGrupos*);
+	NodoGrupos * GetAnterior();
+	void SetAnterior(NodoGrupos *);
 };
 

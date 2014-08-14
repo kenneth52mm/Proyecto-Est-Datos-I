@@ -1,17 +1,16 @@
 #pragma once
 #include "Partido.h"
 
+
 class NodoPartido
 {
 private:
-	Partido * partido;
-	NodoPartido * siguiente;
 	NodoPartido * anterior;
+	NodoPartido * siguiente;
+	Partido * partido;
 public:
 	NodoPartido(void);
 	~NodoPartido(void);
-
-	NodoPartido(Partido *);
 
 	Partido * GetPartido();
 	void SetPartido(Partido *);

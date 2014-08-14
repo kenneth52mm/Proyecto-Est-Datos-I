@@ -4,21 +4,23 @@
 class ListaGrupos
 {
 private:
-    NodoGrupos * cab;
+    NodoGrupos * cabeza;
 	int tamano;
 public:
 	ListaGrupos(void);
 	~ListaGrupos(void);
 
-    NodoGrupos * GetCab();
-	void SetCab(NodoGrupos *);
+    NodoGrupos * GetCabeza();
+	void SetCabeza(NodoGrupos *);
+
+	int GetTamano();
+	void SetTamano(int);
+
 	NodoGrupos * DirNodo(string);
 
-	int GetTama();
-
-    int Agregar(string, ListaEquipoXGrupo *);
-	int Eliminar(int);
+    /*int Agregar(string);
+	int Eliminar(string);
 	void MostarLista();
-	void MostrarGrupo(string);
+	void MostrarGrupo(string);*/
 };
 

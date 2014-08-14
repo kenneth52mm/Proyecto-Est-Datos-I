@@ -8,38 +8,29 @@ NodoEquipo::~NodoEquipo(void)
 {
 }
 
+NodoEquipo * NodoEquipo::GetAnterior()
+{
+	return this->anterior;
+}
+void NodoEquipo::SetAnterior(NodoEquipo * anterior)
+{
+	this->anterior = anterior;
+}
+
+NodoEquipo * NodoEquipo::GetSiguiente()
+{
+	return this->siguiente;
+}
+void NodoEquipo::SetSiguiente(NodoEquipo * siguiente)
+{
+	this->siguiente = siguiente;
+}
+
 Equipo * NodoEquipo::GetEquipo()
 {
 	return this->equipo;
 }	
-void NodoEquipo::SetEquipo(Equipo *_equipo)
+void NodoEquipo::SetEquipo(Equipo * equipo)
 {
-	this->equipo=_equipo;
-}
-
-ListaJugadorxEquipo * NodoEquipo::GetJugadores()
-{
-	return this->jugadores;
-}
-void NodoEquipo::SetJugadores(ListaJugadorxEquipo * jugadores)
-{
-	this->jugadores = jugadores;
-}
-
-NodoEquipo * NodoEquipo::GetSgte()
-{
-	return this->sgte;
-}
-void NodoEquipo::SetSgte(NodoEquipo * _sgte)
-{
-	this->sgte=_sgte;
-}
-
-NodoEquipo *NodoEquipo::GetAnte()
-{
-	return this->ante;
-}
-void NodoEquipo::SetAnte(NodoEquipo *_ante)
-{
-	this->ante=_ante;
+	this->equipo = equipo;
 }

@@ -8,18 +8,13 @@ NodoJugador::~NodoJugador(void)
 {
 }
 
-NodoJugador::NodoJugador(Jugador * jugador)
+NodoJugador * NodoJugador::GetAnterior()
 {
-	this->SetJugador(jugador);
+	return this->anterior;
 }
-
-Jugador * NodoJugador::GetJugador()
+void NodoJugador::SetAnterior(NodoJugador * anterior)
 {
-	return this->jugador;
-}
-void NodoJugador::SetJugador(Jugador * jugador)
-{
-	this->jugador = jugador;
+	this->anterior = anterior;
 }
 
 NodoJugador * NodoJugador::GetSiguiente()
@@ -31,11 +26,11 @@ void NodoJugador::SetSiguiente(NodoJugador * siguiente)
 	this->siguiente = siguiente;
 }
 
-NodoJugador * NodoJugador::GetAnterior()
+Jugador * NodoJugador::GetJugador()
 {
-	return this->anterior;
+	return this->jugador;
 }
-void NodoJugador::SetAnterior(NodoJugador * anterior)
+void NodoJugador::SetJugador(Jugador * jugador)
 {
-	this->anterior = anterior;
+	this->jugador = jugador;
 }

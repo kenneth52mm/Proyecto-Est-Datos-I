@@ -17,7 +17,7 @@
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	ListaGrupos * lista_grupos = new ListaGrupos(); 
+	/*ListaGrupos * lista_grupos = new ListaGrupos(); 
 	ListaEquipoxPais * lista_equipo_pais = new ListaEquipoxPais();
 	ListaPais * lista_pais = new ListaPais();
     ListaEquipos * lista_equipos = new ListaEquipos();
@@ -32,7 +32,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	CargaInicial * carga_inicial = new CargaInicial();
 	carga_inicial->CargarPaisesXEquiposGrupos(lista_grupos, lista_equipo_pais, lista_pais, lista_equipos);
 	carga_inicial->CargarJugadoresXEquipos(lista_jugadores_equipos, lista_equipos, lista_jugadores);
-	carga_inicial->CargarPartidosXEquipos(lista_partidos_equipos, lista_equipos, lista_partidos);
+	carga_inicial->CargarPartidosXEquipos(lista_partidos_equipos, lista_equipos, lista_partidos);*/
 
 	cout << 
 		"++++ Proyecto de Estructuras Discretas I ++++" << endl <<
@@ -79,9 +79,9 @@ int _tmain(int argc, _TCHAR* argv[])
 
 						"( 0 ) Atras" << endl << endl <<
 
-						"( 1 ) Ver Grupos" << endl << 
-						"( 2 ) Agregar Grupo" << endl << 
-						"( 3 ) Editar Grupo" << endl << 
+						"( 1 ) Ver Grupos" << endl <<
+						"( 2 ) Agregar Grupo" << endl <<
+						"( 3 ) Editar Grupo" << endl <<
 						"( 4 ) Eliminar Grupo (Los equipos siguien existiendo)" << endl << 
 						"--" << endl <<
 						"Opcion: ";

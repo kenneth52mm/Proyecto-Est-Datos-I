@@ -1,26 +1,27 @@
 #pragma once
-#include "NodoEquipoXPais.h"
+#include "NodoEquipo.h"
 
 
 class ListaEquipos
 {
 private:
-	NodoEquipoXPais * cab;
+	NodoEquipo * cabeza;
 	int tamano;
 public:
 	ListaEquipos(void);
 	~ListaEquipos(void);
 
-	NodoEquipoXPais * DirNodo(int);
+	NodoEquipo * GetCabeza();
+	void SetCabeza(NodoEquipo *);
 
-	NodoEquipoXPais * GetCab();
-	void SetCab(NodoEquipoXPais *);
+	int GetTamano();
+	void SetTamano(int);
 
-	int GetTama();
+	NodoEquipo * DirNodo(int);
 
-	int Agregar(Equipo *);
+	/*int Agregar(Equipo *, Pais *);
 	int Eliminar(int);
 	void MostarLista();
-	void MostrarEquipo(int);
+	void MostrarEquipo(int);*/
 };
 
