@@ -46,15 +46,17 @@ NodoEquipo * ListaEquipos::DirNodo(int id)
 	}
 }
 
-int ListaEquipos::Agregar(Equipo *)
+int ListaEquipos::Agregar(Equipo * equipo)
 {
 	/*
 	1: Insertado
 	2: Repetido
 	*/
+	bool repetido = false;
+
 	if (this->GetCabeza() == NULL)
 	{
-		NodoEquipo * nuevo_nodo = new NodoEquipo();
+		NodoEquipo * nuevo_nodo = new NodoEquipo(equipo);
 		this->SetCabeza(nuevo_nodo);
 
 		nuevo_nodo->SetAnterior(nuevo_nodo);
@@ -64,15 +66,31 @@ int ListaEquipos::Agregar(Equipo *)
 	}
 	else
 	{
-		NodoEquipo * nuevo_nodo = new NodoEquipo();
+		NodoEquipo * recorrido = this->GetCabeza();
 
-		nuevo_nodo->SetSiguiente(this->GetCabeza());
-		nuevo_nodo->SetAnterior(this->GetCabeza()->GetAnterior());
+		do
+		{
+			if (this->DirNodo(equipo->GetId()) != NULL)
+				repetido = true;
 
-		this->GetCabeza()->GetAnterior()->SetSiguiente(nuevo_nodo);
-		this->GetCabeza()->SetAnterior(nuevo_nodo);
+			recorrido = recorrido->GetSiguiente();
+		}
+		while (recorrido != this->GetCabeza());
+		
+		if (!repetido)
+		{
+			NodoEquipo * nuevo_nodo = new NodoEquipo(equipo);
 
-		return 1;
+			nuevo_nodo->SetSiguiente(this->GetCabeza());
+			nuevo_nodo->SetAnterior(this->GetCabeza()->GetAnterior());
+
+			this->GetCabeza()->GetAnterior()->SetSiguiente(nuevo_nodo);
+			this->GetCabeza()->SetAnterior(nuevo_nodo);
+
+			return 1;
+		}
+		else
+			return 2;
 	}
 }
 void ListaEquipos::MostrarLista()

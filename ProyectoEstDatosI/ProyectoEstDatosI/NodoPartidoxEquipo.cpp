@@ -13,6 +13,13 @@ NodoPartidoxEquipo::~NodoPartidoxEquipo(void)
 {
 }
 
+NodoPartidoxEquipo::NodoPartidoxEquipo(NodoEquipo * equipo1, NodoEquipo * equipo2, NodoPartido * partido)
+{
+	this->SetEquipo1(equipo1);
+	this->SetEquipo2(equipo2);
+	this->SetPartido(partido);
+}
+
 NodoPartidoxEquipo * NodoPartidoxEquipo::GetAnterior()
 {
 	return this->anterior;

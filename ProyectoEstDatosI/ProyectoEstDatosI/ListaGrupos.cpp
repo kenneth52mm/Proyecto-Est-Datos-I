@@ -63,15 +63,19 @@ int ListaGrupos::Agregar(string grupo)
 	}
 	else
 	{
-		NodoGrupos * nuevo_nodo = new NodoGrupos(grupo);
+		if (this->DirNodo(grupo) != NULL)
+		{
+			NodoGrupos * nuevo_nodo = new NodoGrupos(grupo);
 
-		nuevo_nodo->SetAnterior(this->GetCabeza()->GetAnterior());
-		nuevo_nodo->SetSiguiente(this->GetCabeza());
+			nuevo_nodo->SetAnterior(this->GetCabeza()->GetAnterior());
+			nuevo_nodo->SetSiguiente(this->GetCabeza());
 
-		this->GetCabeza()->GetAnterior()->SetSiguiente(nuevo_nodo);
-		this->GetCabeza()->SetAnterior(nuevo_nodo);
+			this->GetCabeza()->GetAnterior()->SetSiguiente(nuevo_nodo);
+			this->GetCabeza()->SetAnterior(nuevo_nodo);
 
-		return 1;
+			return 1;
+		}
+		return 2;
 	}
 }
 void ListaGrupos::MostrarLista()

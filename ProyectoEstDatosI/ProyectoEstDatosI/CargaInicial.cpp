@@ -113,6 +113,53 @@ void CargarJugadoresXEquipos(ListaJugadorxEquipo * lista_jugadores_equipos, List
 	else
 		cout << "Error: No se pudo cargar el archivo: CargaJugadores.txt" << endl;
 }
-void CargarPartidosXEquipos(ListaPartidoXEquipo *, ListaEquipos *, ListaPartidos *)
+void CargarPartidosXEquipos(ListaPartidoXEquipo * lista_partidos_equipos, ListaEquipos * lista_equipos, ListaPartidos * lista_partidos)
 {
+	ifstream archivo_partidos("C:\\Users\\Daniel\\Downloads\\CargaPartidos.txt");
+
+	// Variables de lectura de archivos
+	vector<std::string> split;
+	string linea;
+
+	if (archivo_partidos.is_open())
+	{
+		// Atributos de partido
+		int id_partido;
+		string fecha; 
+		string hora;
+		string estadio;
+		string ubicacion;
+		string puntuacion;
+
+		// Enlace a equipos
+		int id_equipo1;
+		int id_equipo2;
+
+		// Saltarse la primera linea (Contiene una descripción)
+		getline(archivo_partidos, linea);
+
+		while (getline(archivo_partidos, linea))
+		{	
+			boost::split(split, linea, boost::is_any_of("|"));
+
+			id_partido = stoi(split[0]);
+			fecha = split[1];
+			hora = split[2];
+			estadio = split[3];
+			ubicacion = split[4];
+			puntuacion = split[5];
+
+			id_equipo1 = stoi(split[6]);
+			id_equipo2 = stoi(split[7]);
+
+			Partido * partido = new Partido(id_partido, fecha, hora, estadio, ubicacion, puntuacion);
+
+			lista_partidos_equipos->Agregar(id_equipo1, id_equipo2, id_partido, lista_equipos, lista_partidos);
+		}
+		archivo_partidos.close();
+
+		cout << "-- Carga Inicial Equipos + Partidos --" << endl;
+	}
+	else
+		cout << "Error: No se pudo cargar el archivo: CargaPartidos.txt" << endl;
 }

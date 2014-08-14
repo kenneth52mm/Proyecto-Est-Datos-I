@@ -65,13 +65,20 @@ int ListaJugadores::Agregar(Jugador * jugador)
 	}
 	else
 	{
-		NodoJugador * nuevo_nodo = new NodoJugador(jugador);
+		if (this->DirNodo(jugador->GetId()))
+		{
+			NodoJugador * nuevo_nodo = new NodoJugador(jugador);
 
-		nuevo_nodo->SetAnterior(this->GetCabeza()->GetAnterior());
-		nuevo_nodo->SetSiguiente(this->GetCabeza());
+			nuevo_nodo->SetAnterior(this->GetCabeza()->GetAnterior());
+			nuevo_nodo->SetSiguiente(this->GetCabeza());
 
-		this->GetCabeza()->GetAnterior()->SetSiguiente(nuevo_nodo);
-		this->GetCabeza()->SetAnterior(nuevo_nodo);
+			this->GetCabeza()->GetAnterior()->SetSiguiente(nuevo_nodo);
+			this->GetCabeza()->SetAnterior(nuevo_nodo);
+
+			return 1;
+		}
+		else
+			return 2;
 	}
 }
 void ListaJugadores::MostrarLista()

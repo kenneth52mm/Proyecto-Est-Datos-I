@@ -8,6 +8,11 @@ NodoEquipo::~NodoEquipo(void)
 {
 }
 
+NodoEquipo::NodoEquipo(Equipo * equipo)
+{
+	this->SetEquipo(equipo);
+}
+
 NodoEquipo * NodoEquipo::GetAnterior()
 {
 	return this->anterior;

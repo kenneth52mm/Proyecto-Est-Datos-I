@@ -17,9 +17,9 @@ public:
     int GetTamano();
     void SetTamano(int);
 
-	/*int agregar(int, int, int, ListaEquipos *, ListaPartidos *);
+	int Agregar(int, int, int, ListaEquipos *, ListaPartidos *);
 	int eliminar(int, int);
 	void mostrarLista();
 	void mostrarEquipo(int);
-	void mostrarPais(int);*/
+	void mostrarPais(int);
 };
