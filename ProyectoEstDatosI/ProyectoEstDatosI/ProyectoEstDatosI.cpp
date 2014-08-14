@@ -1,4 +1,5 @@
 #include "CargaInicial.h"
+#include "stdafx.h"
 
 /*
 
@@ -17,10 +18,12 @@
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	/*ListaGrupos * lista_grupos = new ListaGrupos(); 
-	ListaEquipoxPais * lista_equipo_pais = new ListaEquipoxPais();
-	ListaPais * lista_pais = new ListaPais();
+	ListaGrupos * lista_grupos = new ListaGrupos(); 
 	ListaEquipos * lista_equipos = new ListaEquipos();
+	Equipo* equipo = new Equipo();
+	
+	/*ListaPais * lista_pais = new ListaPais();
+	ListaEquipoxPais * lista_equipo_pais = new ListaEquipoxPais();
 
 	ListaJugadorxEquipo * lista_jugadores_equipos = new ListaJugadorxEquipo();
 	ListaJugadores * lista_jugadores = new ListaJugadores();
@@ -52,6 +55,10 @@ int _tmain(int argc, _TCHAR* argv[])
 	int altura;
 	string fecha_nac;
 	string club;
+	string entrenador; 
+	string letra;
+	string abreviatura;
+	int respuesta= 0;
 
 	do
 	{
@@ -103,7 +110,30 @@ int _tmain(int argc, _TCHAR* argv[])
 				case 0:
 					break;
 				case 1:
-					//lista_grupos->MostarLista();
+					cout<<"Los grupos son:"<<endl;
+					lista_grupos->MostarLista();
+					break;
+				case 2:
+					cout<<"Digite el nombre (solo letras) del nuevo Grupo: "<<endl;
+					cin>> letra;
+					lista_grupos->Agregar(letra);
+					cout<<"El grupo nuevo se ha agregado con exito"<<endl;
+					break;
+				case 3:
+					cout<<"Digite el nombre del grupo que desea eliminar: "<<endl;
+					cin>> letra;
+					respuesta= lista_grupos->Eliminar(letra);
+					switch(respuesta)
+					{
+						case 1:
+							cout<<"El grupo: "<< letra << " , ha sido eliminado con exito"<<endl; 
+							break;
+						case 2:
+							cout<<"El grupo: "<< letra << " ,No ha sido eliminado. No existe"<<endl;
+							break;
+
+					}
+					
 					break;
 				}
 			}
@@ -113,36 +143,68 @@ int _tmain(int argc, _TCHAR* argv[])
 			break;
 		case 2:
 
-			//do
-			//{
-			//	system("pause");
+			do
+			{
+				system("pause");
 
-			//	cout << 
-			//		"-- Equipos --" << endl << endl <<
+				cout << 
+					"-- Equipos --" << endl << endl <<
 
-			//		"( 0 ) Atras" << endl << endl <<
+					"( 0 ) Atras" << endl << endl <<
 
-			//		"( 1 ) Ver Equipos" << endl << 
-			//		"( 2 ) Agregar Equipos" << endl << 
-			//		"( 3 ) Eliminar Equipos" << endl << 
-			//		"--" << endl <<
-			//		"Opcion: ";
+					"( 1 ) Ver Equipos" << endl << 
+					"( 2 ) Agregar Equipos" << endl << 
+					"( 3 ) Eliminar Equipos" << endl << 
+					"--" << endl <<
+					"Opcion: ";
 
-			//	cin >> opcion;
-			//	cout << "---" << endl;
+				cin >> opcion;
+				cout << "---" << endl;
 
-			//	switch (opcion)
-			//	{
-			//	case 0:
-			//		break;
-			//	case 1:
-			//		//lista_equipos->MostarLista();
-			//		break;
-			//	}
-			//}
-			//while (opcion != 0);
-			//opcion = -1;
-			//break;
+				switch (opcion)
+				{
+				case 0:
+					break;
+				case 1:
+					cout<<"Lista de Todos los equipos"<<endl;
+					lista_equipos->MostrarLista();
+					break;
+				case 2:
+					cout<< "Digite el id del equipo que desea agregar: "<<endl;
+					cin>> id;
+					equipo->SetId(id);
+					cout<< "Digite el nombre del entrenador del equipo: "<<endl;
+					cin>> entrenador;
+					equipo->SetEntrenador(entrenador);
+					cout<<"Digite el nombre del pais del equipo:  "<<endl;
+					cin>> nombre;
+					equipo->SetNombre(nombre);
+					cout<<"Digite la abreviatura del equipo: "<<endl;
+					cin>> abreviatura;
+					equipo->SetAbreviatura(abreviatura);
+					lista_equipos->Agregar(equipo);
+					cout<<"El equipo: "<< equipo->GetNombre()<< ", ha sido agregado con exito.";
+					break;
+				case 3:
+					cout<<"Digite el id el equipo que desea eliminar: "<<endl;
+					cin>> id;
+					respuesta = lista_equipos->Eliminar();
+					switch(respuesta)
+					{
+					case 1:
+						cout<<"El equipo: "<<id<<" ,ha sido eliminado con esxito."<<endl;
+						break;
+					case 2:
+						cout<<"NO se ha podido eliminar el equipo con id: "<<endl;
+						break;
+					}
+
+					break;
+				}
+			}
+			while (opcion != 0);
+			opcion = -1;
+			break;
 
 		case 3:
 			//do
