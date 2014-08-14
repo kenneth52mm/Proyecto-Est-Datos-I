@@ -90,8 +90,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 					"( 1 ) Ver Grupos" << endl << 
 					"( 2 ) Agregar Grupo" << endl << 
-					"( 3 ) Editar Grupo" << endl << 
-					"( 4 ) Eliminar Grupo (Los equipos siguien existiendo)" << endl << 
+					"( 3 ) Eliminar Grupo (Los equipos siguien existiendo)" << endl << 
 					"--" << endl <<
 					"Opcion: ";
 
@@ -124,8 +123,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 					"( 1 ) Ver Equipos" << endl << 
 					"( 2 ) Agregar Equipos" << endl << 
-					"( 3 ) Editar Equipos" << endl << 
-					"( 4 ) Eliminar Equipos" << endl << 
+					"( 3 ) Eliminar Equipos" << endl << 
 					"--" << endl <<
 					"Opcion: ";
 
@@ -157,8 +155,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 					"( 1 ) Ver Judagores" << endl << 
 					"( 2 ) Agregar Jugadores" << endl << 
-					"( 3 ) Editar Jugadores" << endl << 
-					"( 4 ) Eliminar Jugadores" << endl << 
+					"( 3 ) Eliminar Jugadores" << endl << 
 					"--" << endl <<
 					"Opcion: ";
 
@@ -206,9 +203,6 @@ int _tmain(int argc, _TCHAR* argv[])
 					}
 					break;
 				case 3:
-
-					break;
-				case 4:
 					int res;
 					cout<<"Digite el numero de jugador que desea eliminar"<<endl;
 					cin>>res;
@@ -240,8 +234,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 					"( 1 ) Ver Equipos" << endl << 
 					"( 2 ) Agregar Equipos" << endl << 
-					"( 3 ) Editar Equipos" << endl << 
-					"( 4 ) Eliminar Equipos" << endl << 
+					"( 3 ) Eliminar Equipos" << endl << 
 					"--" << endl <<
 					"Opcion: ";
 
