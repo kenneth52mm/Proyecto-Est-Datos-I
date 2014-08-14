@@ -74,3 +74,18 @@ int ListaGrupos::Agregar(string grupo)
 		return 1;
 	}
 }
+void ListaGrupos::MostrarLista()
+{
+	if(this->GetCabeza() == NULL)
+		cout<<"No hay elemntos en la lista"<<endl;
+	else
+	{
+		NodoGrupos* grupo = this->GetCabeza();
+		cout<<"Inicio de la lista"<< endl;
+		do
+		{
+			cout<<"Nombre: "grupo->GetGrupo()->GetNombre;
+			grupo= grupo->GetSiguiente();
+		}while(grupo != this->GetCabeza());
+	cout<<"Fin de la lista"<< endl;
+}

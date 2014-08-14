@@ -20,5 +20,6 @@ public:
 	NodoEquipo * DirNodo(int);
 
 	int Agregar(Equipo *);
+	void MostrarLista();
 };
 

@@ -20,7 +20,7 @@ public:
 
     int Agregar(string);
 	int Eliminar(string);
-	void MostarLista();
+	void MostrarLista();
 	void MostrarGrupo(string);
 };
 

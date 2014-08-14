@@ -65,3 +65,16 @@ int ListaEquipoXGrupo::Agregar(int id_equipo, string grupo, ListaEquipos * lista
 	else
 		cout << "-- Error: Enlace Equipo + Grupo --" << endl;
 }
+void ListaEquipoXGrupo::MostrarLista()
+{
+	if (this->GetCabeza== NULL)
+		cout<< "No hay elementos en la lista"<<endl;
+	else
+	{
+		NodoEquipoXGrupo* nodo = this->GetCabeza();
+		do
+		{
+			
+		}while(nodo != this->GetCabeza());
+	}
+}

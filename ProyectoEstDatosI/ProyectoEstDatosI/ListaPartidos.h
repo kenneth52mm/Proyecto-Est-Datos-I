@@ -19,9 +19,9 @@ public:
 
 	NodoPartido * DirNodo(int);
 
-	//int Agregar(Partido *);
-	//int Eliminar(int);
-	//void MostrarLista();
-	//void MostrarPartido(int);
+	int Agregar(Partido *);
+	int Eliminar(int);
+	void MostrarLista();
+	void MostrarPartido(int);
 };
 

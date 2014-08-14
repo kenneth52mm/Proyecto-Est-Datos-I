@@ -75,3 +75,21 @@ int ListaEquipos::Agregar(Equipo *)
 		return 1;
 	}
 }
+void ListaEquipos::MostrarLista()
+{
+	if(this->GetCabeza() == NULL)
+		cout<<"No hay elemntos en la lista"<<endl;
+	else
+	{
+		NodoEquipo* equipo =this->GetCabeza();
+		cout<<"Inicio de la lista"<< endl;
+		do
+		{
+			cout<<"Id: "<<equipo->GetEquipo()->GetId()<<endl
+				<<"Nombre: "<<equipo->GetEquipo()->GetNombre()<<endl
+				<<"Abreviatura: "<<equipo->GetEquipo()->GetAbreviatura()<<endl
+				<<"Entrenador: "<<equipo->GetEquipo()->GetEntrenador()<<endl;
+			equipo= equipo->GetSiguiente();
+		}while(equipo!= this->GetCabeza());
+	cout<<"Fin de la lista"<< endl;
+}

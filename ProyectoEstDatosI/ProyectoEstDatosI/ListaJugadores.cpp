@@ -74,3 +74,27 @@ int ListaJugadores::Agregar(Jugador * jugador)
 		this->GetCabeza()->SetAnterior(nuevo_nodo);
 	}
 }
+void ListaJugadores::MostrarLista()
+{
+	if(this->GetCabeza() == NULL)
+		cout<<"No hay elemntos en la lista"<<endl;
+	else
+	{
+		NodoJugador* jugador =this->GetCabeza();
+		cout<<"Inicio de la lista"<< endl;
+		do
+		{
+			cout<<"Nombre: "<<jugador->GetJugador()->GetNombre()<<endl
+				<<"Feha de Nacimiento: "<<jugador->GetJugador()->GetFechaNac()<<endl
+				<<"Edad: "<<jugador->GetJugador()->GetEdad()<<endl
+				<<"Altura: "<<jugador->GetJugador()->GetAltura<<endl
+				<<"Numero de Camiseta: "<<jugador->GetJugador()->GetId<<endl
+				<<"Primer partido: "<<jugador->GetJugador()->GetPrimerPartido()<<endl
+				<<"Cantidad de Goles: "<<jugador->GetJugador()->GetCantidadGoles()<<endl
+				<<"Posicion: "<<jugador->GetJugador()->GetPosicion()<<endl
+				<<"Cantidad de Partidos: "<<jugador->GetJugador()->GetPartidosJugados()<<endl
+				<<"Club Actual: "<<jugador->GetJugador()->GetClub()<<endl;
+			jugador = jugador->GetSiguiente();
+		}while(jugador != this->GetCabeza());
+		cout<<"Fin de la lista"<< endl;
+}
