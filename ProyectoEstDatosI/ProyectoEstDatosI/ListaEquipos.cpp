@@ -76,7 +76,7 @@ int ListaEquipos::Agregar(Equipo * equipo)
 			recorrido = recorrido->GetSiguiente();
 		}
 		while (recorrido != this->GetCabeza());
-		
+
 		if (!repetido)
 		{
 			NodoEquipo * nuevo_nodo = new NodoEquipo(equipo);
@@ -109,5 +109,28 @@ void ListaEquipos::MostrarLista()
 				<<"Entrenador: "<<equipo->GetEquipo()->GetEntrenador()<<endl;
 			equipo= equipo->GetSiguiente();
 		}while(equipo!= this->GetCabeza());
-	cout<<"Fin de la lista"<< endl;
+		cout<<"Fin de la lista"<< endl;
+	}
+}
+int ListaEquipos::Eliminar(int id)
+{
+	if (this->DirNodo(id) == NULL)
+		return 2;
+	else
+	{
+		NodoEquipo * eliminar = this->DirNodo(id);
+
+		eliminar->GetAnterior()->SetSiguiente(eliminar->GetSiguiente());
+		eliminar->GetSiguiente()->SetAnterior(eliminar->GetAnterior());
+
+		if (this->GetCabeza() == eliminar)
+			this->SetCabeza(eliminar->GetSiguiente());
+
+		delete eliminar;
+
+		this->SetTamano(this->GetTamano() - 1);
+
+		return 1;
+	}
+
 }

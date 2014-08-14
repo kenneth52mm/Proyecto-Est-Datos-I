@@ -104,4 +104,26 @@ void ListaJugadores::MostrarLista()
 			jugador = jugador->GetSiguiente();
 		}while(jugador != this->GetCabeza());
 		cout<<"Fin de la lista"<< endl;
+	}
+}
+int ListaJugadores::Eliminar(int id)
+{
+	if (this->DirNodo(id) == NULL)
+		return 2;
+	else
+	{
+		NodoJugador * eliminar = this->DirNodo(id);
+
+		eliminar->GetAnterior()->SetSiguiente(eliminar->GetSiguiente());
+		eliminar->GetSiguiente()->SetAnterior(eliminar->GetAnterior());
+
+		if (this->GetCabeza() == eliminar)
+			this->SetCabeza(eliminar->GetSiguiente());
+
+		delete eliminar;
+
+		this->SetTamano(this->GetTamano() - 1);
+
+		return 1;
+	}
 }

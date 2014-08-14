@@ -98,6 +98,28 @@ void ListaPartidos::MostrarLista()
 				<<"Punticion: "<<partido->GetPartido()->GetPuntuacion()<<endl;
 			partido = partido->GetSiguiente();
 		}while(partido != this->GetCabeza());
-	cout<<"Fin de la lista"<< endl;
+		cout<<"Fin de la lista"<< endl;
 	}
+}
+int ListaPartidos::Eliminar(int id)
+{
+	if (this->DirNodo(id) == NULL)
+		return 2;
+	else
+	{
+		NodoPartido * eliminar = this->DirNodo(id);
+
+		eliminar->GetAnterior()->SetSiguiente(eliminar->GetSiguiente());
+		eliminar->GetSiguiente()->SetAnterior(eliminar->GetAnterior());
+
+		if (this->GetCabeza() == eliminar)
+			this->SetCabeza(eliminar->GetSiguiente());
+
+		delete eliminar;
+
+		this->SetTamano(this->GetTamano() - 1);
+
+		return 1;
+	}
+
 }

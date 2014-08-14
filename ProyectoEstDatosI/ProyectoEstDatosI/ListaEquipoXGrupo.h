@@ -8,6 +8,7 @@ class ListaEquipoXGrupo
 private:
     NodoEquipoXGrupo * cabeza;
     int tamano;
+	NodoEquipoXGrupo *DirNodo(int,string);
 public:
 	ListaEquipoXGrupo(void);
 	~ListaEquipoXGrupo(void);
@@ -19,7 +20,7 @@ public:
     void SetTamano(int);
 
     int Agregar(int, string, ListaEquipos *, ListaGrupos *);
-    int Elmininar(int, int);
+    int Eliminar(int, string);
     void MostrarLista();
     void MostrarEquipo(int);
     void MostrarGrupo(int);

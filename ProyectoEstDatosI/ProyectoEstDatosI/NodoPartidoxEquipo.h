@@ -22,7 +22,7 @@ public:
 	NodoPartidoxEquipo * GetAnterior();
 	void SetAnterior(NodoPartidoxEquipo *);
 
-	NodoPartidoxEquipo * GetSguiente();
+	NodoPartidoxEquipo * GetSiguiente();
 	void SetSiguiente(NodoPartidoxEquipo *);
 
 	NodoEquipo * GetEquipo1();

@@ -27,7 +27,18 @@ void ListaJugadorxEquipo::SetTamano(int tamano)
 {
     this->tamano= tamano;
 }
+NodoJugadorxEquipo *ListaJugadorxEquipo::DirNodo(int idJugador,int idEquipo)
+{
+	NodoJugadorxEquipo *aux=GetCabeza();
+	do
+	{
+	if(aux->GetJugador()->GetJugador()->GetId()==idJugador && aux->GetEquipo()->GetEquipo()->GetId())
+		return aux;
+	aux=aux->GetSiguiente();
 
+	}while(aux!=GetCabeza());
+	return NULL;
+}
 int ListaJugadorxEquipo::Agregar(int id_jugador, int id_equipo, ListaJugadores * lista_jugadores, ListaEquipos * lista_equipos)
 {
 	/*
@@ -64,4 +75,28 @@ int ListaJugadorxEquipo::Agregar(int id_jugador, int id_equipo, ListaJugadores *
 	}
 	else
 		cout << "Error: Jugadores + Equipos" << endl;
+}
+
+int ListaJugadorxEquipo::Eliminar(int idJugador,int idEquipo)
+{
+
+	if (this->DirNodo(idJugador,idEquipo) == NULL)
+		return 2;
+	else
+	{
+		NodoJugadorxEquipo* eliminar = this->DirNodo(idJugador,idEquipo);
+
+		eliminar->GetAnterior()->SetSiguiente(eliminar->GetSiguiente());
+		eliminar->GetSiguiente()->SetAnterior(eliminar->GetAnterior());
+
+		if (this->GetCabeza() == eliminar)
+			this->SetCabeza(eliminar->GetSiguiente());
+
+		delete eliminar;
+
+		this->SetTamano(this->GetTamano() - 1);
+
+		return 1;
+
+	}
 }
