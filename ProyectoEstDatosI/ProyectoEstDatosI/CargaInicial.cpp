@@ -56,7 +56,7 @@ void CargaInicial::CargarEquiposXGrupos(ListaEquipoXGrupo * lista_equipos_grupos
 	else
 		cout << "Error: No se pudo cargar el archivo: CargaEquipos.txt" << endl;
 }
-void CargarJugadoresXEquipos(ListaJugadorxEquipo * lista_jugadores_equipos, ListaEquipos * lista_equipos, ListaJugadores * lista_jugadores)
+void CargaInicial::CargarJugadoresXEquipos(ListaJugadorxEquipo * lista_jugadores_equipos, ListaEquipos * lista_equipos, ListaJugadores * lista_jugadores)
 {
 	ifstream archivo_jugadores("C:\\Users\\Daniel\\Downloads\\CargaJugadores.txt");
 
@@ -114,7 +114,7 @@ void CargarJugadoresXEquipos(ListaJugadorxEquipo * lista_jugadores_equipos, List
 	else
 		cout << "Error: No se pudo cargar el archivo: CargaJugadores.txt" << endl;
 }
-void CargarPartidosXEquipos(ListaPartidoXEquipo * lista_partidos_equipos, ListaEquipos * lista_equipos, ListaPartidos * lista_partidos)
+void CargaInicial::CargarPartidosXEquipos(ListaPartidoXEquipo * lista_partidos_equipos, ListaEquipos * lista_equipos, ListaPartidos * lista_partidos)
 {
 	ifstream archivo_partidos("C:\\Users\\Daniel\\Downloads\\CargaPartidos.txt");
 
@@ -154,6 +154,8 @@ void CargarPartidosXEquipos(ListaPartidoXEquipo * lista_partidos_equipos, ListaE
 			id_equipo2 = stoi(split[7]);
 
 			Partido * partido = new Partido(id_partido, fecha, hora, estadio, ubicacion, puntuacion);
+
+			lista_partidos->Agregar(partido);
 
 			lista_partidos_equipos->Agregar(id_equipo1, id_equipo2, id_partido, lista_equipos, lista_partidos);
 		}

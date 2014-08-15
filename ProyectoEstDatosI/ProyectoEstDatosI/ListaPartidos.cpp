@@ -2,6 +2,8 @@
 
 ListaPartidos::ListaPartidos(void)
 {
+	this->SetCabeza(NULL);
+	this->SetTamano(0);
 }
 ListaPartidos::~ListaPartidos(void)
 {
@@ -27,22 +29,21 @@ void ListaPartidos::SetTamano(int tamano)
 
 NodoPartido * ListaPartidos::DirNodo(int id)
 {
-	if (this->GetCabeza() == NULL)
-		return NULL;
-	else
+	if (this->GetCabeza() != NULL)
 	{
-		NodoPartido * recorrido = this->GetCabeza();
+		NodoPartido * nodo = this->GetCabeza();
 
 		do
-		{
-			if (recorrido->GetPartido()->GetId() == id)
-				return recorrido;
+			if (nodo->GetPartido()->GetId() == id)
+				return nodo;
+			else
+				nodo = nodo->GetSiguiente();
 
-			recorrido = recorrido->GetSiguiente();
-		}
-		while (recorrido != this->GetCabeza());
+		while (nodo != this->GetCabeza());
 		return NULL;
 	}
+	else
+		return NULL;
 }
 
 int ListaPartidos::Agregar(Partido * partido)
@@ -52,18 +53,16 @@ int ListaPartidos::Agregar(Partido * partido)
 	2: Repetido
 	*/
 
-	if (this->DirNodo(partido->GetId()) != NULL)
+	if (this->DirNodo(partido->GetId()) == NULL)
 	{
 		NodoPartido * nuevo_nodo = new NodoPartido(partido);
 
-		if (this->GetCabeza() != NULL)
+		if (this->GetCabeza() == NULL)
 		{
 			this->SetCabeza(nuevo_nodo);
 
 			nuevo_nodo->SetAnterior(nuevo_nodo);
 			nuevo_nodo->SetSiguiente(nuevo_nodo);
-
-			return 1;
 		}
 		else
 		{
@@ -72,9 +71,10 @@ int ListaPartidos::Agregar(Partido * partido)
 
 			this->GetCabeza()->GetAnterior()->SetSiguiente(nuevo_nodo);
 			this->GetCabeza()->SetAnterior(nuevo_nodo);
-
-			return 1;
 		}
+
+		this->SetTamano(this->GetTamano() + 1);
+		return 1;
 	}
 	else
 		return 2;

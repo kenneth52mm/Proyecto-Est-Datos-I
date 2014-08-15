@@ -73,6 +73,8 @@ int ListaGrupos::Agregar(string grupo)
 			this->GetCabeza()->GetAnterior()->SetSiguiente(nuevo_nodo);
 			this->GetCabeza()->SetAnterior(nuevo_nodo);
 		}
+
+		this->SetTamano(this->GetTamano() + 1);
 		return 1;
 	}
 	else

@@ -14,9 +14,9 @@ NodoJugadorxEquipo*ListaJugadorxEquipo::GetCabeza()
 {
 	return this->cabeza;
 }
-void ListaJugadorxEquipo::SetCabeza(NodoJugadorxEquipo* _cabeza)
+void ListaJugadorxEquipo::SetCabeza(NodoJugadorxEquipo * cabeza)
 {
-	this->cabeza= _cabeza;
+	this->cabeza = cabeza;
 }
 
 int ListaJugadorxEquipo::GetTamano()
@@ -30,17 +30,21 @@ void ListaJugadorxEquipo::SetTamano(int tamano)
 
 NodoJugadorxEquipo * ListaJugadorxEquipo::DirNodo(int id_jugador,int id_equipo)
 {
-	NodoJugadorxEquipo * nodo = this->GetCabeza();
-
-	do
+	if (this->GetCabeza() != NULL)
 	{
-		if(nodo->GetJugador()->GetJugador()->GetId() == id_jugador && nodo->GetEquipo()->GetEquipo()->GetId() == id_equipo)
-			return nodo;
+		NodoJugadorxEquipo * nodo = this->GetCabeza();
 
-		nodo = nodo->GetSiguiente();
+		do
+			if(nodo->GetJugador()->GetJugador()->GetId() == id_jugador && nodo->GetEquipo()->GetEquipo()->GetId() == id_equipo)
+				return nodo;
+			else
+				nodo = nodo->GetSiguiente();
+
+		while (nodo != this->GetCabeza());
+		return NULL;
 	}
-	while (nodo != this->GetCabeza());
-	return NULL;
+	else
+		return NULL;
 }
 
 int ListaJugadorxEquipo::Agregar(int id_jugador, int id_equipo, ListaJugadores * lista_jugadores, ListaEquipos * lista_equipos)
@@ -75,6 +79,8 @@ int ListaJugadorxEquipo::Agregar(int id_jugador, int id_equipo, ListaJugadores *
 				this->GetCabeza()->GetAnterior()->SetSiguiente(nuevo_nodo);
 				this->GetCabeza()->SetSiguiente(nuevo_nodo);
 			}
+
+			this->SetTamano(this->GetTamano() + 1);
 			return 1;
 		}
 		else

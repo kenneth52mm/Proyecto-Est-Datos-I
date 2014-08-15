@@ -4,6 +4,7 @@
 ListaPartidoXEquipo::ListaPartidoXEquipo(void)
 {
 	this->SetCabeza(NULL);
+	this->SetTamano(0);
 }
 ListaPartidoXEquipo::~ListaPartidoXEquipo(void)
 {
@@ -26,17 +27,26 @@ void ListaPartidoXEquipo::SetTamano(int tamano)
 {
 	this->tamano = tamano;
 }
-NodoPartidoxEquipo *ListaPartidoXEquipo::DirNodo(int idPartido,int idEquipo1,int idEquipo2)
+
+NodoPartidoxEquipo * ListaPartidoXEquipo::DirNodo(int id_partido, int id_equipo1, int id_equipo2)
 {
-	NodoPartidoxEquipo *aux=GetCabeza();
-	do
+	if (this->GetCabeza() != NULL)
 	{
-		if(aux->GetPartido()->GetPartido()->GetId() && aux->GetEquipo1()->GetEquipo()->GetId()==idEquipo1 && aux->GetEquipo2()->GetEquipo()->GetId()==idEquipo2)
-			return aux;
-		aux=aux->GetSiguiente();
+		NodoPartidoxEquipo * nodo = this->GetCabeza();
+
+		do
+		if(nodo->GetPartido()->GetPartido()->GetId() == id_partido &&
+			nodo->GetEquipo1()->GetEquipo()->GetId() == id_equipo1 &&
+			nodo->GetEquipo2()->GetEquipo()->GetId() == id_equipo2)
+				return nodo;
+			else
+				nodo=nodo->GetSiguiente();
+
+		while(nodo!=GetCabeza());
+		return NULL;
 	}
-	while(aux!=GetCabeza());
-	return NULL;
+	else
+		return NULL;
 }
 int ListaPartidoXEquipo::Agregar(int id_equipo1, int id_equipo2, int id_partido, ListaEquipos * lista_equipos, ListaPartidos * lista_partidos)
 {
@@ -50,7 +60,7 @@ int ListaPartidoXEquipo::Agregar(int id_equipo1, int id_equipo2, int id_partido,
 
 		if (this->DirNodo(nuevo_nodo->GetPartido()->GetPartido()->GetId(),
 			nuevo_nodo->GetEquipo1()->GetEquipo()->GetId(),
-			nuevo_nodo->GetEquipo2()->GetEquipo()->GetId()) != NULL)
+			nuevo_nodo->GetEquipo2()->GetEquipo()->GetId()) == NULL)
 		{
 			if (this->GetCabeza() == NULL)
 			{
@@ -58,8 +68,6 @@ int ListaPartidoXEquipo::Agregar(int id_equipo1, int id_equipo2, int id_partido,
 
 				nuevo_nodo->SetAnterior(nuevo_nodo);
 				nuevo_nodo->SetSiguiente(nuevo_nodo);
-
-				return 1;
 			}
 			else
 			{
@@ -68,9 +76,10 @@ int ListaPartidoXEquipo::Agregar(int id_equipo1, int id_equipo2, int id_partido,
 
 				this->GetCabeza()->GetAnterior()->SetSiguiente(nuevo_nodo);
 				this->GetCabeza()->SetAnterior(nuevo_nodo);
-
-				return 1;
 			}
+
+			this->SetTamano(this->GetTamano() + 1);
+			return 1;
 		}
 		else
 			return 2;

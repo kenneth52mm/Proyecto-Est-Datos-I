@@ -4,6 +4,7 @@
 ListaEquipos::ListaEquipos(void)
 {
 	this->SetCabeza(NULL);
+	this->SetTamano(0);
 }
 ListaEquipos::~ListaEquipos(void)
 {

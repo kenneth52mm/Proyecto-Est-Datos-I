@@ -6,7 +6,6 @@ class ListaGrupos
 private:
     NodoGrupos * cabeza;
 	int tamano;
-	NodoGrupos *DirNodo(int);
 public:
 	ListaGrupos(void);
 	~ListaGrupos(void);

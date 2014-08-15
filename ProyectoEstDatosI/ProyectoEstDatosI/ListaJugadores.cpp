@@ -28,20 +28,21 @@ void ListaJugadores::SetTamano(int tamano)
 
 NodoJugador * ListaJugadores::DirNodo(int id)
 {
-	if (this->GetCabeza() == NULL)
-		return NULL;
-	else
-	{
-		NodoJugador * recorrido = this->GetCabeza();
+	if (this->GetCabeza() != NULL)
+		{
+			NodoJugador * nodo = this->GetCabeza();
 
-		do
-			if (recorrido->GetJugador()->GetId() == id)
-				return recorrido;
-			else
-				recorrido = recorrido->GetSiguiente();
-		while (recorrido != this->GetCabeza());
+			do
+				if (nodo->GetJugador()->GetId() == id)
+					return nodo;
+				else
+					nodo = nodo->GetSiguiente();
+
+			while (nodo != this->GetCabeza());
+			return NULL;
+		}
+	else
 		return NULL;
-	}
 }
 
 int ListaJugadores::Agregar(Jugador * jugador)
@@ -70,6 +71,8 @@ int ListaJugadores::Agregar(Jugador * jugador)
 			this->GetCabeza()->GetAnterior()->SetSiguiente(nuevo_nodo);
 			this->GetCabeza()->SetAnterior(nuevo_nodo);
 		}
+
+		this->SetTamano(this->GetTamano() + 1);
 		return 1;
 	}
 	else
