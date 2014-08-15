@@ -97,3 +97,35 @@ int ListaPartidoXEquipo::Eliminar(int idPartido,int idEquipo1,int idEquipo2)
 
 	}
 }
+<<<<<<< HEAD
+void ListaPartidoXEquipo::mostrarLista()
+{
+	if(this->GetCabeza() == NULL)
+		cout<<"No hay elemntos en la lista"<<endl;
+	else
+	{
+		NodoPartidoxEquipo* nodo =this->GetCabeza();
+		cout<<"Inicio de la lista"<< endl;
+		do
+		{
+			cout<<"Partido: "<<nodo->GetPartido()->GetPartido()->GetId()<<endl
+				<<"Puntuacion: "<<nodo->GetPartido()->GetPartido()->GetPuntuacion()<<endl
+				<<"Equipo 1: "<<nodo->GetEquipo1()->GetEquipo()->GetNombre()<<endl
+				<<"Abreviatura: "<<nodo->GetEquipo1()->GetEquipo()->GetAbreviatura()<<endl
+				<<"Id: "<<nodo->GetEquipo1()->GetEquipo()->GetId()<<endl
+				<<"Entrenador: "<<nodo->GetEquipo1()->GetEquipo()->GetEntrenador()<<endl
+				<<"Equipo 2: "<<nodo->GetEquipo2()->GetEquipo()->GetNombre()<<endl
+				<<"Abreviatura: "<<nodo->GetEquipo2()->GetEquipo()->GetAbreviatura()<<endl
+				<<"Id: "<<nodo->GetEquipo2()->GetEquipo()->GetId()<<endl
+				<<"Entrenador: "<<nodo->GetEquipo2()->GetEquipo()->GetEntrenador()<<endl;
+			nodo = nodo->GetSguiente();
+		}while(nodo!= this->GetCabeza());
+		cout<<"Fin de la lista"<<endl;
+	}
+}
+void ListaPartidoXEquipo::mostrarEquipo(int)
+{}
+void ListaPartidoXEquipo::mostrarPais(int)
+{}
+=======
+>>>>>>> origin/master

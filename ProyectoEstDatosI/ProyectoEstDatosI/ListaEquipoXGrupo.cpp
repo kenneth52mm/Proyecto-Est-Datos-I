@@ -103,11 +103,18 @@ void ListaEquipoXGrupo::MostrarLista()
 	else
 	{
 		NodoEquipoXGrupo* nodo = this->GetCabeza();
+		cout<<"Inicio de la lista"<<endl;
 		do
 		{
-			
+			cout<<"Grupo: "<<nodo->GetGrupo()->GetGrupo()<<endl
+				<<"Id: "<<nodo->GetEquipo()->GetEquipo()->GetId()<<endl
+				<<"Nombre: "<<nodo->GetEquipo()->GetEquipo()->GetNombre()<<endl
+				<<"Abreviatura: "<<nodo->GetEquipo()->GetEquipo()->GetAbreviatura()<<endl
+				<<"Entrenador: "<<nodo->GetEquipo()->GetEquipo()->GetEntrenador()<<endl;
+			nodo= nodo->GetSiguiente();	
 		}while(nodo != this->GetCabeza());
 	}
+	cout<<"Fin de la lista"<<endl;
 }
 int ListaEquipoXGrupo::Eliminar(int idEquipo,string idGrupo)
 {

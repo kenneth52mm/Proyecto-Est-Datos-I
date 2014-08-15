@@ -78,6 +78,31 @@ int ListaJugadorxEquipo::Agregar(int id_jugador, int id_equipo, ListaJugadores *
 	else
 		cout << "Error: Jugadores + Equipos" << endl;
 }
+void ListaJugadorxEquipo::mostrarLista()
+{
+	if (this->GetCabeza== NULL)
+		cout<< "No hay elementos en la lista"<<endl;
+	else
+	{
+		NodoJugadorxEquipo* nodo = this->GetCabeza();
+		cout<<"Inicio de la lista"<<endl;
+		do
+		{
+			cout<<"Nombre del equipo: "<<nodo->GetEquipo()->GetEquipo()->GetNombre()<<endl
+				<<"Jugador: "<<nodo->GetJugador()->GetJugador()->GetNombre()<<endl
+				<<"Feha de Nacimiento: "<<nodo->GetJugador()->GetJugador()->GetFechaNac()<<endl
+				<<"Edad: "<<nodo->GetJugador()->GetJugador()->GetEdad()<<endl
+				<<"Altura: "<<nodo->GetJugador()->GetJugador()->GetAltura<<endl
+				<<"Numero de Camiseta: "<<nodo->GetJugador()->GetJugador()->GetId<<endl
+				<<"Primer partido: "<<nodo->GetJugador()->GetJugador()->GetPrimerPartido()<<endl
+				<<"Cantidad de Goles: "<<nodo->GetJugador()->GetJugador()->GetCantidadGoles()<<endl
+				<<"Posicion: "<<nodo->GetJugador()->GetJugador()->GetPosicion()<<endl
+				<<"Cantidad de Partidos: "<<nodo->GetJugador()->GetJugador()->GetPartidosJugados()<<endl
+				<<"Club Actual: "<<nodo->GetJugador()->GetJugador()->GetClub()<<endl;
+			nodo= nodo->GetSiguiente();
+		}while(nodo != this->GetCabeza());
+		cout<<"Fin de la lista"<<endl;
+}
 int ListaJugadorxEquipo::Eliminar(int idJugador,int idEquipo)
 {
 	if (this->DirNodo(idJugador,idEquipo) == NULL)

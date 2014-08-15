@@ -88,7 +88,8 @@ void ListaGrupos::MostrarLista()
 		cout<<"Inicio de la lista"<< endl;
 		do
 		{
-			cout<<"Nombre: "<<grupo->GetGrupo()->GetNombre();
+			cout<<"Nombre: " << grupo->GetGrupo();
+
 			grupo= grupo->GetSiguiente();
 		}while(grupo != this->GetCabeza());
 		cout<<"Fin de la lista"<< endl;
