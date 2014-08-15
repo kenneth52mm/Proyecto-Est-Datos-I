@@ -27,7 +27,18 @@ void ListaEquipoXGrupo::SetTamano(int tam)
 {
     this->tamano = tam;
 }
+NodoEquipoXGrupo *ListaEquipoXGrupo::DirNodo(int idEquipo,string idGrupo)
+{
+	NodoEquipoXGrupo *aux=GetCabeza();
+	do
+	{
+		if(aux->GetEquipo()->GetEquipo()->GetId()==idEquipo&& aux->GetGrupo()->GetGrupo()==idGrupo)
+			return aux;
+		aux=aux->GetSiguiente();
+	}while(aux!=GetCabeza());
+	return NULL;
 
+}
 int ListaEquipoXGrupo::Agregar(int id_equipo, string grupo, ListaEquipos * lista_equipos, ListaGrupos * lista_grupos)
 {
 	/*
@@ -104,4 +115,26 @@ void ListaEquipoXGrupo::MostrarLista()
 		}while(nodo != this->GetCabeza());
 	}
 	cout<<"Fin de la lista"<<endl;
+}
+int ListaEquipoXGrupo::Eliminar(int idEquipo,string idGrupo)
+{
+	if (this->DirNodo(idEquipo,idGrupo) == NULL)
+		return 2;
+	else
+	{
+		NodoEquipoXGrupo* eliminar = this->DirNodo(idEquipo,idGrupo);
+
+		eliminar->GetAnterior()->SetSiguiente(eliminar->GetSiguiente());
+		eliminar->GetSiguiente()->SetAnterior(eliminar->GetAnterior());
+
+		if (this->GetCabeza() == eliminar)
+			this->SetCabeza(eliminar->GetSiguiente());
+
+		delete eliminar;
+
+		this->SetTamano(this->GetTamano() - 1);
+
+		return 1;
+
+	}
 }

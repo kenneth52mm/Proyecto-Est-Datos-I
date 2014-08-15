@@ -89,7 +89,31 @@ void ListaGrupos::MostrarLista()
 		do
 		{
 			cout<<"Nombre: " << grupo->GetGrupo();
+
 			grupo= grupo->GetSiguiente();
 		}while(grupo != this->GetCabeza());
-	cout<<"Fin de la lista"<< endl;
+		cout<<"Fin de la lista"<< endl;
+	}
+}
+int ListaGrupos::Eliminar(string id)
+{
+	if (this->DirNodo(id) == NULL)
+		return 2;
+	else
+	{
+		NodoGrupos* eliminar = this->DirNodo(id);
+
+		eliminar->GetAnterior()->SetSiguiente(eliminar->GetSiguiente());
+		eliminar->GetSiguiente()->SetAnterior(eliminar->GetAnterior());
+
+		if (this->GetCabeza() == eliminar)
+			this->SetCabeza(eliminar->GetSiguiente());
+
+		delete eliminar;
+
+		this->SetTamano(this->GetTamano() - 1);
+
+		return 1;
+
+	}
 }

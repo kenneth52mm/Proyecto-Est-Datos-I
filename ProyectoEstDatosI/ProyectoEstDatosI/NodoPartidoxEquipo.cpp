@@ -29,7 +29,7 @@ void NodoPartidoxEquipo::SetAnterior(NodoPartidoxEquipo * anterior)
 	this->anterior= anterior;
 }
 
-NodoPartidoxEquipo * NodoPartidoxEquipo::GetSguiente()
+NodoPartidoxEquipo * NodoPartidoxEquipo::GetSiguiente()
 {
 	return this->siguiente;
 }
