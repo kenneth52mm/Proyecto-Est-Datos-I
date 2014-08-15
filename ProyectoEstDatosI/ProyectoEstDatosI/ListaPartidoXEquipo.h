@@ -20,7 +20,6 @@ public:
 
 	int Agregar(int, int, int, ListaEquipos *, ListaPartidos *);
 	int Eliminar(int,int,int);
-	void mostrarLista();
-	void mostrarEquipo(int);
-	void mostrarPais(int);
+	void MostrarLista();
+	void MostrarPartido(int);
 };

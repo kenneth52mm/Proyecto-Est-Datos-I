@@ -1,14 +1,12 @@
 #pragma once
 #include "NodoEquipoXGrupo.h"
-#include "ListaEquipos.h"
-#include "ListaGrupos.h"
 
 class ListaEquipoXGrupo
 {
 private:
     NodoEquipoXGrupo * cabeza;
     int tamano;
-	NodoEquipoXGrupo *DirNodo(int,string);
+	NodoEquipoXGrupo *DirNodo(int, string);
 public:
 	ListaEquipoXGrupo(void);
 	~ListaEquipoXGrupo(void);
@@ -22,7 +20,6 @@ public:
     int Agregar(int, string, ListaEquipos *, ListaGrupos *);
     int Eliminar(int, string);
     void MostrarLista();
-    void MostrarEquipo(int);
-    void MostrarGrupo(int);
+    void MostrarGrupo(string);
 };
 

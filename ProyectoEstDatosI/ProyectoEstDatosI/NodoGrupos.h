@@ -1,6 +1,5 @@
 #pragma once
 #include "Equipo.h"
-#include "ListaEquipoXGrupo.h"
 
 
 class NodoGrupos

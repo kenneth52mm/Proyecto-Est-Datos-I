@@ -20,7 +20,7 @@ int _tmain(int argc, _TCHAR* argv[])
 {
 	ListaGrupos * lista_grupos = new ListaGrupos(); 
 	ListaEquipos * lista_equipos = new ListaEquipos();
-	Equipo* equipo = new Equipo();
+	Equipo * equipo = new Equipo();
 	
 	/*ListaPais * lista_pais = new ListaPais();
 	ListaEquipoxPais * lista_equipo_pais = new ListaEquipoxPais();
@@ -49,10 +49,10 @@ int _tmain(int argc, _TCHAR* argv[])
 	string posicion;
 	string primer_partido;
 	string nombre;
-	int partidos_jugados;;
-	int cantidad_goles;
-	int edad;
-	int altura;
+// 	int partidos_jugados;;
+//	int cantidad_goles;
+//	int edad;
+	// int altura;
 	string fecha_nac;
 	string club;
 	string entrenador; 
@@ -111,7 +111,7 @@ int _tmain(int argc, _TCHAR* argv[])
 					break;
 				case 1:
 					cout<<"Los grupos son:"<<endl;
-					lista_grupos->MostarLista();
+					// lista_grupos->MostarLista();
 					break;
 				case 2:
 					cout<<"Digite el nombre (solo letras) del nuevo Grupo: "<<endl;
@@ -188,7 +188,7 @@ int _tmain(int argc, _TCHAR* argv[])
 				case 3:
 					cout<<"Digite el id el equipo que desea eliminar: "<<endl;
 					cin>> id;
-					respuesta = lista_equipos->Eliminar();
+					//respuesta = lista_equipos->Eliminar();
 					switch(respuesta)
 					{
 					case 1:

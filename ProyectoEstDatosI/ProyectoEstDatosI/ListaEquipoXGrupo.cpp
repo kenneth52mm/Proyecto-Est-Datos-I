@@ -27,6 +27,7 @@ void ListaEquipoXGrupo::SetTamano(int tam)
 {
     this->tamano = tam;
 }
+
 NodoEquipoXGrupo *ListaEquipoXGrupo::DirNodo(int idEquipo,string idGrupo)
 {
 	NodoEquipoXGrupo *aux=GetCabeza();
@@ -39,6 +40,7 @@ NodoEquipoXGrupo *ListaEquipoXGrupo::DirNodo(int idEquipo,string idGrupo)
 	return NULL;
 
 }
+
 int ListaEquipoXGrupo::Agregar(int id_equipo, string grupo, ListaEquipos * lista_equipos, ListaGrupos * lista_grupos)
 {
 	/*
@@ -94,27 +96,10 @@ int ListaEquipoXGrupo::Agregar(int id_equipo, string grupo, ListaEquipos * lista
 		}
 	}
 	else
-		cout << "-- Error: Enlace Equipo + Grupo --" << endl;
-}
-void ListaEquipoXGrupo::MostrarLista()
-{
-	if (this->GetCabeza== NULL)
-		cout<< "No hay elementos en la lista"<<endl;
-	else
 	{
-		NodoEquipoXGrupo* nodo = this->GetCabeza();
-		cout<<"Inicio de la lista"<<endl;
-		do
-		{
-			cout<<"Grupo: "<<nodo->GetGrupo()->GetGrupo()<<endl
-				<<"Id: "<<nodo->GetEquipo()->GetEquipo()->GetId()<<endl
-				<<"Nombre: "<<nodo->GetEquipo()->GetEquipo()->GetNombre()<<endl
-				<<"Abreviatura: "<<nodo->GetEquipo()->GetEquipo()->GetAbreviatura()<<endl
-				<<"Entrenador: "<<nodo->GetEquipo()->GetEquipo()->GetEntrenador()<<endl;
-			nodo= nodo->GetSiguiente();	
-		}while(nodo != this->GetCabeza());
+		cout << "-- Error: Enlace Equipo + Grupo --" << endl;
+		return 2;
 	}
-	cout<<"Fin de la lista"<<endl;
 }
 int ListaEquipoXGrupo::Eliminar(int idEquipo,string idGrupo)
 {
@@ -137,4 +122,27 @@ int ListaEquipoXGrupo::Eliminar(int idEquipo,string idGrupo)
 		return 1;
 
 	}
+}
+void ListaEquipoXGrupo::MostrarLista()
+{
+	if (this->GetCabeza()== NULL)
+		cout << "-- Lista vacia --" << endl;
+	else
+	{
+		NodoEquipoXGrupo * recorrido = this->GetCabeza();
+
+		cout<<"-- I --"<<endl;
+
+		do
+		{
+			cout << "Grupo: "<<recorrido->GetGrupo()->GetGrupo() << endl
+				<< "ID: " << recorrido->GetEquipo()->GetEquipo()->GetId() << endl
+				<<"Nombre: " << recorrido->GetEquipo()->GetEquipo()->GetNombre() << endl
+				<<"Abreviatura: " << recorrido->GetEquipo()->GetEquipo()->GetAbreviatura() << endl
+				<<"Entrenador: " << recorrido->GetEquipo()->GetEquipo()->GetEntrenador() << endl;
+			recorrido= recorrido->GetSiguiente();	
+		}
+		while (recorrido != this->GetCabeza());
+	}
+	cout << "-- F --"<<endl;
 }

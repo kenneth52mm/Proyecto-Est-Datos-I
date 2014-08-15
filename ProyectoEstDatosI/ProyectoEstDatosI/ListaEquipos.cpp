@@ -34,13 +34,12 @@ NodoEquipo * ListaEquipos::DirNodo(int id)
 	else
 	{
 		NodoEquipo * nodo = GetCabeza();
+
 		do
-		{
 			if (nodo->GetEquipo()->GetId() == id)
 				return nodo;
 			else
 				nodo = nodo->GetSiguiente();
-		}
 		while(nodo != GetCabeza());
 		return NULL;
 	}
@@ -52,65 +51,34 @@ int ListaEquipos::Agregar(Equipo * equipo)
 	1: Insertado
 	2: Repetido
 	*/
-	bool repetido = false;
 
-	if (this->GetCabeza() == NULL)
+	if (this->DirNodo(equipo->GetId()) == NULL)
 	{
 		NodoEquipo * nuevo_nodo = new NodoEquipo(equipo);
-		this->SetCabeza(nuevo_nodo);
 
-		nuevo_nodo->SetAnterior(nuevo_nodo);
-		nuevo_nodo->SetSiguiente(nuevo_nodo);
-
-		return 1;
-	}
-	else
-	{
-		NodoEquipo * recorrido = this->GetCabeza();
-
-		do
+		if (this->GetCabeza() == NULL)
 		{
-			if (this->DirNodo(equipo->GetId()) != NULL)
-				repetido = true;
+			
+			this->SetCabeza(nuevo_nodo);
 
-			recorrido = recorrido->GetSiguiente();
+			nuevo_nodo->SetAnterior(nuevo_nodo);
+			nuevo_nodo->SetSiguiente(nuevo_nodo);
 		}
-		while (recorrido != this->GetCabeza());
-
-		if (!repetido)
+		else
 		{
-			NodoEquipo * nuevo_nodo = new NodoEquipo(equipo);
-
 			nuevo_nodo->SetSiguiente(this->GetCabeza());
 			nuevo_nodo->SetAnterior(this->GetCabeza()->GetAnterior());
 
 			this->GetCabeza()->GetAnterior()->SetSiguiente(nuevo_nodo);
 			this->GetCabeza()->SetAnterior(nuevo_nodo);
-
-			return 1;
 		}
-		else
-			return 2;
+
+		this->SetTamano(this->GetTamano() + 1);
+
+		return 1;
 	}
-}
-void ListaEquipos::MostrarLista()
-{
-	if(this->GetCabeza() == NULL)
-		cout<<"No hay elemntos en la lista"<<endl;
-	else
-	{
-		NodoEquipo* equipo =this->GetCabeza();
-		cout<<"Inicio de la lista"<< endl;
-		do
-		{
-			cout<<"Id: "<<equipo->GetEquipo()->GetId()<<endl
-				<<"Nombre: "<<equipo->GetEquipo()->GetNombre()<<endl
-				<<"Abreviatura: "<<equipo->GetEquipo()->GetAbreviatura()<<endl
-				<<"Entrenador: "<<equipo->GetEquipo()->GetEntrenador()<<endl;
-			equipo= equipo->GetSiguiente();
-		}while(equipo!= this->GetCabeza());
-		cout<<"Fin de la lista"<< endl;
-	}
+	else 
+		return 2;
 }
 int ListaEquipos::Eliminar(int id)
 {
@@ -132,5 +100,30 @@ int ListaEquipos::Eliminar(int id)
 
 		return 1;
 	}
+}
+void ListaEquipos::MostrarLista()
+{
+	if (this->GetCabeza() == NULL)
+		cout<<"-- Lista vacia --"<<endl;
+	else
+	{
+		NodoEquipo * recorrido = this->GetCabeza();
 
+		cout << "-- I --" << endl;
+
+		do
+		{
+			cout << "---" << endl
+				<< "ID: " << recorrido->GetEquipo()->GetId() << endl
+				<< "Nombre: " << recorrido->GetEquipo()->GetNombre() << endl
+				<< "Abreviatura: " << recorrido->GetEquipo()->GetAbreviatura() << endl
+				<< "Entrenador: " << recorrido->GetEquipo()->GetEntrenador() << endl
+				<< "---" << endl;
+
+			recorrido= recorrido->GetSiguiente();
+		}
+		while (recorrido != this->GetCabeza());
+
+		cout<<"-- F --"<< endl;
+	}
 }

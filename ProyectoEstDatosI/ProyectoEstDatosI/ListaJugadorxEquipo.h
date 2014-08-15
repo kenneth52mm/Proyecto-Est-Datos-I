@@ -22,6 +22,6 @@ public:
 
 	int Agregar(int, int, ListaJugadores *, ListaEquipos *);
 	int Eliminar(int , int);
-	void mostrarLista();
-	void mostrarEnlace(int, int);
+	void MostrarLista();
+	void MostrarEquipo(int); // Muestra jugadores de un equipo
 };

@@ -1,5 +1,6 @@
 #include "CargaInicial.h"
 
+
 CargaInicial::CargaInicial(void)
 {
 }

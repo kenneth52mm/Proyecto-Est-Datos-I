@@ -1,6 +1,7 @@
 #pragma once
 #include "Equipo.h"
 
+
 class NodoEquipo
 {
 private:

@@ -22,6 +22,5 @@ public:
 	int Agregar(Partido *);
 	int Eliminar(int);
 	void MostrarLista();
-	void MostrarPartido(int);
 };
 

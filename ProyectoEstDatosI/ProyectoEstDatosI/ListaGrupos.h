@@ -22,6 +22,5 @@ public:
     int Agregar(string);
 	int Eliminar(string);
 	void MostrarLista();
-	void MostrarGrupo(string);
 };
 

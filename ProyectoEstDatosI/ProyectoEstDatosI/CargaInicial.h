@@ -5,7 +5,6 @@
 #include <vector> // Para poder usar vectores.
 #include <boost/algorithm/string.hpp>
 
-#include "ListaGrupos.h"
 #include "ListaEquipoXGrupo.h"
 #include "ListaJugadorxEquipo.h"
 #include "ListaPartidoXEquipo.h"

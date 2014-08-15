@@ -33,9 +33,10 @@ NodoPartidoxEquipo *ListaPartidoXEquipo::DirNodo(int idPartido,int idEquipo1,int
 	{
 		if(aux->GetPartido()->GetPartido()->GetId() && aux->GetEquipo1()->GetEquipo()->GetId()==idEquipo1 && aux->GetEquipo2()->GetEquipo()->GetId()==idEquipo2)
 			return aux;
-		aux=aux->GetSguiente();
-	}while(aux!=GetCabeza());
-
+		aux=aux->GetSiguiente();
+	}
+	while(aux!=GetCabeza());
+	return NULL;
 }
 int ListaPartidoXEquipo::Agregar(int id_equipo1, int id_equipo2, int id_partido, ListaEquipos * lista_equipos, ListaPartidos * lista_partidos)
 {
@@ -74,6 +75,7 @@ int ListaPartidoXEquipo::Agregar(int id_equipo1, int id_equipo2, int id_partido,
 		else
 			return 2;
 	}
+	return 3;
 }
 int ListaPartidoXEquipo::Eliminar(int idPartido,int idEquipo1,int idEquipo2)
 {
@@ -97,11 +99,10 @@ int ListaPartidoXEquipo::Eliminar(int idPartido,int idEquipo1,int idEquipo2)
 
 	}
 }
-<<<<<<< HEAD
-void ListaPartidoXEquipo::mostrarLista()
+void ListaPartidoXEquipo::MostrarLista()
 {
-	if(this->GetCabeza() == NULL)
-		cout<<"No hay elemntos en la lista"<<endl;
+	if (this->GetCabeza() == NULL)
+		cout<<"-- No hay elemntos en la lista --"<<endl;
 	else
 	{
 		NodoPartidoxEquipo* nodo =this->GetCabeza();
@@ -118,14 +119,40 @@ void ListaPartidoXEquipo::mostrarLista()
 				<<"Abreviatura: "<<nodo->GetEquipo2()->GetEquipo()->GetAbreviatura()<<endl
 				<<"Id: "<<nodo->GetEquipo2()->GetEquipo()->GetId()<<endl
 				<<"Entrenador: "<<nodo->GetEquipo2()->GetEquipo()->GetEntrenador()<<endl;
-			nodo = nodo->GetSguiente();
-		}while(nodo!= this->GetCabeza());
+			nodo = nodo->GetSiguiente();
+		}
+		while (nodo != this->GetCabeza());
 		cout<<"Fin de la lista"<<endl;
 	}
 }
-void ListaPartidoXEquipo::mostrarEquipo(int)
-{}
-void ListaPartidoXEquipo::mostrarPais(int)
-{}
-=======
->>>>>>> origin/master
+void ListaPartidoXEquipo::MostrarPartido(int id)
+{
+	NodoPartidoxEquipo * recorrido = this->GetCabeza();
+	bool vacio = true;
+
+	if (recorrido != NULL)
+	{
+		do
+		{
+			if (recorrido->GetPartido()->GetPartido()->GetId() == id)
+			{
+				vacio = false;
+
+				cout << "Id: " << recorrido->GetPartido()->GetPartido()->GetId() << endl
+					<< "Equipo 1: " << recorrido->GetEquipo1()->GetEquipo()->GetNombre() << endl
+					<< "Equipo 2: " << recorrido->GetEquipo2()->GetEquipo()->GetNombre() << endl
+					<< "Estadio: " << recorrido->GetPartido()->GetPartido()->GetEstadio() << endl
+					<< "Feha: " << recorrido->GetPartido()->GetPartido()->GetFecha() << endl
+					<< "Hora: " << recorrido->GetPartido()->GetPartido()->GetHora() << endl
+					<< "Ubicacion: " << recorrido->GetPartido()->GetPartido()->GetUbicacion() << endl
+					<< "Punticion: " << recorrido->GetPartido()->GetPartido()->GetPuntuacion() << endl;
+			}
+		}
+		while (recorrido != this->GetCabeza());
+
+		if (vacio)
+			cout << "-- Partido no encontrado --" << endl;
+	}
+	else
+		cout << "-- Partido no encontrado --" << endl;
+}

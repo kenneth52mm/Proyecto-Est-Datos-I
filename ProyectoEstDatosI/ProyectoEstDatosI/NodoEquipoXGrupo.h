@@ -1,6 +1,6 @@
 #pragma once
-#include "NodoEquipo.h"
-#include "NodoGrupos.h"
+#include "ListaEquipos.h"
+#include "ListaGrupos.h"
 
 class NodoEquipoXGrupo
 {

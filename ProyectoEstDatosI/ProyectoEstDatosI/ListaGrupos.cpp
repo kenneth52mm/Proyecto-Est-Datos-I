@@ -22,6 +22,10 @@ int ListaGrupos::GetTamano()
 {
 	return this->tamano;
 }
+void ListaGrupos::SetTamano(int tamano)
+{
+	this->tamano = tamano;
+}
 
 NodoGrupos * ListaGrupos::DirNodo(string grupo)
 {
@@ -50,50 +54,29 @@ int ListaGrupos::Agregar(string grupo)
 	2: Repetido
 	*/
 
-	if (this->GetCabeza() == NULL)
+	if (this->DirNodo(grupo) == NULL)
 	{
 		NodoGrupos * nuevo_nodo = new NodoGrupos(grupo);
 
-		this->SetCabeza(nuevo_nodo);
-
-		nuevo_nodo->SetAnterior(nuevo_nodo);
-		nuevo_nodo->SetSiguiente(nuevo_nodo);
-
-		return 1;
-	}
-	else
-	{
-		if (this->DirNodo(grupo) != NULL)
+		if (this->GetCabeza() == NULL)
 		{
-			NodoGrupos * nuevo_nodo = new NodoGrupos(grupo);
+			this->SetCabeza(nuevo_nodo);
 
+			nuevo_nodo->SetAnterior(nuevo_nodo);
+			nuevo_nodo->SetSiguiente(nuevo_nodo);		
+		}
+		else
+		{
 			nuevo_nodo->SetAnterior(this->GetCabeza()->GetAnterior());
 			nuevo_nodo->SetSiguiente(this->GetCabeza());
 
 			this->GetCabeza()->GetAnterior()->SetSiguiente(nuevo_nodo);
 			this->GetCabeza()->SetAnterior(nuevo_nodo);
-
-			return 1;
 		}
-		return 2;
+		return 1;
 	}
-}
-void ListaGrupos::MostrarLista()
-{
-	if(this->GetCabeza() == NULL)
-		cout<<"No hay elemntos en la lista"<<endl;
 	else
-	{
-		NodoGrupos* grupo = this->GetCabeza();
-		cout<<"Inicio de la lista"<< endl;
-		do
-		{
-			cout<<"Nombre: " << grupo->GetGrupo();
-
-			grupo= grupo->GetSiguiente();
-		}while(grupo != this->GetCabeza());
-		cout<<"Fin de la lista"<< endl;
-	}
+		return 2;
 }
 int ListaGrupos::Eliminar(string id)
 {
@@ -101,7 +84,7 @@ int ListaGrupos::Eliminar(string id)
 		return 2;
 	else
 	{
-		NodoGrupos* eliminar = this->DirNodo(id);
+		NodoGrupos * eliminar = this->DirNodo(id);
 
 		eliminar->GetAnterior()->SetSiguiente(eliminar->GetSiguiente());
 		eliminar->GetSiguiente()->SetAnterior(eliminar->GetAnterior());
@@ -114,6 +97,23 @@ int ListaGrupos::Eliminar(string id)
 		this->SetTamano(this->GetTamano() - 1);
 
 		return 1;
+	}
+}
+void ListaGrupos::MostrarLista()
+{
+	if (this->GetCabeza() == NULL)
+		cout<<"-- Lista vacia --"<<endl;
+	else
+	{
+		NodoGrupos * grupo = this->GetCabeza();
+		cout << "-- I --" << endl;
 
+		do
+		{
+			cout << "Nombre: " << grupo->GetGrupo();
+			grupo = grupo->GetSiguiente();
+		}
+		while (grupo != this->GetCabeza());
+		cout<<"Fin de la lista"<< endl;
 	}
 }
