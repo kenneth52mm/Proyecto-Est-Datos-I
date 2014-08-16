@@ -22,5 +22,6 @@ public:
 	int Agregar(Equipo *);
 	int Eliminar(int);
 	void MostrarLista();
+	void MostrarEquipo(int);
 };
 

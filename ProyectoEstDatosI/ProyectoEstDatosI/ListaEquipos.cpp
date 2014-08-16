@@ -93,7 +93,10 @@ int ListaEquipos::Eliminar(int id)
 		eliminar->GetSiguiente()->SetAnterior(eliminar->GetAnterior());
 
 		if (this->GetCabeza() == eliminar)
-			this->SetCabeza(eliminar->GetSiguiente());
+			if (this->GetCabeza()->GetSiguiente() == eliminar)
+				this->SetCabeza(NULL);
+			else
+				this->SetCabeza(eliminar->GetSiguiente());
 
 		delete eliminar;
 
@@ -127,4 +130,19 @@ void ListaEquipos::MostrarLista()
 
 		cout<<"-- F --"<< endl;
 	}
+}
+void ListaEquipos::MostrarEquipo(int id)
+{
+	if (this->GetCabeza() != NULL)
+	{
+		NodoEquipo * equipo = this->DirNodo(id);
+
+		cout << "-- Equipo --" << endl <<
+			"ID: " << equipo->GetEquipo()->GetId() << endl <<
+			"Nombre: " << equipo->GetEquipo()->GetNombre() << endl <<
+			"Abreviatura: " << equipo->GetEquipo()->GetAbreviatura() << endl <<
+			"Entrenador: " << equipo->GetEquipo()->GetEntrenador() << endl;
+	}
+	else
+		cout << "-- Lista vacia --" << endl;
 }

@@ -18,7 +18,8 @@ public:
     void SetTamano(int);
 
     int Agregar(int, string, ListaEquipos *, ListaGrupos *);
-    int Eliminar(int, string);
+    int Eliminar(string);
+	int Eliminar(int);
     void MostrarLista();
     void MostrarGrupo(string);
 };

@@ -9,7 +9,6 @@ class ListaJugadorxEquipo
 private:
 	NodoJugadorxEquipo * cabeza;
 	int tamano;
-	NodoJugadorxEquipo *DirNodo(int,int);
 public:
 	ListaJugadorxEquipo(void);
 	~ListaJugadorxEquipo(void);
@@ -19,6 +18,8 @@ public:
 
     int GetTamano();
     void SetTamano(int);
+
+	NodoJugadorxEquipo * DirNodo(int, int);
 
 	int Agregar(int, int, ListaJugadores *, ListaEquipos *);
 	int Eliminar(int , int);

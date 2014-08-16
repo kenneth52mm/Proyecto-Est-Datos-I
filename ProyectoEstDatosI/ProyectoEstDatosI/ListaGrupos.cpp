@@ -4,6 +4,7 @@
 ListaGrupos::ListaGrupos(void)
 {
 	this->SetCabeza(NULL);
+	this->SetTamano(0);
 }
 ListaGrupos::~ListaGrupos(void)
 {
@@ -80,19 +81,20 @@ int ListaGrupos::Agregar(string grupo)
 	else
 		return 2;
 }
-int ListaGrupos::Eliminar(string id)
+int ListaGrupos::Eliminar(string grupo)
 {
-	if (this->DirNodo(id) == NULL)
-		return 2;
-	else
+	if (this->DirNodo(grupo) != NULL)
 	{
-		NodoGrupos * eliminar = this->DirNodo(id);
+		NodoGrupos * eliminar = this->DirNodo(grupo);
 
 		eliminar->GetAnterior()->SetSiguiente(eliminar->GetSiguiente());
 		eliminar->GetSiguiente()->SetAnterior(eliminar->GetAnterior());
 
 		if (this->GetCabeza() == eliminar)
-			this->SetCabeza(eliminar->GetSiguiente());
+			if (this->GetCabeza()->GetSiguiente() == eliminar)
+				this->SetCabeza(NULL);
+			else
+				this->SetCabeza(eliminar->GetSiguiente());
 
 		delete eliminar;
 
@@ -100,6 +102,8 @@ int ListaGrupos::Eliminar(string id)
 
 		return 1;
 	}
+	else
+		return 2;
 }
 void ListaGrupos::MostrarLista()
 {
@@ -116,6 +120,6 @@ void ListaGrupos::MostrarLista()
 			grupo = grupo->GetSiguiente();
 		}
 		while (grupo != this->GetCabeza());
-		cout<<"Fin de la lista"<< endl;
+		cout<<"-- F --"<< endl;
 	}
 }

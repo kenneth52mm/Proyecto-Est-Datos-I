@@ -35,7 +35,7 @@ string NodoGrupos::GetGrupo()
 {
 	return this->grupo;
 }
-void NodoGrupos::SetGrupo(string _grupo)
+void NodoGrupos::SetGrupo(string grupo)
 {
-	this->grupo=_grupo;
+	this->grupo = grupo;
 }

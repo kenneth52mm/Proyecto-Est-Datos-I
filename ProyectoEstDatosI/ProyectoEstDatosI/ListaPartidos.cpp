@@ -1,5 +1,6 @@
 #include "ListaPartidos.h"
 
+
 ListaPartidos::ListaPartidos(void)
 {
 	this->SetCabeza(NULL);

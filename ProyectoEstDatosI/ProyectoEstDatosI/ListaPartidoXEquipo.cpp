@@ -147,14 +147,15 @@ void ListaPartidoXEquipo::MostrarPartido(int id)
 			{
 				vacio = false;
 
-				cout << "Id: " << recorrido->GetPartido()->GetPartido()->GetId() << endl
-					<< "Equipo 1: " << recorrido->GetEquipo1()->GetEquipo()->GetNombre() << endl
-					<< "Equipo 2: " << recorrido->GetEquipo2()->GetEquipo()->GetNombre() << endl
-					<< "Estadio: " << recorrido->GetPartido()->GetPartido()->GetEstadio() << endl
-					<< "Feha: " << recorrido->GetPartido()->GetPartido()->GetFecha() << endl
-					<< "Hora: " << recorrido->GetPartido()->GetPartido()->GetHora() << endl
-					<< "Ubicacion: " << recorrido->GetPartido()->GetPartido()->GetUbicacion() << endl
-					<< "Punticion: " << recorrido->GetPartido()->GetPartido()->GetPuntuacion() << endl;
+				cout << "---" <<
+					"Id: " << recorrido->GetPartido()->GetPartido()->GetId() << endl <<
+					"Equipo 1: " << recorrido->GetEquipo1()->GetEquipo()->GetNombre() << endl <<
+					"Equipo 2: " << recorrido->GetEquipo2()->GetEquipo()->GetNombre() << endl <<
+					"Estadio: " << recorrido->GetPartido()->GetPartido()->GetEstadio() << endl <<
+					"Feha: " << recorrido->GetPartido()->GetPartido()->GetFecha() << endl <<
+					"Hora: " << recorrido->GetPartido()->GetPartido()->GetHora() << endl <<
+					"Ubicacion: " << recorrido->GetPartido()->GetPartido()->GetUbicacion() << endl <<
+					"Puntuacion: " << recorrido->GetPartido()->GetPartido()->GetPuntuacion() << endl;
 			}
 		}
 		while (recorrido != this->GetCabeza());
@@ -163,5 +164,5 @@ void ListaPartidoXEquipo::MostrarPartido(int id)
 			cout << "-- Partido no encontrado --" << endl;
 	}
 	else
-		cout << "-- Partido no encontrado --" << endl;
+		cout << "-- Lista vacia --" << endl;
 }

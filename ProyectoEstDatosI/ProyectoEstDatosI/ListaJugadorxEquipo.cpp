@@ -101,7 +101,10 @@ int ListaJugadorxEquipo::Eliminar(int idJugador,int idEquipo)
 		eliminar->GetSiguiente()->SetAnterior(eliminar->GetAnterior());
 
 		if (this->GetCabeza() == eliminar)
-			this->SetCabeza(eliminar->GetSiguiente());
+			if (this->GetCabeza()->GetSiguiente() == eliminar)
+				this->SetCabeza(NULL);
+			else
+				this->SetCabeza(eliminar->GetSiguiente());
 
 		delete eliminar;
 
@@ -112,13 +115,14 @@ int ListaJugadorxEquipo::Eliminar(int idJugador,int idEquipo)
 }
 void ListaJugadorxEquipo::MostrarLista()
 {
-	if (this->GetCabeza()== NULL)
+	if (this->GetCabeza() == NULL)
 		cout<< "-- Lista vacia --"<<endl;
 	else
 	{
 		NodoJugadorxEquipo * recorrido = this->GetCabeza();
 
 		cout << "-- I --" << endl;
+
 		do
 		{
 			cout << "Nombre del equipo: " << recorrido->GetEquipo()->GetEquipo()->GetNombre() << endl 
@@ -133,44 +137,50 @@ void ListaJugadorxEquipo::MostrarLista()
 				<< "Cantidad de Partidos: " << recorrido->GetJugador()->GetJugador()->GetPartidosJugados() << endl
 				<< "Club Actual: " << recorrido->GetJugador()->GetJugador()->GetClub() << endl;
 
-			recorrido= recorrido->GetSiguiente();
+			recorrido = recorrido->GetSiguiente();
 		}
+
 		while (recorrido != this->GetCabeza());
 		cout<<"-- F --"<<endl;
 	}
 }
 void ListaJugadorxEquipo::MostrarEquipo(int id)
 {
-	NodoJugadorxEquipo * recorrido = this->GetCabeza();
-	bool vacio = true;
-
-	do
+	if (this->GetCabeza() != NULL)
 	{
+		NodoJugadorxEquipo * recorrido = this->GetCabeza();
+
+		bool vacio = true;
+
 		cout << "-- I --" << endl;
 
-		if (recorrido->GetEquipo()->GetEquipo()->GetId() == id)
+		do
 		{
-			vacio = false;
+			if (recorrido->GetEquipo()->GetEquipo()->GetId() == id)
+			{
+				vacio = false;
 
-			cout << "---" << endl
-				<< "Nombre: " << recorrido->GetJugador()->GetJugador()->GetNombre() << endl
-				<< "Feha de Nacimiento: " << recorrido->GetJugador()->GetJugador()->GetFechaNac() << endl
-				<<"Edad: " << recorrido->GetJugador()->GetJugador()->GetEdad() << endl
-				<<"Altura: " << recorrido->GetJugador()->GetJugador()->GetAltura() << endl
-				<<"Numero de Camiseta: " << recorrido->GetJugador()->GetJugador()->GetId() << endl
-				<<"Primer partido: " << recorrido->GetJugador()->GetJugador()->GetPrimerPartido() << endl
-				<<"Cantidad de Goles: " << recorrido->GetJugador()->GetJugador()->GetCantidadGoles() << endl
-				<<"Posicion: " << recorrido->GetJugador()->GetJugador()->GetPosicion() << endl
-				<<"Cantidad de Partidos: " << recorrido->GetJugador()->GetJugador()->GetPartidosJugados() << endl
-				<<"Club Actual: " << recorrido->GetJugador()->GetJugador()->GetClub() << endl;
+				cout << "---" << endl
+					<< "Nombre: " << recorrido->GetJugador()->GetJugador()->GetNombre() << endl
+					<< "Feha de Nacimiento: " << recorrido->GetJugador()->GetJugador()->GetFechaNac() << endl
+					<<"Edad: " << recorrido->GetJugador()->GetJugador()->GetEdad() << endl
+					<<"Altura: " << recorrido->GetJugador()->GetJugador()->GetAltura() << endl
+					<<"Numero de Camiseta: " << recorrido->GetJugador()->GetJugador()->GetId() << endl
+					<<"Primer partido: " << recorrido->GetJugador()->GetJugador()->GetPrimerPartido() << endl
+					<<"Cantidad de Goles: " << recorrido->GetJugador()->GetJugador()->GetCantidadGoles() << endl
+					<<"Posicion: " << recorrido->GetJugador()->GetJugador()->GetPosicion() << endl
+					<<"Cantidad de Partidos: " << recorrido->GetJugador()->GetJugador()->GetPartidosJugados() << endl
+					<<"Club Actual: " << recorrido->GetJugador()->GetJugador()->GetClub() << endl;
+			}
+
+			recorrido = recorrido->GetSiguiente();
 		}
+		while (recorrido != this->GetCabeza());
 
-		recorrido = recorrido->GetSiguiente();
+		if (vacio)
+			cout << "-- Equipo no encontrado --" << endl;
+		cout << "-- F --" << endl;
 	}
-	while (recorrido != this->GetCabeza());
-
-	if (vacio)
+	else
 		cout << "-- Lista vacia --" << endl;
-
-	cout << "-- F --" << endl;
 }

@@ -27,7 +27,8 @@ int _tmain(int argc, _TCHAR* argv[])
 	ListaJugadorxEquipo * lista_jugadores_equipos = new ListaJugadorxEquipo();
 	ListaPartidoXEquipo * lista_partidos_equipos = new ListaPartidoXEquipo();
 
-	Equipo * equipo = new Equipo();
+	Equipo * equipo;
+	Jugador * jugador;
 
 	CargaInicial * carga_inicial = new CargaInicial();
 
@@ -95,266 +96,343 @@ int _tmain(int argc, _TCHAR* argv[])
 
 		switch (opcion)
 		{
-		case -1:
-			break;
-		case 0:
-			break;
-		case 1:
-			do
-			{
-				system("pause");
-
-				cout << 
-					"-- Grupos --" << endl << endl <<
-
-					"( 0 ) Atras" << endl << endl <<
-
-					"( 1 ) Ver Grupos" << endl << 
-					"( 2 ) Ver Grupo" << endl <<
-					"( 3 ) Agregar Grupo" << endl << 
-					"( 4 ) Eliminar Grupo" << endl << 
-					"---" << endl <<
-					"Opcion: ";
-
-				cin >> opcion;
-				cout << "---" << endl;
-
-				switch (opcion)
+			case -1:
+				break;
+			case 0:
+				break;
+			case 1:
+				do
 				{
-				case 0:
-					break;
-				case 1:
-					cout << "-- Ver Grupos --"<<endl;
-					lista_equipos_grupos->MostrarLista();
-					break;
-				case 2:
-					cout << "Ver Grupo: ";
-					cin >> grupo;
-					cout << endl;
-					cout << "-- Ver Grupo " << grupo << " --" << endl;
-					lista_equipos_grupos->MostrarGrupo(grupo);
-					break;
-				case 3:
-					cout << "Ingrese la letra del nuevo grupo: ";
-					cin >> grupo;
-					cout << endl;
-					estado = lista_grupos->Agregar(grupo);
-					switch (estado)
+					system("pause");
+
+					cout << 
+						"-- Grupos --" << endl << endl <<
+
+						"( 0 ) Atras" << endl << endl <<
+
+						"( 1 ) Ver Grupos" << endl << 
+						"( 2 ) Ver Grupo" << endl <<
+						"( 3 ) Agregar Grupo" << endl << 
+						"( 4 ) Eliminar Grupo" << endl << 
+						"---" << endl <<
+						"Opcion: ";
+
+					cin >> opcion;
+					cout << "---" << endl;
+
+					switch (opcion)
 					{
+					case 0:
+						break;
+					case 1:
+						cout << "-- Ver Grupos --" << endl;
+						lista_equipos_grupos->MostrarLista();
+						break;
+					case 2:
+						cout << "Ver Grupo: ";
+						cin >> grupo;
+						cout << endl;
+						cout << "-- Ver Grupo " << grupo << " --" << endl;
+						lista_equipos_grupos->MostrarGrupo(grupo);
+						break;
+					case 3:
+						cout << "Ingrese la letra del nuevo grupo: ";
+						cin >> grupo;
+						cout << endl;
+						estado = lista_grupos->Agregar(grupo);
+						switch (estado)
+						{
+							case 1:
+								cout << "-- Grupo " << grupo << " insertado con exito --" << endl;
+								break;
+							case 2:
+								cout << "-- Error: Grupo " << grupo << " repetido --" << endl;
+								break;
+						}
+						break;
+					case 4:
+						cout << "Ingrese la letra del grupo a eliminar: ";
+						cin >> grupo;
+						cout << endl;
+						estado = lista_equipos_grupos->Eliminar(grupo);
+						estado = lista_grupos->Eliminar(grupo);				
+						switch (estado)
+						{
+							case 1:
+								cout << "-- Grupo "<< grupo << " eliminado con exito --" << endl; 
+								break;
+							case 2:
+								cout << "-- Error: " << grupo << " no encontrado --" << endl;
+								break;
+						}	
+						break;
+					default:
+						cout << "-- Opcion no valida --" << endl;
+						break;
+					}
+				}
+				while (opcion != 0);
+				opcion = -1;
+
+				break;
+			case 2:
+				do
+				{
+					system("pause");
+
+					cout << 
+						"-- Equipos --" << endl << endl <<
+
+						"( 0 ) Atras" << endl << endl <<
+
+						"( 1 ) Ver Equipos" << endl << 
+						"( 2 ) Ver Equipo" << endl <<
+						"( 3 ) Agregar Equipo" << endl << 
+						"( 4 ) Asignar Grupo a Equipo" << endl <<
+						"( 5 ) Eliminar Equipo" << endl << 
+						"--" << endl <<
+						"Opcion: ";
+
+					cin >> opcion;
+					cout << "---" << endl;
+
+					switch (opcion)
+					{
+						case 0:
+							break;
 						case 1:
-							cout << "-- Grupo " << grupo << " insertado con exito --" << endl;
+							cout << "-- Ver Equipos --" << endl;
+							lista_equipos->MostrarLista();
 							break;
 						case 2:
-							cout << "-- Error: Grupo " << grupo << " repetido --" << endl;
+							cout << "Ver Equipo: ";
+							cin >> id_equipo;
+							cout << endl;
+							cout << "-- Ver Equipo " << id_equipo << " --" << endl;
+							lista_equipos->MostrarEquipo(id_equipo);
+							lista_jugadores_equipos->MostrarEquipo(id_equipo);
+							break;						
+						case 3:
+							cout << "Ingrese el ID del nuevo equipo: ";
+							cin>> id_equipo;
+							cout << endl;
+							cout<< "Ingrese el nombre del entrenador del nuevo equipo: ";
+							cin>> entrenador;
+							cout << endl;
+							cout << "Ingrese el nombre del nuevo equipo: ";
+							cin>> nombre_equipo;
+							cout << endl;
+							cout<<"Ingrese la abreviatura del nuevo equipo: ";
+							cin>> abreviatura;
+							cout << endl;
+
+							equipo = new Equipo(id_equipo, nombre_equipo, abreviatura, entrenador);
+
+							estado = lista_equipos->Agregar(equipo);
+
+							switch (estado)
+							{
+								case 1:
+									cout << "-- Equipo " << equipo->GetNombre() << " insertado con exito --" << endl;
+									break;
+								case 2:
+									cout << "-- Error: Equipo " << equipo->GetNombre() << " repetido --" << endl;
+									break;
+							}
+							break;
+						case 4:
+							cout<<"Ingrese el id del equipo: ";
+							cin>> id_equipo;
+							cout << endl;
+							cout<<"Ingrese el grupo del equipo: ";
+							cin>> grupo;
+							cout << endl;
+							estado = lista_equipos_grupos->Agregar(id_equipo, grupo, lista_equipos, lista_grupos);
+
+							switch (estado)
+							{
+								case 1:
+									cout << "-- Equipo " << id_equipo << " asignado al grupo " << grupo << " con exito --" << endl;
+									break;
+								case 2:
+									cout << "-- Error: Equipo ya tiene grupo asignado --" << endl;
+									break;
+								case 3:
+									cout << "-- Error: Grupo o Equipo no encontrado --" << endl;
+									break;
+							}
+							break;
+					case 5:
+						cout << "Ingrese el id el equipo a eliminar: ";
+						cin >> id_equipo;
+						estado = lista_equipos_grupos->Eliminar(id_equipo);
+						estado = lista_equipos->Eliminar(id_equipo);
+						switch (estado)
+						{
+							case 1:
+								cout << "-- Equipo: " << id_equipo << " eliminado con exito --."<<endl;
+								break;
+							case 2:
+								cout << "-- Error: " << id_equipo << " equipo no encontrado --" << endl;
+								break;
+						}
+						break;
+					}
+				}
+				while (opcion != 0);
+				opcion = -1;
+				break;
+			case 3:
+				do
+				{
+					system("pause");
+
+					cout << 
+						"-- Jugadores --" << endl << endl <<
+
+						"( 0 ) Atras" << endl << endl <<
+
+						"( 1 ) Ver Judagores" << endl << 
+						"( 2 ) Ver Jugador" << endl <<
+						"( 3 ) Agregar Jugador" << endl << 
+						"( 4 ) Eliminar Jugador" << endl << 
+						"--" << endl <<
+						"Opcion: ";
+
+					cin >> opcion;
+					cout << "---" << endl;
+
+					switch (opcion)
+					{
+						case 0:
+							break;
+						case 1:
+							cout << "-- Ver Jugadores --" << endl;
+							lista_jugadores->MostrarLista();
+							break;
+						case 2:
+							cout << "Ver Jugador: ";
+							cin >> id_jugador;
+							cout << endl;
+							cout << "-- Ver Jugador " << id_jugador << " --" << endl;
+							lista_jugadores->MostrarJugador(id_jugador);
+							break;
+						case 3:
+							cout << "Ingrese el ID del nuevo jugador: ";
+							cin>> id_jugador;
+							cout << endl;
+							cout<< "Ingrese la posicion del nuevo jugador: ";
+							cin>> posicion;
+							cout << endl;
+							cout << "Ingrese la fecha del primer partido del nuevo jugador: ";
+							cin>> primer_partido;
+							cout << endl;
+							cout<<"Ingresee el nombre nuevo jugador: ";
+							cin>> nombre_jugador;
+							cout << endl;
+							cout<<"Ingresee la cantidad de partidos jugados por el nuevo jugador: ";
+							cin>> partidos_jugados;
+							cout << endl;
+							cout<<"Ingresee la cantidad de goles marcados por el nuevo jugador: ";
+							cin>> cantidad_goles;
+							cout << endl;
+							cout<<"Ingresee la edad del nuevo jugador: ";
+							cin>> edad;
+							cout << endl;
+							cout<<"Ingresee la altura del nuevo jugador: ";
+							cin>> altura;
+							cout << endl;
+							cout<<"Ingresee la fecha de nacimiento del nuevo jugador: ";
+							cin>> fecha_nac;
+							cout << endl;
+							cout<<"Ingresee el club al que pertenece el nuevo jugador: ";
+							cin>> nombre_jugador;
+							cout << endl;
+
+							jugador = new Jugador (id_jugador, posicion, primer_partido, nombre_jugador, partidos_jugados, cantidad_goles, edad, altura, fecha_nac, club);
+
+							estado = lista_jugadores->Agregar(jugador);
+
+							switch (estado)
+							{
+								case 1:
+									cout <<"-- Jugador " << nombre_jugador << " insertado con exito --" << endl;
+									break;
+								case 2:
+									cout <<"-- Error: Jugador " << nombre_jugador << " repetido --" << endl;
+									break;
+							}
+							break;
+						case 4:
+							cout << "Ingrese el id del jugador a eliminar: ";
+							cin >> id_jugador;
+							cout << endl;
+							opcion = lista_jugadores->Eliminar(id_jugador);
+
+							switch (opcion)
+							{
+								case 1:
+									cout << "-- Jugador " << id_jugador << " eliminado con exito --" << endl;
+									break;
+								case 2:
+									cout << "-- Error: Jugador " << id_jugador << " no encontrado --" << endl;
+									break;
+							}
 							break;
 					}
-					break;
-				case 4:
-					cout << "Ingrese la letra del grupo a eliminar: ";
-					cin >> grupo;
-					cout << endl;
-					estado = lista_grupos->Eliminar(grupo);
-					switch (estado)
+				}
+				while (opcion != 0);
+				opcion = -1;
+				break;
+			case 4:
+				do
+				{
+					system("pause");
+
+					cout << 
+						"-- Partidos --" << endl << endl <<
+
+						"( 0 ) Atras" << endl << endl <<
+
+						"( 1 ) Ver Partidos" << endl << 
+						"( 2 ) Ver Partido" << endl <<
+						"( 3 ) Agregar Partido" << endl << 
+						"( 4 ) Eliminar Partido" << endl << 
+						"--" << endl <<
+						"Opcion: ";
+
+					cin >> opcion;
+					cout << "---" << endl;
+
+					switch (opcion)
 					{
+						case 0:
+							break;
 						case 1:
-							cout << "-- Grupo "<< grupo << " eliminado con exito --" << endl; 
+							cout << "-- Ver Partidos --" << endl;
+							lista_partidos->MostrarLista();
 							break;
 						case 2:
-							cout << "-- Error: " << grupo << " no encontrado --" << endl;
+							cout << "Ver Partido: ";
+							cin >> id_partido;
+							cout << endl;
+							cout << "-- Ver Partido " << id_partido << " --" << endl;
+							lista_partidos_equipos->MostrarPartido(id_partido);
 							break;
-					}	
-					break;
-				default:
-					cout << "-- Opcion no valida --" << endl;
-					break;
+						case 3:
+							break;
+						case 4:
+							break;
+					}
 				}
-			}
-			while (opcion != 0);
-			opcion = -1;
-
-			break;
-		//case 2:
-		//	do
-		//	{
-		//		system("pause");
-
-		//		cout << 
-		//			"-- Equipos --" << endl << endl <<
-
-		//			"( 0 ) Atras" << endl << endl <<
-
-		//			"( 1 ) Ver Equipos" << endl << 
-		//			"( 2 ) Agregar Equipos" << endl << 
-		//			"( 3 ) Eliminar Equipos" << endl << 
-		//			"--" << endl <<
-		//			"Opcion: ";
-
-		//		cin >> opcion;
-		//		cout << "---" << endl;
-
-		//		switch (opcion)
-		//		{
-		//		case 0:
-		//			break;
-		//		case 1:
-		//			cout<<"Lista de Todos los equipos"<<endl;
-		//			lista_equipos->MostrarLista();
-		//			break;
-		//		case 2:
-		//			cout<< "Digite el id del equipo que desea agregar: "<<endl;
-		//			cin>> id;
-		//			equipo->SetId(id);
-		//			cout<< "Digite el nombre del entrenador del equipo: "<<endl;
-		//			cin>> entrenador;
-		//			equipo->SetEntrenador(entrenador);
-		//			cout<<"Digite el nombre del pais del equipo:  "<<endl;
-		//			cin>> nombre;
-		//			equipo->SetNombre(nombre);
-		//			cout<<"Digite la abreviatura del equipo: "<<endl;
-		//			cin>> abreviatura;
-		//			equipo->SetAbreviatura(abreviatura);
-		//			lista_equipos->Agregar(equipo);
-		//			cout<<"El equipo: "<< equipo->GetNombre()<< ", ha sido agregado con exito.";
-		//			break;
-		//		case 3:
-		//			cout<<"Digite el id el equipo que desea eliminar: "<<endl;
-		//			cin>> id;
-		//			//respuesta = lista_equipos->Eliminar();
-		//			switch(respuesta)
-		//			{
-		//			case 1:
-		//				cout<<"El equipo: "<<id<<" ,ha sido eliminado con esxito."<<endl;
-		//				break;
-		//			case 2:
-		//				cout<<"NO se ha podido eliminar el equipo con id: "<<endl;
-		//				break;
-		//			}
-
-		//			break;
-		//		}
-		//	}
-		//	while (opcion != 0);
-		//	opcion = -1;
-		//	break;
-
-		//case 3:
-		//	//do
-		//	//{
-		//	//	system("pause");
-
-		//	//	cout << 
-		//	//		"-- Jugadores --" << endl << endl <<
-
-		//	//		"( 0 ) Atras" << endl << endl <<
-
-		//	//		"( 1 ) Ver Judagores" << endl << 
-		//	//		"( 2 ) Agregar Jugadores" << endl << 
-		//	//		"( 3 ) Eliminar Jugadores" << endl << 
-		//	//		"--" << endl <<
-		//	//		"Opcion: ";
-
-		//	//	cin >> opcion;
-		//	//	cout << "---" << endl;
-
-		//	//	switch (opcion)
-		//	//	{
-		//	//	case 0:
-		//	//		break;
-		//	//	case 1:
-		//	//		//lista_jugadores->MostrarLista();
-		//	//		break;
-		//	//	case 2:
-		//	//		cout<<"Numero de jugador"<<endl;
-		//	//		cin>>id;
-		//	//		cout<<"Posicion en la que juega"<<endl;
-		//	//		cin>>posicion;
-		//	//		cout<<"Primer partido jugado"<<endl;
-		//	//		cin>>primer_partido;
-		//	//		cout<<"Nombre"<<endl;
-		//	//		cin>>nombre;
-		//	//		cout<<"Cantidad de partidos jugados"<<endl;
-		//	//		cin>>partidos_jugados;
-		//	//		cout<<"Cantidad de goles anotados"<<endl;
-		//	//		cin>>cantidad_goles;
-		//	//		cout<<"Edad"<<endl;
-		//	//		cin>>edad;
-		//	//		cout<<"Altura"<<endl;
-		//	//		cin>>altura;
-		//	//		cout<<"Fecha nacimiento"<<endl;
-		//	//		cin>>fecha_nac;
-		//	//		cout<<"Equipo en el que juega"<<endl;
-		//	//		cin>>club;
-		//	//		Jugador *jugador=new Jugador(id,posicion,primer_partido,nombre,partidos_jugados,cantidad_goles,edad,altura,fecha_nac,club);
-		//	//		//int respuesta=lista_jugadores->Agregar(jugador);
-		//	//		int respuesta=0;
-		//	//		switch (respuesta)
-		//	//		{
-		//	//		case 1:
-		//	//			cout<<"Agregado correctamente"<<endl;
-		//	//			break;
-		//	//		case 2:
-		//	//			cout<<"El jugador no fue agregado"<<endl;
-		//	//			break;
-		//	//		}
-		//	//		break;
-		//	//	case 3:
-		//	//		int res;
-		//	//		cout<<"Digite el numero de jugador que desea eliminar"<<endl;
-		//	//		cin>>res;
-		//	//		//int respuesta=lista_jugadores->Eliminar(res);
-		//	//		respuesta=0;
-		//	//		switch(respuesta){
-		//	//		case 1:
-		//	//			cout<<"El jugador fue eliminado correctamente"<<endl;
-		//	//			break;
-		//	//		case 2:
-		//	//			cout<<"El jugador especificado no se pudo eliminar, ya que no existe"<<endl;
-		//	//			break;
-		//	//		}
-		//	//		break;
-		//	//	}
-		//	//}
-		//	//while (opcion != 0);
-		//	//opcion = -1;
-
-		//	//break;
-		//case 4:
-		//	do
-		//	{
-		//		system("pause");
-
-		//		cout << 
-		//			"-- Partidos --" << endl << endl <<
-
-		//			"( 0 ) Atras" << endl << endl <<
-
-		//			"( 1 ) Ver Equipos" << endl << 
-		//			"( 2 ) Agregar Equipos" << endl << 
-		//			"( 3 ) Eliminar Equipos" << endl << 
-		//			"--" << endl <<
-		//			"Opcion: ";
-
-		//		cin >> opcion;
-		//		cout << "---" << endl;
-
-		//		switch (opcion)
-		//		{
-		//		case 0:
-		//			break;
-		//		case 1:
-		//			//lista_jugadores->MostrarLista();
-		//			break;
-		//		}
-		//	}
-		//	while (opcion != 0);
-		//	opcion = -1;
-
-		//	break;
-		//default:
-		//	break;
+				while (opcion != 0);
+				opcion = -1;
+				break;
+			default:
+				cout << "-- Opcion no valida --" << endl;
+				break;
 		}
 	}
 	while (opcion != 0);
-
 	system("pause");
 	}

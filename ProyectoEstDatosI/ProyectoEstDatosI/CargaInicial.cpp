@@ -51,7 +51,7 @@ void CargaInicial::CargarEquiposXGrupos(ListaEquipoXGrupo * lista_equipos_grupos
 		}
 		archivo_equipos.close();
 
-		cout << "-- Carga Inicial Equipos + Grupos --" << endl;
+		cout << "-- Carga Inicial Equipos + Grupos Exitosa --" << endl;
 	}
 	else
 		cout << "Error: No se pudo cargar el archivo: CargaEquipos.txt" << endl;
@@ -109,7 +109,7 @@ void CargaInicial::CargarJugadoresXEquipos(ListaJugadorxEquipo * lista_jugadores
 		}
 		archivo_jugadores.close();
 
-		cout << "-- Carga Inicial Jugadores + Equipos --" << endl;
+		cout << "-- Carga Inicial Jugadores + Equipos Exitosa --" << endl;
 	}
 	else
 		cout << "Error: No se pudo cargar el archivo: CargaJugadores.txt" << endl;
@@ -161,7 +161,7 @@ void CargaInicial::CargarPartidosXEquipos(ListaPartidoXEquipo * lista_partidos_e
 		}
 		archivo_partidos.close();
 
-		cout << "-- Carga Inicial Equipos + Partidos --" << endl;
+		cout << "-- Carga Inicial Equipos + Partidos Exitosa --" << endl;
 	}
 	else
 		cout << "Error: No se pudo cargar el archivo: CargaPartidos.txt" << endl;
