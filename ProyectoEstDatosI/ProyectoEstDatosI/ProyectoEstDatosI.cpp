@@ -29,6 +29,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	Equipo * equipo;
 	Jugador * jugador;
+	Partido * partido;
 
 	CargaInicial * carga_inicial = new CargaInicial();
 
@@ -67,6 +68,9 @@ int _tmain(int argc, _TCHAR* argv[])
 	string estadio;
 	string ubicacion;
 	string puntuacion;
+
+	int id_equipo1;
+	int id_equipo2;
 
 	cout << 
 		"-- Proyecto de Estructuras Discretas I --" << endl <<
@@ -210,6 +214,7 @@ int _tmain(int argc, _TCHAR* argv[])
 							cout << endl;
 							cout << "-- Ver Equipo " << id_equipo << " --" << endl;
 							lista_equipos->MostrarEquipo(id_equipo);
+							cout << "-- Jugadores --" << endl;
 							lista_jugadores_equipos->MostrarEquipo(id_equipo);
 							break;						
 						case 3:
@@ -255,7 +260,7 @@ int _tmain(int argc, _TCHAR* argv[])
 									cout << "-- Equipo " << id_equipo << " asignado al grupo " << grupo << " con exito --" << endl;
 									break;
 								case 2:
-									cout << "-- Error: Equipo ya tiene grupo asignado --" << endl;
+									cout << "-- Error: Equipo ya pertenece a ese grupo --" << endl;
 									break;
 								case 3:
 									cout << "-- Error: Grupo o Equipo no encontrado --" << endl;
@@ -295,7 +300,8 @@ int _tmain(int argc, _TCHAR* argv[])
 						"( 1 ) Ver Judagores" << endl << 
 						"( 2 ) Ver Jugador" << endl <<
 						"( 3 ) Agregar Jugador" << endl << 
-						"( 4 ) Eliminar Jugador" << endl << 
+						"( 4 ) Asignar Equipo a Jugador" << endl <<
+						"( 5 ) Eliminar Jugador" << endl << 
 						"--" << endl <<
 						"Opcion: ";
 
@@ -319,34 +325,34 @@ int _tmain(int argc, _TCHAR* argv[])
 							break;
 						case 3:
 							cout << "Ingrese el ID del nuevo jugador: ";
-							cin>> id_jugador;
+							cin >> id_jugador;
 							cout << endl;
 							cout<< "Ingrese la posicion del nuevo jugador: ";
-							cin>> posicion;
+							cin >> posicion;
 							cout << endl;
 							cout << "Ingrese la fecha del primer partido del nuevo jugador: ";
-							cin>> primer_partido;
+							cin >> primer_partido;
 							cout << endl;
-							cout<<"Ingresee el nombre nuevo jugador: ";
-							cin>> nombre_jugador;
+							cout << "Ingresee el nombre nuevo jugador: ";
+							cin >> nombre_jugador;
 							cout << endl;
-							cout<<"Ingresee la cantidad de partidos jugados por el nuevo jugador: ";
-							cin>> partidos_jugados;
+							cout << "Ingresee la cantidad de partidos jugados por el nuevo jugador: ";
+							cin >> partidos_jugados;
 							cout << endl;
-							cout<<"Ingresee la cantidad de goles marcados por el nuevo jugador: ";
-							cin>> cantidad_goles;
+							cout << "Ingresee la cantidad de goles marcados por el nuevo jugador: ";
+							cin >> cantidad_goles;
 							cout << endl;
-							cout<<"Ingresee la edad del nuevo jugador: ";
-							cin>> edad;
+							cout << "Ingresee la edad del nuevo jugador: ";
+							cin >> edad;
 							cout << endl;
-							cout<<"Ingresee la altura del nuevo jugador: ";
-							cin>> altura;
+							cout << "Ingresee la altura del nuevo jugador: ";
+							cin >> altura;
 							cout << endl;
-							cout<<"Ingresee la fecha de nacimiento del nuevo jugador: ";
-							cin>> fecha_nac;
+							cout << "Ingresee la fecha de nacimiento del nuevo jugador: ";
+							cin >> fecha_nac;
 							cout << endl;
-							cout<<"Ingresee el club al que pertenece el nuevo jugador: ";
-							cin>> nombre_jugador;
+							cout << "Ingresee el club al que pertenece el nuevo jugador: ";
+							cin >> club;
 							cout << endl;
 
 							jugador = new Jugador (id_jugador, posicion, primer_partido, nombre_jugador, partidos_jugados, cantidad_goles, edad, altura, fecha_nac, club);
@@ -364,12 +370,36 @@ int _tmain(int argc, _TCHAR* argv[])
 							}
 							break;
 						case 4:
+							cout << "Ingrese el id del jugador: ";
+							cin >> id_jugador;
+							cout << endl;
+							cout << "Ingrese el id del equipo: ";
+							cin >> id_equipo;
+							cout << endl;
+
+							estado = lista_jugadores_equipos->Agregar(id_jugador, id_equipo, lista_jugadores, lista_equipos);
+
+							switch (estado)
+							{
+								case 1:
+									cout << "-- Jugador " << id_jugador << " asignado al equipo " << id_equipo << " con exito --" << endl;
+									break;
+								case 2:
+									cout << "-- Error: Jugador ya pertenece a ese equipo --" << endl;
+									break;
+								case 3:
+									cout << "-- Error: Jugador o Equipo no encontrado --" << endl;
+									break;
+							}
+							break;
+						case 5:
 							cout << "Ingrese el id del jugador a eliminar: ";
 							cin >> id_jugador;
 							cout << endl;
-							opcion = lista_jugadores->Eliminar(id_jugador);
+							estado = lista_jugadores_equipos->Eliminar(id_jugador);
+							estado = lista_jugadores->Eliminar(id_jugador);
 
-							switch (opcion)
+							switch (estado)
 							{
 								case 1:
 									cout << "-- Jugador " << id_jugador << " eliminado con exito --" << endl;
@@ -420,8 +450,64 @@ int _tmain(int argc, _TCHAR* argv[])
 							lista_partidos_equipos->MostrarPartido(id_partido);
 							break;
 						case 3:
+							cout << "Ingrese el ID del partido: ";
+							cin >> id_partido;
+							cout << endl;
+							cout << "Ingrese la fecha del partido: ";
+							cin >> fecha;
+							cout << endl;
+							cout << "Ingrese la hora del partido: ";
+							cin >> hora;
+							cout << endl;
+							cout << "Ingrese el estadio del partido: ";
+							cin >> estadio;
+							cout << endl;
+							cout << "Ingrese la ubicacion del partido: ";
+							cin >> ubicacion;
+							cout << endl;
+							cout << "Ingrese el ID del equipo 1: ";
+							cin >> id_equipo1;
+							cout << endl;
+							cout << "Ingrese el ID del equipo 2: ";
+							cin >> id_equipo2;
+							cout << endl;
+							cout << "Ingrese la puntuacion del partido: ";
+							cin >> puntuacion;
+							cout << endl;
+
+							partido = new Partido(id_partido, fecha, hora, estadio, ubicacion, puntuacion);
+
+							estado = lista_partidos->Agregar(partido);
+							estado = lista_partidos_equipos->Agregar(id_equipo1, id_equipo2, id_partido, lista_equipos, lista_partidos);
+
+							switch (estado)
+							{
+								case 1:
+									cout << "-- Partido " << id_partido << " creado con exito --" << endl;
+									break;
+								case 2:
+									cout << "-- Error: Partido " << id_partido << " repetido --" << endl;
+									break;
+								case 3:
+									cout << "-- Error: Equipo 1 o Equipo 2 no encontrado --" << endl;
+									break;
+							}
 							break;
 						case 4:
+							cout << "Ingrese el ID del partido a eliminar: ";
+							cin >> id_partido;
+							cout << endl;
+							estado = lista_partidos_equipos->Eliminar(id_partido);
+							estado = lista_partidos->Eliminar(id_partido);				
+							switch (estado)
+							{
+								case 1:
+									cout << "-- Partido "<< id_partido << " eliminado con exito --" << endl; 
+									break;
+								case 2:
+									cout << "-- Error: Partido " << lista_partidos << " no encontrado --" << endl;
+									break;
+							}	
 							break;
 					}
 				}

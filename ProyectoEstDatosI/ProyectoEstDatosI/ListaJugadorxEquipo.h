@@ -22,7 +22,7 @@ public:
 	NodoJugadorxEquipo * DirNodo(int, int);
 
 	int Agregar(int, int, ListaJugadores *, ListaEquipos *);
-	int Eliminar(int , int);
+	int Eliminar(int);
 	void MostrarLista();
 	void MostrarEquipo(int); // Muestra jugadores de un equipo
 };

@@ -41,7 +41,7 @@ NodoEquipo * ListaEquipos::DirNodo(int id)
 				return nodo;
 			else
 				nodo = nodo->GetSiguiente();
-		while(nodo != GetCabeza());
+		while (nodo != GetCabeza());
 		return NULL;
 	}
 }
@@ -135,13 +135,18 @@ void ListaEquipos::MostrarEquipo(int id)
 {
 	if (this->GetCabeza() != NULL)
 	{
-		NodoEquipo * equipo = this->DirNodo(id);
+		if (this->DirNodo(id) != NULL)
+		{
+			NodoEquipo * equipo = this->DirNodo(id);
 
-		cout << "-- Equipo --" << endl <<
+			cout << "-- Equipo --" << endl <<
 			"ID: " << equipo->GetEquipo()->GetId() << endl <<
 			"Nombre: " << equipo->GetEquipo()->GetNombre() << endl <<
 			"Abreviatura: " << equipo->GetEquipo()->GetAbreviatura() << endl <<
 			"Entrenador: " << equipo->GetEquipo()->GetEntrenador() << endl;
+		}
+		else
+			cout << "-- Equipo no encontrado --" << endl;
 	}
 	else
 		cout << "-- Lista vacia --" << endl;

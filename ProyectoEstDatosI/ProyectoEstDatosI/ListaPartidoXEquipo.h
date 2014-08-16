@@ -19,7 +19,7 @@ public:
     void SetTamano(int);
 
 	int Agregar(int, int, int, ListaEquipos *, ListaPartidos *);
-	int Eliminar(int,int,int);
+	int Eliminar(int);
 	void MostrarLista();
 	void MostrarPartido(int);
 };

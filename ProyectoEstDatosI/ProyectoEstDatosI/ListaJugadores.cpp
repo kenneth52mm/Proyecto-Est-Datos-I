@@ -90,7 +90,10 @@ int ListaJugadores::Eliminar(int id)
 		eliminar->GetSiguiente()->SetAnterior(eliminar->GetAnterior());
 
 		if (this->GetCabeza() == eliminar)
-			this->SetCabeza(eliminar->GetSiguiente());
+			if (this->GetCabeza()->GetSiguiente() == eliminar)
+				this->SetCabeza(NULL);
+			else
+				this->SetCabeza(eliminar->GetSiguiente());
 
 		delete eliminar;
 

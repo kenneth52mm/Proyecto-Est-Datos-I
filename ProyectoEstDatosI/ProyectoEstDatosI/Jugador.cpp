@@ -11,6 +11,7 @@ Jugador::~Jugador(void)
 Jugador::Jugador(int id, string posicion, string primer_partido, string nombre, int partidos_jugados, int cantidad_goles, int edad, int altura, string fecha_nac, string club)
 {
 	this->id = id;
+	this->posicion = posicion;
 	this->primer_partido = primer_partido;
 	this->nombre = nombre;
 	this->partidos_jugados = partidos_jugados;

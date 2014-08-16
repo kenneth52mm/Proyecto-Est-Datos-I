@@ -86,27 +86,39 @@ int ListaPartidoXEquipo::Agregar(int id_equipo1, int id_equipo2, int id_partido,
 	}
 	return 3;
 }
-int ListaPartidoXEquipo::Eliminar(int idPartido,int idEquipo1,int idEquipo2)
+int ListaPartidoXEquipo::Eliminar(int id)
 {
-	if (this->DirNodo(idPartido,idEquipo1,idEquipo2) == NULL)
-		return 2;
-	else
+	if (this->GetCabeza() != NULL)
 	{
-		NodoPartidoxEquipo* eliminar = this->DirNodo(idPartido,idEquipo1,idEquipo2);
+		NodoPartidoxEquipo * eliminar  = this->GetCabeza();
 
-		eliminar->GetAnterior()->SetSiguiente(eliminar->GetSiguiente());
-		eliminar->GetSiguiente()->SetAnterior(eliminar->GetAnterior());
+		do
+		{
+			if (eliminar->GetPartido()->GetPartido()->GetId() == id)
+			{
+				eliminar->GetAnterior()->SetSiguiente(eliminar->GetSiguiente());
+				eliminar->GetSiguiente()->SetAnterior(eliminar->GetAnterior());
 
-		if (this->GetCabeza() == eliminar)
-			this->SetCabeza(eliminar->GetSiguiente());
+				if (this->GetCabeza() == eliminar)
+					if (this->GetCabeza()->GetSiguiente() == eliminar)
+						this->SetCabeza(NULL);
+					else
+						this->SetCabeza(eliminar->GetSiguiente());
 
-		delete eliminar;
+				delete eliminar;
 
-		this->SetTamano(this->GetTamano() - 1);
+				this->SetTamano(this->GetTamano() - 1);
 
-		return 1;
+				return 1;
+			}
 
+			eliminar = eliminar->GetSiguiente();
+		}
+		while (eliminar != this->GetCabeza());
+		return 2;
 	}
+	else
+		return 2;
 }
 void ListaPartidoXEquipo::MostrarLista()
 {

@@ -77,7 +77,7 @@ int ListaJugadorxEquipo::Agregar(int id_jugador, int id_equipo, ListaJugadores *
 				nuevo_nodo->SetSiguiente(this->GetCabeza());
 
 				this->GetCabeza()->GetAnterior()->SetSiguiente(nuevo_nodo);
-				this->GetCabeza()->SetSiguiente(nuevo_nodo);
+				this->GetCabeza()->SetAnterior(nuevo_nodo);
 			}
 
 			this->SetTamano(this->GetTamano() + 1);
@@ -89,29 +89,37 @@ int ListaJugadorxEquipo::Agregar(int id_jugador, int id_equipo, ListaJugadores *
 	else
 		return 3;
 }
-int ListaJugadorxEquipo::Eliminar(int idJugador,int idEquipo)
+int ListaJugadorxEquipo::Eliminar(int id_jugador)
 {
-	if (this->DirNodo(idJugador,idEquipo) == NULL)
-		return 2;
-	else
+	if (this->GetCabeza() != NULL)
 	{
-		NodoJugadorxEquipo* eliminar = this->DirNodo(idJugador,idEquipo);
+		NodoJugadorxEquipo * eliminar = this->GetCabeza();
 
-		eliminar->GetAnterior()->SetSiguiente(eliminar->GetSiguiente());
-		eliminar->GetSiguiente()->SetAnterior(eliminar->GetAnterior());
+		do
+		{
+			if (eliminar->GetJugador()->GetJugador()->GetId() == id_jugador)
+			{
+				eliminar->GetAnterior()->SetSiguiente(eliminar->GetSiguiente());
+				eliminar->GetSiguiente()->SetAnterior(eliminar->GetAnterior());
 
-		if (this->GetCabeza() == eliminar)
-			if (this->GetCabeza()->GetSiguiente() == eliminar)
-				this->SetCabeza(NULL);
-			else
-				this->SetCabeza(eliminar->GetSiguiente());
+				if (this->GetCabeza() == eliminar)
+					if (this->GetCabeza()->GetSiguiente() == eliminar)
+						this->SetCabeza(NULL);
+					else
+						this->SetCabeza(eliminar->GetSiguiente());
 
-		delete eliminar;
+				delete eliminar;
 
-		this->SetTamano(this->GetTamano() - 1);
+				this->SetTamano(this->GetTamano() - 1);
 
-		return 1;
+				return 1;
+			}
+		}
+		while (eliminar != this->GetCabeza());
+		return 2;
 	}
+	else
+		return 2;
 }
 void ListaJugadorxEquipo::MostrarLista()
 {
@@ -178,7 +186,7 @@ void ListaJugadorxEquipo::MostrarEquipo(int id)
 		while (recorrido != this->GetCabeza());
 
 		if (vacio)
-			cout << "-- Equipo no encontrado --" << endl;
+			cout << "-- Lista vacia --" << endl;
 		cout << "-- F --" << endl;
 	}
 	else
