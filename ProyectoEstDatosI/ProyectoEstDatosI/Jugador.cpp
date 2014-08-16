@@ -111,3 +111,18 @@ void Jugador::SetClub(string club)
 {
 	this->club = club;
 }
+
+void Jugador::Mostrar()
+{
+	cout << "-- Jugador --" << endl <<
+		"ID: " << this->GetId() << endl <<
+		"Posicion: " << this->GetPosicion() << endl <<
+		"Primer Partido: " << this->GetPrimerPartido() << endl <<
+		"Nombre: " << this->GetNombre() << endl <<
+		"Partidos Jugados: " << this->GetPartidosJugados() << endl <<
+		"Cantidad de Goles: " << this->GetCantidadGoles() << endl <<
+		"Edad: " << this->GetEdad() << endl <<
+		"Altura: " << this->GetAltura() << endl <<
+		"Fecha de Nacimiento: " << this->GetFechaNac() << endl <<
+		"Club Actual: " << this->GetClub() << endl;
+}

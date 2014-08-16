@@ -23,6 +23,10 @@ void CargaInicial::CargarEquiposXGrupos(ListaEquipoXGrupo * lista_equipos_grupos
 		string nombre;
 		string abreviatura;
 		string entrenador;
+		int partidos_jugados;
+		int goles_marcados;
+		int disparos_a_puerta;
+		int distancia_recorrida;
 
 		// Enlace a grupos
 		string grupo;
@@ -41,10 +45,14 @@ void CargaInicial::CargarEquiposXGrupos(ListaEquipoXGrupo * lista_equipos_grupos
 			nombre = split[1];
 			abreviatura = split[2];
 			entrenador = split[3];
+			partidos_jugados = stoi(split[4]);
+			goles_marcados = stoi(split[5]);
+			disparos_a_puerta = stoi(split[6]);
+			distancia_recorrida = stoi(split[7]);
 
-			grupo = split[4];
+			grupo = split[8];
 
-			Equipo * equipo = new Equipo(id, nombre, abreviatura, entrenador);
+			Equipo * equipo = new Equipo(id, nombre, abreviatura, entrenador, partidos_jugados, goles_marcados, disparos_a_puerta, distancia_recorrida);
 			lista_equipos->Agregar(equipo);
 
 			lista_equipos_grupos->Agregar(id, grupo, lista_equipos, lista_grupos);

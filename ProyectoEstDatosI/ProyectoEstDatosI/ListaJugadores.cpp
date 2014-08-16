@@ -108,21 +108,11 @@ void ListaJugadores::MostrarLista()
 		cout << "-- Lista vacia --" << endl;
 	else
 	{
-		NodoJugador * recorrido =this->GetCabeza();
+		NodoJugador * recorrido = this->GetCabeza();
 		cout <<"-- I --" << endl;
 		do
 		{
-			cout << "---" << endl
-				<< "Nombre: " << recorrido->GetJugador()->GetNombre() << endl
-				<< "Feha de Nacimiento: " << recorrido->GetJugador()->GetFechaNac() << endl
-				<<"Edad: " << recorrido->GetJugador()->GetEdad() << endl
-				<<"Altura: " << recorrido->GetJugador()->GetAltura() << endl
-				<<"Numero de Camiseta: " << recorrido->GetJugador()->GetId() << endl
-				<<"Primer partido: " << recorrido->GetJugador()->GetPrimerPartido() << endl
-				<<"Cantidad de Goles: " << recorrido->GetJugador()->GetCantidadGoles() << endl
-				<<"Posicion: " << recorrido->GetJugador()->GetPosicion() << endl
-				<<"Cantidad de Partidos: " << recorrido->GetJugador()->GetPartidosJugados() << endl
-				<<"Club Actual: " << recorrido->GetJugador()->GetClub() << endl;
+			recorrido->GetJugador()->Mostrar();
 
 			recorrido = recorrido->GetSiguiente();
 		}
@@ -136,16 +126,7 @@ void ListaJugadores::MostrarJugador(int id)
 	{
 		NodoJugador * jugador = this->DirNodo(id);
 
-		cout << "Nombre: " << jugador->GetJugador()->GetNombre() << endl 
-			<< "Feha de Nacimiento: " << jugador->GetJugador()->GetFechaNac() << endl
-			<<"Edad: " << jugador->GetJugador()->GetEdad() << endl
-			<<"Altura: " << jugador->GetJugador()->GetAltura() << endl
-			<<"Numero de Camiseta: " << jugador->GetJugador()->GetId() << endl
-			<<"Primer partido: " << jugador->GetJugador()->GetPrimerPartido() << endl
-			<<"Cantidad de Goles: " << jugador->GetJugador()->GetCantidadGoles() << endl
-			<<"Posicion: " << jugador->GetJugador()->GetPosicion() << endl
-			<<"Cantidad de Partidos: " << jugador->GetJugador()->GetPartidosJugados() << endl
-			<<"Club Actual: " << jugador->GetJugador()->GetClub() << endl;
+		jugador->GetJugador()->Mostrar();
 	}
 	else
 		cout << "-- Jugador no encontrado --" << endl;

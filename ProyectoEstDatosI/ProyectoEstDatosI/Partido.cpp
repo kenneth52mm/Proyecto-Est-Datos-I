@@ -71,3 +71,14 @@ void Partido::SetPuntuacion(string puntuacion)
 {
 	this->puntuacion = puntuacion;
 }
+
+void Partido::Mostrar()
+{
+	cout << "-- Partido --" << endl <<
+		"ID: " << this->GetId() << endl <<
+		"Estadio: " << this->GetEstadio() << endl <<
+		"Feha: " << this->GetFecha() << endl <<
+		"Hora: " << this->GetHora() << endl <<
+		"Ubicacion:" << this->GetUbicacion() << endl <<
+		"Punticion: " << this->GetPuntuacion() << endl;
+}

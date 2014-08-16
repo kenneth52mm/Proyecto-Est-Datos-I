@@ -33,5 +33,7 @@ public:
 
 	string GetPuntuacion();
 	void SetPuntuacion(string);
+
+	void Mostrar();
 };
 

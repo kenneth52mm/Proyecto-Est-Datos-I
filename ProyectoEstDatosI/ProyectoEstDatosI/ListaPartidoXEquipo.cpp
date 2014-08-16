@@ -123,27 +123,27 @@ int ListaPartidoXEquipo::Eliminar(int id)
 void ListaPartidoXEquipo::MostrarLista()
 {
 	if (this->GetCabeza() == NULL)
-		cout<<"-- No hay elemntos en la lista --"<<endl;
+		cout<<"-- Lista Vacia --"<<endl;
 	else
 	{
-		NodoPartidoxEquipo* nodo =this->GetCabeza();
-		cout<<"Inicio de la lista"<< endl;
+		NodoPartidoxEquipo * recorrido = this->GetCabeza();
+		cout <<"-- I --" << endl;
 		do
 		{
-			cout<<"Partido: "<<nodo->GetPartido()->GetPartido()->GetId()<<endl
-				<<"Puntuacion: "<<nodo->GetPartido()->GetPartido()->GetPuntuacion()<<endl
-				<<"Equipo 1: "<<nodo->GetEquipo1()->GetEquipo()->GetNombre()<<endl
-				<<"Abreviatura: "<<nodo->GetEquipo1()->GetEquipo()->GetAbreviatura()<<endl
-				<<"Id: "<<nodo->GetEquipo1()->GetEquipo()->GetId()<<endl
-				<<"Entrenador: "<<nodo->GetEquipo1()->GetEquipo()->GetEntrenador()<<endl
-				<<"Equipo 2: "<<nodo->GetEquipo2()->GetEquipo()->GetNombre()<<endl
-				<<"Abreviatura: "<<nodo->GetEquipo2()->GetEquipo()->GetAbreviatura()<<endl
-				<<"Id: "<<nodo->GetEquipo2()->GetEquipo()->GetId()<<endl
-				<<"Entrenador: "<<nodo->GetEquipo2()->GetEquipo()->GetEntrenador()<<endl;
-			nodo = nodo->GetSiguiente();
+			cout << "---" <<
+					"Id: " << recorrido->GetPartido()->GetPartido()->GetId() << endl <<
+					"Equipo 1: " << recorrido->GetEquipo1()->GetEquipo()->GetNombre() << endl <<
+					"Equipo 2: " << recorrido->GetEquipo2()->GetEquipo()->GetNombre() << endl <<
+					"Estadio: " << recorrido->GetPartido()->GetPartido()->GetEstadio() << endl <<
+					"Feha: " << recorrido->GetPartido()->GetPartido()->GetFecha() << endl <<
+					"Hora: " << recorrido->GetPartido()->GetPartido()->GetHora() << endl <<
+					"Ubicacion: " << recorrido->GetPartido()->GetPartido()->GetUbicacion() << endl <<
+					"Puntuacion: " << recorrido->GetPartido()->GetPartido()->GetPuntuacion() << endl;
+
+			recorrido = recorrido->GetSiguiente();
 		}
-		while (nodo != this->GetCabeza());
-		cout<<"Fin de la lista"<<endl;
+		while (recorrido != this->GetCabeza());
+		cout << "-- F --" << endl;
 	}
 }
 void ListaPartidoXEquipo::MostrarPartido(int id)
@@ -159,7 +159,7 @@ void ListaPartidoXEquipo::MostrarPartido(int id)
 			{
 				vacio = false;
 
-				cout << "---" <<
+				cout << "---" << endl <<
 					"Id: " << recorrido->GetPartido()->GetPartido()->GetId() << endl <<
 					"Equipo 1: " << recorrido->GetEquipo1()->GetEquipo()->GetNombre() << endl <<
 					"Equipo 2: " << recorrido->GetEquipo2()->GetEquipo()->GetNombre() << endl <<

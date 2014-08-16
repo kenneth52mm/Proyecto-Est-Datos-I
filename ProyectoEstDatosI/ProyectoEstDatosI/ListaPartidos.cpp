@@ -116,12 +116,7 @@ void ListaPartidos::MostrarLista()
 
 		do
 		{
-			cout << "Id: "<<partido->GetPartido()->GetId() << endl
-				<< "Estadio: " << partido->GetPartido()->GetEstadio() << endl
-				<< "Feha: " << partido->GetPartido()->GetFecha() << endl
-				<< "Hora: " << partido->GetPartido()->GetHora() << endl
-				<< "Ubicacion:" << partido->GetPartido()->GetUbicacion() << endl
-				<< "Punticion: " << partido->GetPartido()->GetPuntuacion() << endl;
+			partido->GetPartido()->Mostrar();
 
 			partido = partido->GetSiguiente();
 		}

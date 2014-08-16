@@ -203,11 +203,9 @@ void ListaEquipoXGrupo::MostrarGrupo(string grupo)
 			{
 				vacio = false;
 				cout << "---" << endl <<
-					"Grupo: " << recorrido->GetGrupo()->GetGrupo() << endl <<
-					"ID: " << recorrido->GetEquipo()->GetEquipo()->GetId() << endl <<
-					"Nombre: " << recorrido->GetEquipo()->GetEquipo()->GetNombre() << endl <<
-					"Abreviatura: " << recorrido->GetEquipo()->GetEquipo()->GetAbreviatura() << endl <<
-					"Entrenador: " << recorrido->GetEquipo()->GetEquipo()->GetEntrenador() << endl;
+					"Grupo: " << recorrido->GetGrupo()->GetGrupo() << endl;
+				recorrido->GetEquipo()->GetEquipo()->Mostrar();
+					
 			}
 
 			recorrido = recorrido->GetSiguiente();

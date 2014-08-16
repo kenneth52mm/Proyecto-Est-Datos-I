@@ -49,5 +49,7 @@ public:
 
 	string GetClub();
 	void SetClub(string);
+
+	void Mostrar();
 };
 

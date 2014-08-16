@@ -2,7 +2,6 @@
 #include "stdafx.h"
 
 /*
-
  _    _        _                     ______                                              _             
 | |  | |      | |                    | ___ \                                            (_)            
 | |  | | ___  | |     _____   _____  | |_/ / __ ___   __ _ _ __ __ _ _ __ ___  _ __ ___  _ _ __   __ _ 
@@ -12,8 +11,10 @@
                                                       __/ |                                       __/ |
                                                      |___/                                       |___/
 
-"For the Lord your God is he who goes with you to fight for you against your enemies, to give you the victory." 
-																								Deuteronomy 20:4
+
+ "For the LORD your God is the one who goes with you to fight for you against your enemies to give you victory."
+
+																								Deuteronomy 20:4															
 */
 
 int _tmain(int argc, _TCHAR* argv[])
@@ -48,13 +49,17 @@ int _tmain(int argc, _TCHAR* argv[])
 	string nombre_equipo;
 	string abreviatura;
     string entrenador;
+	int equipo_partidos_jugados;
+	int goles_marcados;
+	int disparos_a_puerta;
+	int distancia_recorrida;
 
 	// Atributos de Jugador
 	int id_jugador;
 	string posicion;
 	string primer_partido;
 	string nombre_jugador;
-	int partidos_jugados;
+	int jugador_partidos_jugados;
 	int cantidad_goles;
 	int edad;
 	int altura;
@@ -230,8 +235,21 @@ int _tmain(int argc, _TCHAR* argv[])
 							cout<<"Ingrese la abreviatura del nuevo equipo: ";
 							cin>> abreviatura;
 							cout << endl;
+							cout << "- Estadistica -" << endl;
+							cout << "Ingrese la cantidad de partidos jugados del equipo: ";
+							cin>> equipo_partidos_jugados;
+							cout << endl;
+							cout<< "Ingrese la cantidad de goles marcados por el equipo: ";
+							cin>> goles_marcados;
+							cout << endl;
+							cout << "Ingrese la cantidad de disparos a puerta del equipo: ";
+							cin>> disparos_a_puerta;
+							cout << endl;
+							cout<<"Ingrese la distancia recorrida por el equipo: ";
+							cin>> distancia_recorrida;
+							cout << endl;
 
-							equipo = new Equipo(id_equipo, nombre_equipo, abreviatura, entrenador);
+							equipo = new Equipo(id_equipo, nombre_equipo, abreviatura, entrenador, equipo_partidos_jugados, goles_marcados, disparos_a_puerta, distancia_recorrida);
 
 							estado = lista_equipos->Agregar(equipo);
 
@@ -337,7 +355,7 @@ int _tmain(int argc, _TCHAR* argv[])
 							cin >> nombre_jugador;
 							cout << endl;
 							cout << "Ingresee la cantidad de partidos jugados por el nuevo jugador: ";
-							cin >> partidos_jugados;
+							cin >> jugador_partidos_jugados;
 							cout << endl;
 							cout << "Ingresee la cantidad de goles marcados por el nuevo jugador: ";
 							cin >> cantidad_goles;
@@ -355,7 +373,7 @@ int _tmain(int argc, _TCHAR* argv[])
 							cin >> club;
 							cout << endl;
 
-							jugador = new Jugador (id_jugador, posicion, primer_partido, nombre_jugador, partidos_jugados, cantidad_goles, edad, altura, fecha_nac, club);
+							jugador = new Jugador (id_jugador, posicion, primer_partido, nombre_jugador, jugador_partidos_jugados, cantidad_goles, edad, altura, fecha_nac, club);
 
 							estado = lista_jugadores->Agregar(jugador);
 

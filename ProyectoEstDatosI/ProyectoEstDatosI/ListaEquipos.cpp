@@ -139,11 +139,7 @@ void ListaEquipos::MostrarEquipo(int id)
 		{
 			NodoEquipo * equipo = this->DirNodo(id);
 
-			cout << "-- Equipo --" << endl <<
-			"ID: " << equipo->GetEquipo()->GetId() << endl <<
-			"Nombre: " << equipo->GetEquipo()->GetNombre() << endl <<
-			"Abreviatura: " << equipo->GetEquipo()->GetAbreviatura() << endl <<
-			"Entrenador: " << equipo->GetEquipo()->GetEntrenador() << endl;
+			equipo->GetEquipo()->Mostrar();
 		}
 		else
 			cout << "-- Equipo no encontrado --" << endl;
